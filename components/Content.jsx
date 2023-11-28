@@ -14,6 +14,7 @@ export default function Content() {
     FFGet("schedule").then((schedule) => setSchedule(schedule));
   }, []);
   console.log(bands, events, schedule);
+  /* OBS dette er bare en testside for at teste utilities og css modules */
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.headline}>Test Side</h1>
