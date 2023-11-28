@@ -23,6 +23,12 @@ export default function Content() {
           return <p key={item.slug} className={styles.bands}>{item.name}</p>;
         })}
       </div>
+      <div className={styles.bandwrapper}>
+        <button className={styles.buttons}>Button 1</button>
+        <button className={styles.buttons}>Button 2</button>
+        <button className={styles.buttons}>Button 3</button>
+        <button className={styles.buttons}>Button 4</button>
+      </div>
     </div>
   );
 }

@@ -1,18 +1,18 @@
-/* TODO:
-tilføj de rigtige fonts i deres givene properties
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Ruslan+Display&display=swap");
 
- */
-:root{
-    --primary_dark:#282844;
-    --primary_light:#FFEAFA;
-    --secondary_dark:#4F4F74;
-    --secondary_light:#C3B1D8;
-    --accent:#EA4BC8;
---heading_font:"";
---text_font:"";
+:root {
+  --primary_dark: #282844;
+  --primary_light: #ffeafa;
+  --secondary_dark: #4f4f74;
+  --secondary_light: #c3b1d8;
+  --accent_pink: #ea4bc8;
+  --accent_red: #ff2e00;
+  --heading_font: "Ruslan Display", sans-serif;
+  --text_font: "Actor", sans-serif;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
