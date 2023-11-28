@@ -1,9 +1,9 @@
-import Content from "../../components/ContentTest";
+import ContentTest from "../../components/ContentTest";
 import KoncertListe from "../../components/KoncertListe";
 export default function Home() {
   return (
     <main>
-<Content></Content>
+<ContentTest></ContentTest>
     </main>
   );
 }
