@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { FFGet } from "./Utilities";
-import styles from "./Content.module.css"
+import styles from "./Content.module.css";
 export default function ContentTest() {
   /* vores states som holder vores data når vores fetch promises er resolved */
   const [bands, setBands] = useState(null);
@@ -9,9 +9,12 @@ export default function ContentTest() {
   const [schedule, setSchedule] = useState(null);
   /* useEffect kalder vores fetch requests, venter på at de retunerede promises er løst, og sætter vores states til at være vores fetchede data */
   useEffect(() => {
-    FFGet("bands").then((bands) => setBands(bands));
-    FFGet("events").then((events) => setEvents(events));
-    FFGet("schedule").then((schedule) => setSchedule(schedule));
+    async function fetchData() {
+      setBands(await FFGet("bands"));
+      setEvents(await FFGet("events"));
+      setSchedule(await FFGet("schedule"));
+    }
+    fetchData();
   }, []);
   console.log(bands, events, schedule);
   /* OBS dette er bare en testside for at teste utilities og css modules */
@@ -20,7 +23,11 @@ export default function ContentTest() {
       <h1 className={styles.headline}>Test Side</h1>
       <div className={styles.bandwrapper}>
         {bands?.map((item) => {
-          return <p key={item.slug} className={styles.bands}>{item.name}</p>;
+          return (
+            <p key={item.slug} className={styles.bands}>
+              {item.name}
+            </p>
+          );
         })}
       </div>
       <div className={styles.bandwrapper}>

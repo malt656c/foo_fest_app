@@ -1,12 +1,9 @@
-const url = "http://localhost:8080/";
 /* vores fetch function der henter data fra vores api med et specificeret endpoint */
 async function FFGet(endpoint) {
-  return await fetch(url + endpoint)
-    .then((response) => response.json())
-    .then((json) => {
-      return json;
-    })
-    .catch((err) => console.error(err));
+  const url = "http://localhost:8080/";
+  const res = await fetch(url + endpoint);
+  const data = await res.json().catch((err) => console.error(err));
+  return data
 }
 
-export {FFGet};
+export { FFGet };
