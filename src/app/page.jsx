@@ -1,8 +1,9 @@
-import Content from "../../components/Content";
+import Content from "../../components/ContentTest";
+import KoncertListe from "../../components/KoncertListe";
 export default function Home() {
   return (
     <main>
-<Content/>
+<Content></Content>
     </main>
   );
 }

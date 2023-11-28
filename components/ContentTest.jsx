@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { FFGet } from "./Utilities";
 import styles from "./Content.module.css"
-export default function Content() {
+export default function ContentTest() {
   /* vores states som holder vores data når vores fetch promises er resolved */
   const [bands, setBands] = useState(null);
   const [events, setEvents] = useState(null);

@@ -9,4 +9,4 @@ async function FFGet(endpoint) {
     .catch((err) => console.error(err));
 }
 
-export { FFGet};
+export {FFGet};
