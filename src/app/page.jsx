@@ -1,9 +1,10 @@
 import ContentTest from "../../components/ContentTest";
-import KoncertListe from "../../components/KoncertListe";
+import ServerSideComponent from "../../components/ServerSideComponent";
+import AppWrapper from "../../components/AppWrapper";
 export default function Home() {
   return (
     <main>
-      <ContentTest></ContentTest>
+      <AppWrapper></AppWrapper>
   </main>
   );
 }

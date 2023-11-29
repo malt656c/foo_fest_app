@@ -9,6 +9,7 @@ export default function ContentTest() {
   const [schedule, setSchedule] = useState(null);
   /* useEffect kalder vores fetch requests, venter på at de retunerede promises er løst, og sætter vores states til at være vores fetchede data */
   useEffect(() => {
+    /* async function venter på at diverse "promises" er løst, før at dataen bliver diffineret */
     async function fetchData() {
       setBands(await FFGet("bands"));
       setEvents(await FFGet("events"));
