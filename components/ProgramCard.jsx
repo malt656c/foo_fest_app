@@ -1,12 +1,6 @@
 import styles from "./ProgramCard.module.css";
-export default function ProgramCard(props) {
-  if (props.act === "break") {
-    return (
-      <div className={styles.break}>
-        <h3>Break</h3>
-      </div>
-    );
-  } else {
+export default async function ProgramCard(props) {
+  console.log(props.act)
     return (
       <article className={styles.card}>
         <img src="" alt="" />
@@ -19,4 +13,4 @@ export default function ProgramCard(props) {
       </article>
     );
   }
-}
+
