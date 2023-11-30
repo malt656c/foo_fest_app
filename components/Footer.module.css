@@ -1,3 +1,12 @@
 .footerBackground {
   background-color: var(--primary_light);
+  display: grid;
+  justify-content: space-between;
+  font-family: var(--heading_font);
+  gap: 2rem;
+}
+
+.footerIcons {
+  display: flex;
+  justify-content: space-between;
 }
