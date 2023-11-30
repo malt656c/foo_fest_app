@@ -1,4 +1,9 @@
-
+/* TODO:
+som standard skal alle bands vises,
+se dagens program-knap,
+se specifikke dage filter,
+se specifikke scener,
+hvert kort skal gå til det specifikke bands side */
 import { FFGet, FFSchedule, FFScheduleToday } from "./Utilities";
 import styles from "./Program.module.css";
 export default async function Program() {
