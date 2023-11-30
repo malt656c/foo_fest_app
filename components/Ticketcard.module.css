@@ -1,14 +1,67 @@
 .Card1 {
+    padding: 2rem;
     background-color: var(--primary_light);
     margin: 3rem;
 }
 
 .Heading {
+    font-size: xx-large;
+    text-align: center;
     font-family: var(--heading_font);
     color: var(--secondary_dark)
 }
 
 .Card2 {
+    padding: 2rem;
     background-color: var(--secondary_light);
     margin: 3rem;
 }
+
+.Button {
+    display: block;
+  margin: 0 auto;
+ background-color: var(--accent_pink);
+ font-family: var(--heading_font);
+ font-size: large;
+ padding: 6px 60px;
+ border-radius: 30px;
+}
+
+.Button:hover {
+    background-color: var(--accent_red);
+}
+
+.Price {
+    font-family: var(--heading_font);
+    color: var(--secondary_dark);
+    text-align: center;
+    font-size: x-large;
+
+}
+
+.Text {
+    text-align: center;
+    font-family: var(--text_font);
+}
+
+.Counter {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    width: 90px;
+    text-align: center;
+    border: var(--accent_pink) 2px solid;
+    margin-bottom: 10px;
+}
+
+.Counterbtn {
+    background: none;
+    border: none;
+}
+
+.Heading,
+.Text,
+.Price,
+.Button {
+  margin-bottom: 20px;
+}  
