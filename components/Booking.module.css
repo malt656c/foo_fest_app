@@ -1,4 +1,11 @@
-h1 {
-    font-family: var(--heading-font);
+.Background {
+    height: 600px;
+    align-items: center;
+    width: 400px;
+    background-color: var(--primary_dark);
+}
+
+.Heading {
+    font-family: var(--heading_font);
     color: var(--primary_light);
 }

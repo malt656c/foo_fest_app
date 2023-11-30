@@ -1,8 +1,10 @@
 import styles from "./Booking.module.css";
-export default async function booking() {
+import Ticketcard from "./Ticketcard";
+export default async function Booking() {
     return (
-<div>
-<h1>Tickets</h1>
+<div className={styles.Background}>
+<h1 className={styles.Heading}>Tickets</h1>
+<Ticketcard></Ticketcard>
 </div>
 
     )
