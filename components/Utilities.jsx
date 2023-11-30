@@ -8,6 +8,8 @@ async function FFGet(endpoint) {
   const data = await res.json().catch((err) => console.error(err));
   return data;
 }
+/* henter schedule for "day" og laver formatet om fra:
+{venue:{day:act}}, til: {day:{venue:act}} */
 async function FFSchedule(day) {
   let completeSchedule = await FFGet("schedule");
   let daysProgram = [];
@@ -16,4 +18,12 @@ async function FFSchedule(day) {
   });
   return daysProgram;
 }
-export { FFGet, FFSchedule };
+/* henter programmet for idag */
+async function FFScheduleToday() {
+  let today = new Date();
+  /* giver og idags ugedag som 3 små karakterer feks: mon,tue,wed... */
+  today = today.toDateString().split(" ")[0].toLowerCase();
+  let scheduleToday = await FFSchedule(today);
+  return scheduleToday;
+}
+export { FFGet, FFSchedule, FFScheduleToday };
