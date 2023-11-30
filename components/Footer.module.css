@@ -4,9 +4,23 @@
   justify-content: space-between;
   font-family: var(--heading_font);
   gap: 2rem;
+  padding: 2rem;
+}
+
+.footerGapGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.footerH3 {
+  font-size: 26px;
 }
 
 .footerIcons {
   display: flex;
   justify-content: space-between;
+}
+
+.footerImg {
+  height: 50px;
 }
