@@ -20,9 +20,9 @@ export default function Footer() {
       <div>
         <h3>Følg os på de sociale medier</h3>
         <div className={styles.footerIcons}>
-          <p>Facebook</p>
-          <p>instagram</p>
-          <p>Tiktok</p>
+          <img src="/facebook-f.svg" alt="facebook" />
+          <img src="/instagram(2).svg" alt="instagram" />
+          <img src="/tiktok.svg" alt="tiktok" />
         </div>
       </div>
     </section>
