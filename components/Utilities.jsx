@@ -6,17 +6,14 @@ async function FFGet(endpoint) {
   const url = "http://localhost:8080/";
   const res = await fetch(url + endpoint);
   const data = await res.json().catch((err) => console.error(err));
-  return data
+  return data;
 }
-async function FFSchedule(day){
-let completeSchedule = await FFGet("schedule");
-let chosenDay = day;
-const chooseDay = async (day)=>{
- let venues= Object.keys(completeSchedule)
- let daysProgram =[]
-venues.forEach((venue)=>{daysProgram.push({[venue]:completeSchedule[venue][day]})})
-return daysProgram
-}
-return chooseDay(chosenDay)
+async function FFSchedule(day) {
+  let completeSchedule = await FFGet("schedule");
+  let daysProgram = [];
+  Object.keys(completeSchedule).forEach((venue) => {
+    daysProgram.push({ [venue]: completeSchedule[venue][day] });
+  });
+  return daysProgram;
 }
 export { FFGet, FFSchedule };
