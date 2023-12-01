@@ -11,11 +11,48 @@
   margin-top: 20px;
 }
 
-.menuH2 {
+/* .menuH2 {
   color: var(--primary_light);
   font-family: var(--heading_font);
   font-size: 42px;
   z-index: 1;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  display: inline-block;
+}
+
+.menuH2:hover {
+  color: var(--secondary_dark);
+}
+
+
+
+.menuH2span1 {
+  color: var(--secondary_dark);
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  opacity: 0;
+}
+
+.menuH2span1:hover {
+  opacity: 1;
+  color: var(--primary_light);
+  position: absolute;
+  margin-left: -221px;
+  margin-top: -4px;
+  text-shadow: 2px 2px 0px var(--accent_pink);
+} */
+
+.menuH2 {
+  color: var(--primary_light);
+  font-family: var(--heading_font);
+  font-size: 42px;
+  position: relative;
+  display: inline-block;
 }
 
 .menuH2:hover {
@@ -23,33 +60,16 @@
 }
 
 .menuH2span1 {
-  color: var(--accent_pink);
-  position: absolute;
-  margin-left: -219px;
-  margin-top: -1px;
-  opacity: 0;
-}
-
-.menuH2span1:hover {
-  opacity: 1;
-  color: var(--accent_pink);
-  position: absolute;
-  margin-left: -219px;
-  margin-top: -1px;
-}
-
-.menuH2span2 {
-  color: var(--secondary_dark);
-  position: absolute;
-  margin-left: -221px;
-  margin-top: -2px;
-  opacity: 0;
-}
-
-.menuH2span2:hover {
-  opacity: 1;
   color: var(--primary_light);
   position: absolute;
-  margin-left: -221px;
-  margin-top: -2px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0s ease, transform 0s ease;
+}
+
+.menuH2:hover .menuH2span1 {
+  opacity: 1;
+  transform: translate(-4px, -4px);
+  text-shadow: 2px 2px 0px var(--accent_pink);
 }
