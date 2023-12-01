@@ -1,0 +1,12 @@
+.list{
+    display:grid;
+    gap: 1rem;
+}
+.filterSection {
+    display: grid;
+  padding:1rem;
+}
+.filterGroup {
+  display: grid;
+  gap: 0.5rem;
+}

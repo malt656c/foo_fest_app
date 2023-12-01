@@ -1,0 +1,8 @@
+.venueWrapper {
+  display: grid;
+  padding: 1rem;
+}
+.cardList {
+  display: grid;
+  gap: 1rem;
+}

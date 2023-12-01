@@ -1,9 +1,9 @@
-import ProgramCard from "./ProgramCard";
 import styles from "./ProgramVenue.module.css";
-export default async function ProgramVenue(props) {
- return  (
-    <section>
-
+export default function ProgramVenue(props) {
+  return (
+    <section className={styles.venueWrapper}>
+      <h2>{props.venue}</h2>
+      <div className={styles.cardList}>{props.children}</div>
     </section>
   );
 }
