@@ -1,0 +1,53 @@
+.TentCard {
+    background-image: url(/public/frontpagebg.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.Heading {
+    font-size: xx-large;
+    text-align: center;
+    font-family: var(--heading_font);
+    color: var(--secondary_dark)
+}
+
+.Counter {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    width: 90px;
+    text-align: center;
+    border: var(--accent_pink) 2px solid;
+    margin-bottom: 10px;
+}
+
+.Counterbtn {
+    background: none;
+    border: none;
+}
+
+.Button {
+    color: var(--primary_light);
+display: block;
+  margin: 0 auto;
+ background-color: var(--accent_pink);
+ font-family: var(--heading_font);
+ font-size: large;
+ padding: 6px 60px;
+ border-radius: 30px;
+ border: none;
+}
+.Button:hover {
+    background-color: var(--accent_red);
+}
+
+.Text {
+    color: var(--primary_light);
+    font-family: var(--text_font);
+}
+
+.Button,
+.Text,
+.Counter {
+    margin-bottom: 1rem;
+}

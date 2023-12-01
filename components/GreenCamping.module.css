@@ -1,0 +1,48 @@
+
+.GCcard {
+    background-image: url(../public/frontpagebg.jpg);
+    background-size: cover;
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.Heading {
+    font-family: var(--heading_font);
+    color: var(--primary_light);
+}
+
+.Price {
+    font-family: var(--heading_font);
+    color: var(--primary_light);
+    font-size: x-large;
+}
+
+.Button {
+display: block;
+margin: 0 auto;
+background-color: var(--accent_pink);
+font-family: var(--heading_font);
+font-size: large;
+padding: 6px 60px;
+border-radius: 30px;
+margin-bottom: 1rem;
+border: none;
+color: var(--primary_light);
+}
+
+.Button:hover {
+    background-color: var(--accent_red);
+}
+
+.Text{
+    color: var(--primary_light);
+}
+
+.Heading,
+.Price,
+.Text {
+    margin-bottom: 2rem;
+}
