@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Actor&family=Ruslan+Display&display=swap");
-
+/* TODO:
+spacing variabler
+eventuelt bezier
+ */
 :root {
   --primary_dark: #282844;
   --primary_light: #ffeafa;
