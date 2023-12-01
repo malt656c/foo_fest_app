@@ -1,8 +1,14 @@
 .venueWrapper {
   display: grid;
   padding: 1rem;
+  gap: 1rem;
 }
 .cardList {
   display: grid;
   gap: 1rem;
+}
+.venueName {
+  color: var(--primary_light);
+  font-family: var(--heading_font);
+  font-size: 3rem;
 }

@@ -53,15 +53,17 @@ export default function ProgramListe(props) {
         </div>
       </form>
 
-      {filteredBands().map((venue) => {
-        return (
-          <ProgramVenue key={venue.venue} venue={venue.venue}>
-            {venue.bands.map((band) => {
-              return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug}></ProgramCard>;
-            })}
-          </ProgramVenue>
-        );
-      })}
+      <div className={styles.venueList}>
+        {filteredBands().map((venue) => {
+          return (
+            <ProgramVenue key={venue.venue} venue={venue.venue}>
+              {venue.bands.map((band) => {
+                return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug}></ProgramCard>;
+              })}
+            </ProgramVenue>
+          );
+        })}
+      </div>
     </section>
   );
 }

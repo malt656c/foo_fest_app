@@ -5,8 +5,13 @@
 .filterSection {
     display: grid;
   padding:1rem;
+  color: var(--secondary_light);
 }
 .filterGroup {
   display: grid;
   gap: 0.5rem;
+}
+.venueList {
+  display: flex;
+justify-content: space-evenly;
 }
