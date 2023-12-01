@@ -1,0 +1,42 @@
+.CompleteCard {
+    background-color: rgba(210, 171, 253, 0.8);
+    background-size: cover;
+    text-align: center;
+    width: 400px;
+    padding: 2rem;
+    margin: 0 auto;
+
+}
+
+.Heading {
+    font-size: xx-large;
+    text-align: center;
+    font-family: var(--heading_font);
+    color: var(--secondary_dark);
+    margin-bottom: 4rem
+}
+
+.Button {
+    color: var(--primary_light);
+display: block;
+  margin: 0 auto;
+ background-color: var(--accent_pink);
+ font-family: var(--heading_font);
+ font-size: large;
+ padding: 6px 60px;
+ border-radius: 30px;
+ border: none;
+}
+.Button:hover {
+    background-color: var(--accent_red);
+}
+
+.Text {
+    color: var(--primary_light);
+    font-family: var(--text_font);
+    margin-bottom: 4rem;
+}
+
+.Button {
+    margin-bottom: 1rem;
+}
