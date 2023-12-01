@@ -1,4 +1,55 @@
 .menuBackground {
   background-color: var(--primary_dark);
   height: 100%;
+
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  height: 80vh;
+  margin-top: 20px;
+}
+
+.menuH2 {
+  color: var(--primary_light);
+  font-family: var(--heading_font);
+  font-size: 42px;
+  z-index: 1;
+}
+
+.menuH2:hover {
+  color: var(--secondary_dark);
+}
+
+.menuH2span1 {
+  color: var(--accent_pink);
+  position: absolute;
+  margin-left: -219px;
+  margin-top: -1px;
+  opacity: 0;
+}
+
+.menuH2span1:hover {
+  opacity: 1;
+  color: var(--accent_pink);
+  position: absolute;
+  margin-left: -219px;
+  margin-top: -1px;
+}
+
+.menuH2span2 {
+  color: var(--secondary_dark);
+  position: absolute;
+  margin-left: -221px;
+  margin-top: -2px;
+  opacity: 0;
+}
+
+.menuH2span2:hover {
+  opacity: 1;
+  color: var(--primary_light);
+  position: absolute;
+  margin-left: -221px;
+  margin-top: -2px;
 }

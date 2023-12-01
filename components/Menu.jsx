@@ -3,12 +3,14 @@ import styles from "./Menu.module.css";
 export default function Menu() {
   return (
     <section className={styles.menuBackground}>
-      <h2>Program</h2>
-      <h2>Billetter</h2>
-      <h2>Nyheder</h2>
-      <h2>Bliv Frivillig</h2>
-      <h2>Om Foofest</h2>
-      <h2>Kontakt</h2>
+      <h2 className={styles.menuH2}>
+        Program <span className={styles.menuH2span1}>program</span> <span className={styles.menuH2span2}>program</span>
+      </h2>
+      <h2 className={styles.menuH2}>Billetter</h2>
+      <h2 className={styles.menuH2}>Nyheder</h2>
+      <h2 className={styles.menuH2}>Bliv Frivillig</h2>
+      <h2 className={styles.menuH2}>Om Foofest</h2>
+      <h2 className={styles.menuH2}>Kontakt</h2>
     </section>
   );
 }
