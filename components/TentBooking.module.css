@@ -15,19 +15,37 @@
     color: var(--secondary_dark)
 }
 
+.H3 {
+    font-family: var(--text_font);
+    color: var(--primary_light);
+    margin-bottom: 1rem;
+}
+
+.Info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px 25px;
+}
+
 .Counter {
-    display: block;
-    width: fit-content;
+    font-family: var(--display_font);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    padding: 5px 10px;
     margin: 0 auto;
-    width: 90px;
-    text-align: center;
     border: var(--accent_pink) 2px solid;
     margin-bottom: 10px;
+    color: var(--primary_light);
 }
 
 .Counterbtn {
     background: none;
     border: none;
+    font-size: 1.2rem;
+    color: var(--primary_light);
+
 }
 
 .Button {
@@ -45,13 +63,34 @@ display: block;
     background-color: var(--accent_red);
 }
 
+.Price,
 .Text {
     color: var(--primary_light);
     font-family: var(--text_font);
 }
 
+.Heading,
 .Button,
 .Text,
 .Counter {
     margin-bottom: 1rem;
 }
+
+
+@media (min-width: 768px) {
+    .GCcard {
+      width: 600px;
+    }
+    .Heading {
+        font-size: xx-large;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .GCcard {
+      width: 650px;
+    }
+    .Heading {
+        font-size: xx-large;
+    }
+  }

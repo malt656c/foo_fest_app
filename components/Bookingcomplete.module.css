@@ -1,8 +1,8 @@
 .CompleteCard {
-    background-color: rgba(210, 171, 253, 0.8);
+    background-color: rgba(226, 207, 248, 0.47);
     background-size: cover;
     text-align: center;
-    width: 400px;
+    width: 350px;
     padding: 2rem;
     margin: 0 auto;
 
@@ -12,7 +12,7 @@
     font-size: xx-large;
     text-align: center;
     font-family: var(--heading_font);
-    color: var(--secondary_dark);
+    color: var(--primary_dark);
     margin-bottom: 4rem
 }
 
@@ -32,11 +32,30 @@ display: block;
 }
 
 .Text {
-    color: var(--primary_light);
+    color: var(--primary_dark);
     font-family: var(--text_font);
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .Button {
     margin-bottom: 1rem;
 }
+
+
+@media (min-width: 768px) {
+    .GCcard {
+      width: 600px;
+    }
+    .Heading {
+        font-size: xx-large;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .GCcard {
+      width: 650px;
+    }
+    .Heading {
+        font-size: xx-large;
+    }
+  }

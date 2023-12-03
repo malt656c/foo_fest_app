@@ -1,3 +1,5 @@
+
+
 .Card1 {
     padding: 2rem;
     background-color: var(--primary_light);
@@ -46,11 +48,13 @@
 }
 
 .Counter {
-    display: block;
-    width: fit-content;
+    font-family: var(--display_font);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    padding: 5px 10px;
     margin: 0 auto;
-    width: 90px;
-    text-align: center;
     border: var(--accent_pink) 2px solid;
     margin-bottom: 10px;
 }
@@ -58,7 +62,12 @@
 .Counterbtn {
     background: none;
     border: none;
+    font-size: 1.2rem;
 }
+
+
+
+
 
 .Heading,
 .Text,
@@ -66,3 +75,38 @@
 .Button {
   margin-bottom: 20px;
 }  
+
+
+@media (min-width: 768px) {
+    .Heading {
+        font-size: xx-large;
+    }
+    .Counter  {
+        width: 40%;
+
+    }
+  }
+
+  @media (min-width: 992px) {
+    .Ticketcards {
+        justify-content: center;
+        display: flex;
+    }
+    .Card1 {
+        height: 450px;
+        margin: 2rem;
+        padding: 5rem;
+    }
+    .Card2 {
+        height: 450px;
+        margin: 2rem;
+        padding: 5rem;
+    }
+    .Text {
+        width: 250px;
+    }
+    .Counter  {
+        width: 60%;
+
+    }
+  }
