@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./ProgramCard.module.css";
+import Link from "next/link";
 export default function ProgramCard(props) {
   const url = "http://localhost:8080/logos/";
   const imageSource = () => {
@@ -15,7 +16,7 @@ export default function ProgramCard(props) {
     }
   };
   return (
-    <a href={`/band/${props.slug}`} className={styles.linkWrapper}>
+    <Link href={`/band/${props.slug}`} className={styles.linkWrapper}>
       <article className={styles.card}>
         {imageSource()}
         <div className={styles.bandInfo}>
@@ -23,6 +24,6 @@ export default function ProgramCard(props) {
           <span className={styles.genre}></span>
         </div>
       </article>
-    </a>
+    </Link>
   );
 }
