@@ -1,0 +1,56 @@
+.wrapper {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  color: var(--primary_light);
+
+}
+.bandContent {
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+}
+.imageWrapper {
+  display: grid;
+  width: fit-content;
+  background-color: var(--secondary_light);
+  max-width: 400px;
+  height: fit-content;
+}
+.bandImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.logoCredits {
+  color: var(--primary_dark);
+  padding: 1rem;
+  word-break: break-all;
+}
+.bandInfo {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+.bandInfo>p {
+  max-width: 45ch;
+}
+.bandInfo>h1 {
+margin: auto;
+font-size: 3rem;
+font-family: var(--heading_font);
+  }
+.bandGeneral {
+  display: grid;
+gap: 1rem;
+padding-inline: 1rem;
+}
+.bandMembers {
+  display: grid;
+  gap: 0.25rem;
+}
+@media (min-width: 600px) {
+  .bandContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
