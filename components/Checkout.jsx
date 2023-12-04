@@ -2,7 +2,7 @@ import styles from "./Checkout.module.css";
 export default function Checkout() {
   return (
     <section className={styles.checkoutWrapper}>
-      <div>
+      <div className={styles.checkoutOplysninger}>
         <h1>Betalingsoplysninger</h1>
         <form className={styles.checkoutFormFlex}>
           <label for="firstName">Fornavn:</label>
@@ -12,7 +12,7 @@ export default function Checkout() {
           <input type="text" id="lastName" name="lastName" required></input>
 
           <label htmlFor="Adresse">Adresse</label>
-          <input type="text" name="Adresse" id="adresse" />
+          <input type="text" name="Adresse" id="adresse" required />
 
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required></input>

@@ -1,3 +1,7 @@
+.checkoutOplysninger {
+  background-color: var(--primary_light);
+}
+
 .checkoutFormFlex {
   display: grid;
 }
