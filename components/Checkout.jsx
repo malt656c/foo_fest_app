@@ -3,7 +3,7 @@ export default function Checkout() {
   return (
     <section className={styles.checkoutWrapper}>
       <div className={styles.checkoutOplysninger}>
-        <h1>Betalingsoplysninger</h1>
+        <h1 className={styles.checkoutH2}>Betalingsoplysninger</h1>
         <form className={styles.checkoutFormGrid}>
           <label className={styles.checkoutLabel} for="firstName">
             Fornavn
@@ -64,15 +64,62 @@ export default function Checkout() {
             Payment method
           </label>
           <div className={styles.checkoutButtonGrid}>
-            <button>Card/visa</button>
-            <button>Mobilepay</button>
-            <button>Gavekort</button>
-            <button>Viabill</button>
+            <button className={styles.checkoutBetalingsButton}>Card/visa</button>
+            <button className={styles.checkoutBetalingsButton}>Mobilepay</button>
+            <button className={styles.checkoutBetalingsButton}>Gavekort</button>
+            <button className={styles.checkoutBetalingsButton}>Viabill</button>
           </div>
         </form>
       </div>
-      <div>
-        <h1>Dette er din ordreresume</h1>
+      <div className={styles.checkoutOrderWrapper}>
+        <div className={styles.checkoutOrdreResume}>
+          <h3 className={styles.checkoutH3}>Order Resume</h3>
+          <div className={styles.checkoutOrdreResumeFlex}>
+            <p>Regular ticket x ? </p>
+            <p>???.-</p>
+          </div>
+          <div className={styles.checkoutOrdreResumeFlex}>
+            <p>Green Camping</p>
+            <p>???.-</p>
+          </div>
+          <div className={styles.checkoutOrdreResumeFlex}>
+            <p>Telt til x personer</p>
+            <p>???.-</p>
+          </div>
+          <div className={styles.checkoutLine}></div>
+
+          <div className={styles.checkoutOrdreResumeFlex}>
+            <p>Produkttotal</p>
+            <p>???.-</p>
+          </div>
+          <div className={styles.checkoutOrdreResumeFlex}>
+            <p>Betalingsgebyr</p>
+            <p>???.-</p>
+          </div>
+
+          <div className={styles.checkoutLine}></div>
+          <div className={styles.checkoutOrdreResumeFlex}>
+            <p>Total inklussiv moms</p>
+            <p>???.-</p>
+          </div>
+          <div className={styles.checkoutOrdreResumeFlex}>
+            <p>Moms udgør</p>
+            <p>???.-</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <input className={styles.checkoutInput} type="text" placeholder="Enter Promocode" />
+            <button className={styles.checkoutBetalingsButton}>Send</button>
+          </div>
+          <div>
+            <input type="checkbox" id="myCheckbox" name="myCheckbox" />
+            <p>jeg accepterer handelsbetingelserne og giver samtykke til at Foo-Fest behandler mine persondata.</p>
+          </div>
+          <div>
+            <button className={styles.checkoutConfirmButton}>Confirm order</button>
+          </div>
+        </div>
       </div>
     </section>
   );
