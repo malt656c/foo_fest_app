@@ -3,7 +3,6 @@
   gap: 1rem;
   padding: 1rem;
   color: var(--primary_light);
-
 }
 .bandContent {
   display: grid;

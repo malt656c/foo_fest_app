@@ -2,7 +2,7 @@
 import ProgramVenue from "./ProgramVenue";
 import ProgramCard from "./ProgramCard";
 import styles from "./ProgramListe.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import { FFGet, FFSchedule, FFScheduleToday } from "./utilities";
 export default function ProgramListe(props) {
   const [filter, setFilter] = useState(null);
@@ -25,7 +25,6 @@ export default function ProgramListe(props) {
     });
     return program;
   };
-  console.log(filteredBands());
   return (
     <section className={styles.list}>
       <form action="" className={styles.filterSection}>
@@ -57,9 +56,12 @@ export default function ProgramListe(props) {
         {filteredBands().map((venue) => {
           return (
             <ProgramVenue key={venue.venue} venue={venue.venue}>
-              {venue.bands.map((band) => {
-                return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug}></ProgramCard>;
-              })}
+
+
+                {venue.bands.map((band) => {
+                  return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug}></ProgramCard>;
+                })}
+
             </ProgramVenue>
           );
         })}

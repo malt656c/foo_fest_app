@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <main>
       <AppWrapper>
-<Program></Program>
+          <Program></Program>
       </AppWrapper>
-  </main>
+    </main>
   );
 }
