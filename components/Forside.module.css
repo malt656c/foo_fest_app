@@ -98,3 +98,20 @@
   color: var(--primary_light);
   cursor: pointer;
 }
+
+@media (min-width: 768px) {
+  .forsideHeader {
+    margin-top: 10%;
+    margin-bottom: 6rem;
+  }
+
+  .forsideButton {
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 992px) {
+  .forsideH2 {
+    font-size: 3rem;
+  }
+}

@@ -22,5 +22,19 @@
 }
 
 .footerImg {
-  height: 50px;
+  height: 49px;
+}
+
+@media (min-width: 768px) {
+  .footerBackground {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .footerBackground {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
