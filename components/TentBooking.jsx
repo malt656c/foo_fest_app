@@ -19,8 +19,12 @@ export default function TentBooking() {
 <div className={styles.Counter}>
    <button className={styles.Counterbtn}>-</button> 1 <button className={styles.Counterbtn}ß>+</button>
 </div>
+<a href="/greencamping">
 <button className={styles.Button}>Add to bag</button>
+</a>
+<a href="/checkout">
 <button className={styles.Button}>skip</button>
+</a>
 </div>
     )
 }
