@@ -2,6 +2,33 @@
   background-color: var(--primary_light);
 }
 
-.checkoutFormFlex {
+.checkoutFormGrid {
   display: grid;
+  padding: 2rem;
+}
+
+.checkoutLabel {
+  font-family: var(--heading_font);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.checkoutInput {
+  border: none;
+  background-color: var(--secondary_light);
+  height: 2rem;
+}
+
+.checkoutEtage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.checkoutDoor {
+  display: grid;
+}
+
+.checkoutButtonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
