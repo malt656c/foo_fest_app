@@ -1,5 +1,18 @@
+"use client"
+import React, { useState } from 'react';
 import styles from "./TentBooking.module.css";
 export default function TentBooking() {
+ 
+        const [count, setCount] = useState(0);
+      
+        function increment() {
+          setCount(count + 1);
+        }
+      
+        function decrement() {
+          setCount(count - 1);
+        }
+    
     return(
         <div className={styles.TentCard}>
         <h1 className={styles.Heading}>Tents</h1>
@@ -10,19 +23,19 @@ export default function TentBooking() {
         <p className={styles.Price}>299 DKK</p>
         </div>
         <div className={styles.Counter}>
-   <button className={styles.Counterbtn}>-</button> 1 <button className={styles.Counterbtn}ß>+</button>
+   <button className={styles.Counterbtn} onClick={decrement}>-</button> {count} <button className={styles.Counterbtn} onClick={increment}>+</button>
 </div>
 <div className={styles.Info}>
 <p className={styles.Text}>3 persons</p>
 <p className={styles.Price}>349 DKK</p>
 </div>
 <div className={styles.Counter}>
-   <button className={styles.Counterbtn}>-</button> 1 <button className={styles.Counterbtn}ß>+</button>
+   <button className={styles.Counterbtn} onClick={decrement}>-</button> {count} <button className={styles.Counterbtn} onClick={increment}>+</button>
 </div>
-<a href="/greencamping">
+<a href="/greencamping" className={styles.alink}>
 <button className={styles.Button}>Add to bag</button>
 </a>
-<a href="/checkout">
+<a href="/checkout" className={styles.alink}>
 <button className={styles.Button}>skip</button>
 </a>
 </div>

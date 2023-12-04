@@ -48,10 +48,14 @@
 
 }
 
+.alink {
+    text-decoration: none;
+}
+
 .Button {
-    color: var(--primary_light);
+color: var(--primary_light);
 display: block;
-  margin: 0 auto;
+margin: 0 auto;
  background-color: var(--accent_pink);
  font-family: var(--heading_font);
  font-size: large;

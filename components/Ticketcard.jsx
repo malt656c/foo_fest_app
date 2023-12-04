@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'; // Kun en import statement
+import React, { useState } from 'react';
 
 import styles from "./Ticketcard.module.css"; 
 
@@ -21,7 +21,7 @@ export default function Ticketcard() {
                 <p className={styles.Text}>Giver adgang til alle koncerter, alle dage og til teltplads i valgfrit teltområde</p>
                 <p className={styles.Price}>799 DKK</p>
                 <div className={styles.Counter}>
-                    <button className={styles.Counterbtn}>-</button>
+                    <button className={styles.Counterbtn} onClick={decrement}>-</button>
                     <p>{count}</p>
                     <button className={styles.Counterbtn} onClick={increment}>+</button>
                 </div>
