@@ -1,4 +1,5 @@
 "use client";
+import { The_Girl_Next_Door } from "next/font/google";
 import styles from "./Menu.module.css";
 export default function Menu() {
   return (
