@@ -39,6 +39,7 @@ export default function ProgramListe(props) {
       <form action="" className={styles.filterSection}>
         <div className={styles.filterGroup}>
           <label htmlFor="dayFilter">filter by day</label>
+
           <select name="day" id="dayFilter">
             <option value="today">Today</option>
             <option value="mon">Monday</option>
@@ -52,6 +53,7 @@ export default function ProgramListe(props) {
         </div>
         <div className={styles.filterGroup}>
           <label htmlFor="venueFilter">filter by venue</label>
+
           <select name="venue" id="venueFilter">
             <option value="tue">all</option>
             <option value="Midgard">Midgard</option>
@@ -63,7 +65,11 @@ export default function ProgramListe(props) {
 
       <div className={styles.bandList}>
         {filteredBands().map((band) => {
-          return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug} start={band.start} end={band.end} venue={band.venue}></ProgramCard>;
+          return (
+            <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug} start={band.start} end={band.end} venue={band.venue} genre={band.genre}>
+              {" "}
+            </ProgramCard>
+          );
         })}
       </div>
     </section>
