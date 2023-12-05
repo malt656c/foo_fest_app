@@ -4,31 +4,31 @@ export default function Footer() {
     <section className={styles.footerBackground}>
       <div className={styles.footerGapGrid}>
         <div>
-          <h3 className={styles.footerH3}>Få Hjælp</h3>
+          <h3 className={styles.footerH3}>Get Help</h3>
         </div>
         <div>
-          <p>Ofte stillede sprøgmsål</p>
-          <p>Kontakt</p>
+          <p>Questions</p>
+          <p>Contact</p>
         </div>
         <div>
-          <p>Fortrydelse & returnering</p>
-          <p>Handelsbetingelser</p>
-          <p>persondatapolitik</p>
-        </div>
-      </div>
-      <div className={styles.footerGapGrid}>
-        <div>
-          <h3 className={styles.footerH3}>Om foofest</h3>
-        </div>
-        <div>
-          <p>Job og Karriere</p>
-          <p>bliv frivillig</p>
-          <p>Samarbejdspartnere</p>
+          <p>Cancellation & Refund</p>
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
         </div>
       </div>
       <div className={styles.footerGapGrid}>
         <div>
-          <h3 className={styles.footerH3}>Følg os på de sociale medier</h3>
+          <h3 className={styles.footerH3}>About</h3>
+        </div>
+        <div>
+          <p>Job & Careers</p>
+          <p>Volunteer</p>
+          <p>Sponsers & Partners</p>
+        </div>
+      </div>
+      <div className={styles.footerGapGrid}>
+        <div>
+          <h3 className={styles.footerH3}>Follow us on social media</h3>
         </div>
         <div className={styles.footerIcons}>
           <img className={styles.footerImg} src="/facebook-f.svg" alt="facebook" />

@@ -35,7 +35,15 @@ export default function Menu() {
       >
         <MenuLink
           link="/program"
-          content="Program"
+          content="Programme"
+          click={() => {
+            setOpen(false);
+            setTranslation("-100%");
+          }}
+        />
+        <MenuLink
+          link="/booking"
+          content="Tickets"
           click={() => {
             setOpen(false);
             setTranslation("-100%");
@@ -43,7 +51,7 @@ export default function Menu() {
         />
         <MenuLink
           link="/"
-          content="Billetter"
+          content="News"
           click={() => {
             setOpen(false);
             setTranslation("-100%");
@@ -51,7 +59,7 @@ export default function Menu() {
         />
         <MenuLink
           link="/"
-          content="Nyheder"
+          content="Volunteer"
           click={() => {
             setOpen(false);
             setTranslation("-100%");
@@ -59,7 +67,7 @@ export default function Menu() {
         />
         <MenuLink
           link="/"
-          content="Bliv Frivillig"
+          content="About"
           click={() => {
             setOpen(false);
             setTranslation("-100%");
@@ -67,15 +75,7 @@ export default function Menu() {
         />
         <MenuLink
           link="/"
-          content="Om Foofest"
-          click={() => {
-            setOpen(false);
-            setTranslation("-100%");
-          }}
-        />
-        <MenuLink
-          link="/"
-          content="Kontakt"
+          content="Contact"
           click={() => {
             setOpen(false);
             setTranslation("-100%");

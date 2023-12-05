@@ -2,13 +2,18 @@
   display: grid;
   gap: 1rem;
   padding: 1rem;
-  color: var(--primary_light);
 }
 .bandContent {
   display: grid;
   gap: 1rem;
   place-items: center;
 }
+
+.bandH1 {
+  color: var(--primary_light);
+  font-family: var(--heading_font);
+}
+
 .imageWrapper {
   display: grid;
   width: fit-content;
@@ -31,24 +36,24 @@
   gap: 1rem;
   padding: 1rem;
 }
-.bandInfo>p {
+.bandInfo > p {
   max-width: 45ch;
 }
-.bandInfo>h1 {
-margin: auto;
-font-size: 3rem;
-font-family: var(--heading_font);
-  }
+.bandInfo > h1 {
+  margin: auto;
+  font-size: 3rem;
+  font-family: var(--heading_font);
+}
 .bandGeneral {
   display: grid;
-gap: 1rem;
-padding-inline: 1rem;
+  gap: 1rem;
+  padding-inline: 1rem;
 }
 .bandMembers {
   display: grid;
   gap: 0.25rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .bandContent {
     grid-template-columns: repeat(2, 1fr);
   }
