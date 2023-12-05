@@ -23,7 +23,7 @@ export default function Forside() {
 
         <button className={styles.forsideBottomButton}>
           <a className={styles.forsideAtags} href="/program">
-            Fuldt program
+            See full programme
           </a>
         </button>
       </div>
