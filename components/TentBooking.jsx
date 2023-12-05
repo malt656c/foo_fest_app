@@ -24,7 +24,7 @@ export default function TentBooking() {
           setCount2(count2 - 1);
         }
     
-    return(
+    return(<div>
         <div className={styles.TentCard}>
         <h1 className={styles.Heading}>Tents</h1>
         <h3 className={styles.H3}>Do you want a tent with that?</h3>
@@ -49,6 +49,18 @@ export default function TentBooking() {
 <a href="/checkout" className={styles.alink}>
 <button className={styles.Button}>skip</button>
 </a>
+</div>
+<div className={styles.ChooseTent}>
+<h2 className={styles.Tentheadline}>Choose your camping area</h2>
+<div className={styles.Tentareas}>
+<h3 className={styles.Tentbtn}>svartheim</h3>
+<h3 className={styles.Tentbtn}>nilfheim</h3>
+<h3 className={styles.Tentbtn}>helheim</h3>
+<h3 className={styles.Tentbtn}>muspleheim</h3>
+<h3 className={styles.Tentbtn}>alfheim</h3>
+<h3 className={styles.Tentbtn}>Surprise me</h3>
+</div>
+</div>
 </div>
     )
 }
