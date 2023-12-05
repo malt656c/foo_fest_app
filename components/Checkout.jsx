@@ -3,7 +3,7 @@ export default function Checkout() {
   return (
     <section className={styles.checkoutWrapper}>
       <div className={styles.checkoutOplysninger}>
-        <h1 className={styles.checkoutH2}>Betalingsoplysninger</h1>
+        <h2 className={styles.checkoutH2}>Betalingsoplysninger</h2>
         <form className={styles.checkoutFormGrid}>
           <label className={styles.checkoutLabel} for="firstName">
             Fornavn
@@ -117,7 +117,9 @@ export default function Checkout() {
             <p>jeg accepterer handelsbetingelserne og giver samtykke til at Foo-Fest behandler mine persondata.</p>
           </div>
           <div>
-            <button className={styles.checkoutConfirmButton}>Confirm order</button>
+            <a href="/payment">
+              <button className={styles.checkoutConfirmButton}>Confirm order</button>
+            </a>
           </div>
         </div>
       </div>

@@ -1,0 +1,54 @@
+.paymentOplysninger {
+  background-color: var(--primary_light);
+  color: var(primary_dark);
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.paymentH2 {
+  font-family: var(--heading_font);
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 3rem;
+}
+
+.paymentFormGrid {
+  display: grid;
+  padding: 1rem;
+}
+
+.paymentLabel {
+  font-family: var(--heading_font);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.paymentInput {
+  border: none;
+  background-color: var(--secondary_light);
+  height: 2rem;
+}
+
+.paymentExpire {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.paymentCVC {
+  display: grid;
+}
+
+.paymentConfirmButton {
+  background-color: var(--accent_pink);
+  border: none;
+  border-radius: 50px;
+  font-family: var(--text_font);
+  font-size: 2rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  margin: 1rem;
+}
+
+.paymentConfirmButton:hover {
+  background-color: var(--accent_red);
+}
