@@ -1,8 +1,14 @@
+.paymentWrapper {
+  display: block;
+  padding: 1rem;
+}
+
 .paymentOplysninger {
   background-color: var(--primary_light);
   color: var(primary_dark);
-  margin: 1rem;
+  margin: 0 auto;
   padding: 0.5rem;
+  max-width: 400px;
 }
 
 .paymentH2 {
@@ -44,6 +50,10 @@
   place-items: top;
 }
 
+.paymentButtonContainer {
+  text-align: center;
+}
+
 .paymentConfirmButton {
   background-color: var(--accent_pink);
   border: none;
@@ -56,4 +66,29 @@
 
 .paymentConfirmButton:hover {
   background-color: var(--accent_red);
+}
+
+@media (min-width: 768px) {
+  .paymentOplysninger {
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .paymentOplysninger {
+    max-width: 650px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  /* .paymentWrapper {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  } */
 }

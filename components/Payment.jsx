@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function Payment() {
   return (
-    <section>
+    <section className={styles.paymentWrapper}>
       <div className={styles.paymentOplysninger}>
         <h2 className={styles.paymentH2}>Payment Details</h2>
 
@@ -32,9 +32,11 @@ export default function Payment() {
             </div>
           </div>
         </form>
-        <a href="/ordercomplete">
-          <button className={styles.paymentConfirmButton}>Confirm Payment</button>
-        </a>
+        <div className={styles.paymentButtonContainer}>
+          <a href="/ordercomplete">
+            <button className={styles.paymentConfirmButton}>Confirm Payment</button>
+          </a>
+        </div>
       </div>
     </section>
   );
