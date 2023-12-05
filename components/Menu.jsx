@@ -1,7 +1,7 @@
 "use client";
 // import { The_Girl_Next_Door } from "next/font/google";
 import styles from "./Menu.module.css";
-import { Pivot as Hamburger } from "hamburger-react";
+import { Turn as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import MenuLink from "./MenuLink";
 export default function Menu() {
