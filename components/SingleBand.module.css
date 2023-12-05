@@ -1,7 +1,16 @@
+.imageWrapper {
+  display: grid;
+  width: fit-content;
+  background-color: var(--secondary_light);
+  max-width: 400px;
+  height: fit-content;
+}
+
 .wrapper {
   display: grid;
   gap: 1rem;
   padding: 1rem;
+  margin: 0 auto;
 }
 .bandContent {
   display: grid;
@@ -12,15 +21,13 @@
 .bandH1 {
   color: var(--primary_light);
   font-family: var(--heading_font);
+  font-size: 2rem;
 }
 
-.imageWrapper {
-  display: grid;
-  width: fit-content;
+.mobileWrapper {
   background-color: var(--secondary_light);
-  max-width: 400px;
-  height: fit-content;
 }
+
 .bandImage {
   width: 100%;
   height: auto;
@@ -36,8 +43,19 @@
   gap: 1rem;
   padding: 1rem;
 }
-.bandInfo > p {
+
+.bandGenre {
+  display: flex;
+}
+
+.h2Pink {
+  color: var(--accent_pink);
+}
+
+.bandInfo p {
   max-width: 45ch;
+  color: var(--primary_dark);
+  font-family: var(--text_font);
 }
 .bandInfo > h1 {
   margin: auto;
@@ -48,8 +66,16 @@
   display: grid;
   gap: 1rem;
   padding-inline: 1rem;
+  font-family: var(--heading_font);
+  text-align: center;
 }
 .bandMembers {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.bandMembers div {
+  color: var(--accent_pink);
   display: grid;
   gap: 0.25rem;
 }

@@ -30,19 +30,26 @@ export default function SingleBand(props) {
       <section className={styles.wrapper}>
         <article className={styles.bandContent}>
           <h1 className={styles.bandH1}>{data.name}</h1>
-          {imageSource()}
-          <div className={styles.bandInfo}>
-            <div className={styles.bandGeneral}>
-              <h2>Genre: {data.genre}</h2>
-              <div className={styles.bandMembers}>
-                <h3>Members:</h3>
-                {data.members.map((member) => {
-                  return <span key={member}>{member}</span>;
-                })}
+          <div className={styles.mobileWrapper}>
+            {imageSource()}
+            <div className={styles.bandInfo}>
+              <div className={styles.bandGeneral}>
+                <div className={styles.bandGenre}>
+                  <h2>Genre: </h2>
+                  <h2 className={styles.h2Pink}>{data.genre}</h2>
+                </div>
+                <div className={styles.bandMembers}>
+                  <h3>Members:</h3>
+                  <div>
+                    {data.members.map((member) => {
+                      return <span key={member}>{member}</span>;
+                    })}
+                  </div>
+                </div>
               </div>
+              <p>{data.bio}</p>
+              <p>Credits: {data.logoCredits}</p>
             </div>
-            <p>{data.bio}</p>
-            <p>{data.logoCredits}</p>
           </div>
         </article>
       </section>
