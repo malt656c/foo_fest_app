@@ -5,13 +5,15 @@
 .filterSection {
     display: grid;
   padding:1rem;
+width: auto;
   color: var(--secondary_light);
 }
 .filterGroup {
   display: grid;
   gap: 0.5rem;
 }
-.venueList {
-  display: flex;
-justify-content: space-evenly;
+.bandList {
+  display: grid;
+  gap: 1rem;
+  place-items: center;
 }

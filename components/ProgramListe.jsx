@@ -18,41 +18,22 @@ export default function ProgramListe(props) {
   const filteredBands = () => {
     let program = [];
     filter?.forEach((venue) => {
-      let bandNames = venue[Object.keys(venue)].map((i) => i.act);
-      let bands = unfliteredBands.filter((band) => bandNames.includes(band.name));
-      console.log(bandNames);
+      let bands = venue[Object.keys(venue)].map((i) => {
+        if (i.act !== "break") {
+          let bandData = unfliteredBands.filter((band) => band.name === i.act)[0];
+          let bandObject = {
+            ...bandData,
+            ...i,
+            venue: Object.keys(venue)[0],
+          };
+          delete bandObject.act;
+          program.push(bandObject);
+        }
+      });
     });
-    console.log(program);
-
     return program;
   };
-  const newFilters = () => {
-    let program = [];
-
-    filter?.forEach((venue) => {
-      let bands = venue[Object.keys(venue)].map((i) => {let bandData = unfliteredBands.filter((band) => band.name === i.act && i.act !== "break")[0];
-
-      let bandObject= {
-        ...bandData,
-        ...i
-
-    }
-    console.log(bandData)
-        console.log(bandObject)
-      });
-      console.log(bands);
-      /* bands.map((band)=>{let bandObject={
-    name:,
-    members: ,
-    genre:,
-    logoCredits:,
-    logo:,
-    bio:,
-    slug: 
-}}) */
-    });
-  };
-  console.log(newFilters());
+  console.log(filteredBands());
   return (
     <section className={styles.list}>
       <form action="" className={styles.filterSection}>
@@ -80,15 +61,9 @@ export default function ProgramListe(props) {
         </div>
       </form>
 
-      <div className={styles.venueList}>
-        {filteredBands().map((venue) => {
-          return (
-            <ProgramVenue key={venue.venue} venue={venue.venue}>
-              {venue.bands.map((band) => {
-                return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug}></ProgramCard>;
-              })}
-            </ProgramVenue>
-          );
+      <div className={styles.bandList}>
+        {filteredBands().map((band) => {
+          return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug} start={band.start} end={band.end} venue={band.venue}></ProgramCard>;
         })}
       </div>
     </section>
