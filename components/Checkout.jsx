@@ -107,12 +107,12 @@ export default function Checkout() {
             <p>???.-</p>
           </div>
         </div>
-        <div>
+        <div className={styles.checkoutOrdreBottom}>
           <div>
             <input className={styles.checkoutInput} type="text" placeholder="Enter Promocode" />
             <button className={styles.checkoutBetalingsButton}>Send</button>
           </div>
-          <div>
+          <div className={styles.checkoutHandelsbetingelser}>
             <input type="checkbox" id="myCheckbox" name="myCheckbox" />
             <p>jeg accepterer handelsbetingelserne og giver samtykke til at Foo-Fest behandler mine persondata.</p>
           </div>

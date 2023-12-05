@@ -6,7 +6,7 @@ export default function Forside() {
       <div className={styles.forsideContent}>
         <h1 className={styles.forsideHeader}>FooFest</h1>
         <button className={styles.forsideButton}>
-          <a className={styles.forsideAtags} href="/program">
+          <a className={styles.forsideAtags} href="/booking">
             Buy tickets
           </a>
         </button>
