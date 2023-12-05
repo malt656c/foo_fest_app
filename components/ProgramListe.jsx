@@ -2,7 +2,7 @@
 import ProgramVenue from "./ProgramVenue";
 import ProgramCard from "./ProgramCard";
 import styles from "./ProgramListe.module.css";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { FFGet, FFSchedule, FFScheduleToday } from "./utilities";
 export default function ProgramListe(props) {
   const [filter, setFilter] = useState(null);
@@ -20,11 +20,39 @@ export default function ProgramListe(props) {
     filter?.forEach((venue) => {
       let bandNames = venue[Object.keys(venue)].map((i) => i.act);
       let bands = unfliteredBands.filter((band) => bandNames.includes(band.name));
-      let actList = { venue: Object.keys(venue), bands: bands };
-      program.push(actList);
+      console.log(bandNames);
     });
+    console.log(program);
+
     return program;
   };
+  const newFilters = () => {
+    let program = [];
+
+    filter?.forEach((venue) => {
+      let bands = venue[Object.keys(venue)].map((i) => {let bandData = unfliteredBands.filter((band) => band.name === i.act && i.act !== "break")[0];
+
+      let bandObject= {
+        ...bandData,
+        ...i
+
+    }
+    console.log(bandData)
+        console.log(bandObject)
+      });
+      console.log(bands);
+      /* bands.map((band)=>{let bandObject={
+    name:,
+    members: ,
+    genre:,
+    logoCredits:,
+    logo:,
+    bio:,
+    slug: 
+}}) */
+    });
+  };
+  console.log(newFilters());
   return (
     <section className={styles.list}>
       <form action="" className={styles.filterSection}>
@@ -56,12 +84,9 @@ export default function ProgramListe(props) {
         {filteredBands().map((venue) => {
           return (
             <ProgramVenue key={venue.venue} venue={venue.venue}>
-
-
-                {venue.bands.map((band) => {
-                  return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug}></ProgramCard>;
-                })}
-
+              {venue.bands.map((band) => {
+                return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug}></ProgramCard>;
+              })}
             </ProgramVenue>
           );
         })}
