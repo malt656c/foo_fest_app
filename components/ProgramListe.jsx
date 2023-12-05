@@ -1,5 +1,6 @@
 "use client";
 import ProgramVenue from "./ProgramVenue";
+import { FormEvent } from "react";
 import ProgramCard from "./ProgramCard";
 import styles from "./ProgramListe.module.css";
 import { useState, useEffect } from "react";
@@ -9,16 +10,17 @@ export default function ProgramListe(props) {
   const unfliteredBands = props.bands;
   useEffect(() => {
     async function fetchSchedule() {
-      setFilter(await FFScheduleToday());
+      if (filter == null) {
+        setFilter(await FFScheduleToday());
+      }
     }
     fetchSchedule();
-  }, []);
+  }, [filter]);
 
-  console.log(filter);
   const filteredBands = () => {
     let program = [];
     filter?.forEach((venue) => {
-      let bands = venue[Object.keys(venue)].map((i) => {
+      venue[Object.keys(venue)].map((i) => {
         if (i.act !== "break") {
           let bandData = unfliteredBands.filter((band) => band.name === i.act)[0];
           let bandObject = {
@@ -33,34 +35,53 @@ export default function ProgramListe(props) {
     });
     return program;
   };
-  console.log(filteredBands());
+  const newFilter = async (event) => {
+    const formData = new FormData(event.currentTarget);
+    const day = formData.get("day");
+    const venue = formData.get("venue");
+    let daySchedule;
+    if (day == "today") {
+      daySchedule = await FFScheduleToday();
+    } else if (day !== "today") {
+      daySchedule = await FFSchedule(day);
+    }
+    if (venue == "all") {
+      setFilter(daySchedule);
+    } else if (venue !== "all") {
+      setFilter(daySchedule.filter((v) => Object.keys(v) == venue));
+    }
+  };
+  console.log(filter);
   return (
     <section className={styles.list}>
-      <form action="" className={styles.filterSection}>
-        <div className={styles.filterGroup}>
-          <label htmlFor="dayFilter">filter by day</label>
+      <form
+        action=""
+        className={styles.filterSection}
+        onChange={(event) => {
+          newFilter(event);
+        }}
+      >
+        <label htmlFor="dayFilter">filter by day</label>
 
-          <select name="day" id="dayFilter">
-            <option value="today">Today</option>
-            <option value="mon">Monday</option>
-            <option value="tue">Tuesday</option>
-            <option value="wed">Wednesday</option>
-            <option value="thu">Thursday</option>
-            <option value="fri">Friday</option>
-            <option value="sat">Saturday</option>
-            <option value="sun">Sunday</option>
-          </select>
-        </div>
-        <div className={styles.filterGroup}>
-          <label htmlFor="venueFilter">filter by venue</label>
+        <select name="day" id="dayFilter">
+          <option value="today">Today</option>
+          <option value="mon">Monday</option>
+          <option value="tue">Tuesday</option>
+          <option value="wed">Wednesday</option>
+          <option value="thu">Thursday</option>
+          <option value="fri">Friday</option>
+          <option value="sat">Saturday</option>
+          <option value="sun">Sunday</option>
+        </select>
 
-          <select name="venue" id="venueFilter">
-            <option value="tue">all</option>
-            <option value="Midgard">Midgard</option>
-            <option value="Vanaheim">Vanaheim</option>
-            <option value="Jotunheim">Jotunheim</option>
-          </select>
-        </div>
+        <label htmlFor="venueFilter">filter by venue</label>
+
+        <select name="venue" id="venueFilter">
+          <option value="all">all</option>
+          <option value="Midgard">Midgard</option>
+          <option value="Vanaheim">Vanaheim</option>
+          <option value="Jotunheim">Jotunheim</option>
+        </select>
       </form>
 
       <div className={styles.bandList}>

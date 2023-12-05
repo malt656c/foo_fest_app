@@ -1,14 +1,16 @@
 .linkWrapper {
   width: 100%;
   text-decoration: none;
-  max-width: 350px;
+  max-width: 400px;
   color: var(--primary_dark);
+
 }
 .card {
   display: grid;
   background-color: var(--secondary_light);
   width: 100%;
   place-items: center;
+  border-radius: 0.5rem;
 }
 .imageWrapper {
   display: grid;
@@ -18,12 +20,14 @@
   place-items: center;
   width: 100%;
   height: auto;
+
 }
 .bandLogo {
   object-fit: cover;
   width: 100%;
   height: auto;
   max-height: 350px;
+  border-radius:  0.5rem 0.5rem 0 0;
 }
 .imageCredits {
   background-color: var(--secondary_dark);
