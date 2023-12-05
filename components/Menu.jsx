@@ -1,5 +1,5 @@
 "use client";
-import { The_Girl_Next_Door } from "next/font/google";
+// import { The_Girl_Next_Door } from "next/font/google";
 import styles from "./Menu.module.css";
 import { Pivot as Hamburger } from "hamburger-react";
 import { useState } from "react";

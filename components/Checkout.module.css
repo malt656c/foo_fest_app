@@ -79,6 +79,16 @@
   margin: 1rem 2rem 1rem 2rem;
 }
 
+.checkoutOrdreBottom {
+  margin: 2rem;
+  text-align: center;
+}
+
+.checkoutHandelsbetingelser {
+  background-color: var(--secondary_light);
+  display: flex;
+  gap: 1rem;
+}
 .checkoutConfirmButton {
   background-color: var(--accent_pink);
   border: none;
@@ -92,6 +102,7 @@
 .checkoutConfirmButton:hover {
   background-color: var(--accent_red);
 }
+
 
 @media (min-width: 768px) {
   .checkoutWrapper {

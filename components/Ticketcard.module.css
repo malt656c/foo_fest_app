@@ -20,14 +20,19 @@
     margin: 3rem;
 }
 
+.btnlink {
+    text-decoration: none;
+}
+
 .Button {
-    display: block;
-  margin: 0 auto;
+display: block;
+margin: 0 auto;
  background-color: var(--accent_pink);
  font-family: var(--heading_font);
  font-size: large;
  padding: 6px 60px;
  border-radius: 30px;
+ border: none;
 }
 
 .Button:hover {

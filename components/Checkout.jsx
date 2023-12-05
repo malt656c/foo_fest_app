@@ -3,7 +3,7 @@ export default function Checkout() {
   return (
     <section className={styles.checkoutWrapper}>
       <div className={styles.checkoutOplysninger}>
-        <h1 className={styles.checkoutH2}>Betalingsoplysninger</h1>
+        <h2 className={styles.checkoutH2}>Betalingsoplysninger</h2>
         <form className={styles.checkoutFormGrid}>
           <label className={styles.checkoutLabel} for="firstName">
             Fornavn
@@ -13,47 +13,47 @@ export default function Checkout() {
           <label className={styles.checkoutLabel} for="lastName">
             Efternavn
           </label>
-          <input className={styles.checkoutInput} type="text" id="lastName" name="lastName" required></input>
+          <input className={styles.checkoutInput} type="text" id="lastName" name="lastName" placeholder="Jensen"required></input>
 
           <label className={styles.checkoutLabel} htmlFor="Adresse">
             Adresse
           </label>
-          <input className={styles.checkoutInput} type="text" name="Adresse" id="adresse" required />
+          <input className={styles.checkoutInput} type="text" name="Adresse" id="adresse" required  placeholder="Østergade 14"/>
 
           <div className={styles.checkoutEtage}>
             <div className={styles.checkoutDoor}>
               <label className={styles.checkoutLabel} htmlFor="etage">
                 Etage
               </label>
-              <input className={styles.checkoutInput} type="text" name="etage" id="etage" />
+              <input className={styles.checkoutInput} type="text" name="etage" id="etage" placeholder="1" />
             </div>
             <div className={styles.checkoutDoor}>
               <label className={styles.checkoutLabel} htmlFor="door">
                 Door
               </label>
-              <input className={styles.checkoutInput} type="text" name="door" id="door" />
+              <input className={styles.checkoutInput} type="text" name="door" id="door" placeholder="tv"/>
             </div>
           </div>
 
           <label className={styles.checkoutLabel} htmlFor="postnummer">
             Zip code
           </label>
-          <input className={styles.checkoutInput} type="number" name="zipcode" id="zipcode" />
+          <input className={styles.checkoutInput} type="number" name="zipcode" id="zipcode" placeholder="2200"/>
 
           <label className={styles.checkoutLabel} htmlFor="city">
             City
           </label>
-          <input className={styles.checkoutInput} type="text" name="city" id="city" />
+          <input className={styles.checkoutInput} type="text" name="city" id="city" placeholder="København Ø"/>
 
           <label className={styles.checkoutLabel} for="email">
             Email:
           </label>
-          <input className={styles.checkoutInput} type="email" id="email" name="email" required></input>
+          <input className={styles.checkoutInput} type="email" id="email" name="email" placeholder="poul-erik@mail.dk"required></input>
 
           <label className={styles.checkoutLabel} htmlFor="telephonenumber">
             Telephone
           </label>
-          <input className={styles.checkoutInput} type="number" name="telephonenumber" id="telephonenumber" />
+          <input className={styles.checkoutInput} type="text" name="telephonenumber" id="telephonenumber" placeholder="12345678" pattern="^[0-9]{8}$"/>
 
           <label className={styles.checkoutLabel} htmlFor="kommentar">
             Comments
@@ -107,17 +107,19 @@ export default function Checkout() {
             <p>???.-</p>
           </div>
         </div>
-        <div>
+        <div className={styles.checkoutOrdreBottom}>
           <div>
             <input className={styles.checkoutInput} type="text" placeholder="Enter Promocode" />
             <button className={styles.checkoutBetalingsButton}>Send</button>
           </div>
-          <div>
+          <div className={styles.checkoutHandelsbetingelser}>
             <input type="checkbox" id="myCheckbox" name="myCheckbox" />
             <p>jeg accepterer handelsbetingelserne og giver samtykke til at Foo-Fest behandler mine persondata.</p>
           </div>
           <div>
-            <button className={styles.checkoutConfirmButton}>Confirm order</button>
+            <a href="/payment">
+              <button className={styles.checkoutConfirmButton}>Confirm order</button>
+            </a>
           </div>
         </div>
       </div>
