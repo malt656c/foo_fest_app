@@ -12,6 +12,17 @@ export default function TentBooking() {
         function decrement() {
           setCount(count - 1);
         }
+
+
+        const [count2, setCount2] = useState(0);
+      
+        function increment2() {
+          setCount2(count2 + 1);
+        }
+      
+        function decrement2() {
+          setCount2(count2 - 1);
+        }
     
     return(
         <div className={styles.TentCard}>
@@ -30,7 +41,7 @@ export default function TentBooking() {
 <p className={styles.Price}>349 DKK</p>
 </div>
 <div className={styles.Counter}>
-   <button className={styles.Counterbtn} onClick={decrement}>-</button> {count} <button className={styles.Counterbtn} onClick={increment}>+</button>
+   <button className={styles.Counterbtn} onClick={decrement2}>-</button> {count2} <button className={styles.Counterbtn} onClick={increment2}>+</button>
 </div>
 <a href="/greencamping" className={styles.alink}>
 <button className={styles.Button}>Add to bag</button>

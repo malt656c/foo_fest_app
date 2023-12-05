@@ -103,6 +103,7 @@
   background-color: var(--accent_red);
 }
 
+
 @media (min-width: 768px) {
   .checkoutWrapper {
     display: grid;
