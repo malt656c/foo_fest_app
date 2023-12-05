@@ -82,16 +82,22 @@ margin: 0 auto;
 
 
 @media (min-width: 768px) {
-    .GCcard {
+    .TentCard {
       width: 600px;
     }
     .Heading {
         font-size: xx-large;
     }
+    .Counter {
+        width: 40%;
+    }
+    .Info {
+        margin: 0 120px;
+    }
   }
 
   @media (min-width: 992px) {
-    .GCcard {
+    .TentCard {
       width: 650px;
     }
     .Heading {
