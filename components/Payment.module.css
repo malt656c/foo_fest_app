@@ -33,10 +33,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  align-items: end;
 }
 
 .paymentCVC {
   display: grid;
+}
+
+.paymentCVC2 {
+  place-items: top;
 }
 
 .paymentConfirmButton {
