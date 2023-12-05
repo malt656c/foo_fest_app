@@ -37,7 +37,7 @@ export default function Ticketcard() {
                     <p>{count}</p>
                     <button className={styles.Counterbtn} onClick={increment}>+</button>
                 </div>
-                <button className={styles.Button}>BUY</button>
+                <button className={styles.Button}>Add to Cart</button>
             </div>
             <div className={styles.Card2}>
                 <h1 className={styles.Heading}>VIP</h1>
@@ -48,7 +48,7 @@ export default function Ticketcard() {
                     <p>{count2}</p>
                     <button className={styles.Counterbtn} onClick={increment2}>+</button>
                 </div>
-                <button className={styles.Button}>BUY</button>
+                <button className={styles.Button}>Add to Cart</button>
             </div>
             </div>
             <div className={styles.Buttons}>

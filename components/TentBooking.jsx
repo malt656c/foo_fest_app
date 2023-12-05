@@ -44,7 +44,7 @@ export default function TentBooking() {
    <button className={styles.Counterbtn} onClick={decrement2}>-</button> {count2} <button className={styles.Counterbtn} onClick={increment2}>+</button>
 </div>
 <a href="/greencamping" className={styles.alink}>
-<button className={styles.Button}>Add to bag</button>
+<button className={styles.Button}>Add to Cart</button>
 </a>
 <a href="/checkout" className={styles.alink}>
 <button className={styles.Button}>skip</button>
