@@ -19,7 +19,9 @@ export default function SingleBand(props) {
         return (
           <div className={styles.imageWrapper}>
             <Image src={url + data.logo} alt={data.name} height={350} width={350} className={styles.bandImage} />
-            <span className={styles.logoCredits}>*credits</span>
+            <a href="#creditId">
+              <span className={styles.logoCredits}>Photo Credits</span>
+            </a>
           </div>
         );
       } else {
@@ -48,7 +50,7 @@ export default function SingleBand(props) {
                 </div>
               </div>
               <p>{data.bio}</p>
-              <p>Credits: {data.logoCredits}</p>
+              <p id="creditId"> CREDITS: {data.logoCredits}</p>
             </div>
           </div>
         </article>
