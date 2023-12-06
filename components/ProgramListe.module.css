@@ -1,11 +1,10 @@
-.list{
-    display:grid;
-    gap: 1rem;
+.list {
+  display: grid;
+  gap: 1rem;
 }
 .filterSection {
-    display: grid;
-  padding:1rem;
-width: auto;
+  display: grid;
+  padding: 1rem;
   color: var(--secondary_light);
   gap: 1rem;
 }
@@ -13,7 +12,7 @@ width: auto;
   display: grid;
   gap: 0.5rem;
 }
-.filterGroup>select{
+.filterGroup > select {
   padding: 0.75rem;
   font-size: 1rem;
   border-radius: 1rem;
@@ -24,4 +23,17 @@ width: auto;
   gap: 1rem;
   place-items: center;
   padding: 1rem;
+}
+@media (min-width: 768px) {
+  .bandList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .filterSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .bandList {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

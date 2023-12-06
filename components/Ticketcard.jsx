@@ -5,9 +5,7 @@ tæller og add to cart kan med fordel også laves til deres
 egne client-side components mens at de andre kort kan laves
 til server-side components */
 import React, { useState } from "react";
-
 import styles from "./Ticketcard.module.css";
-
 export default function Ticketcard() {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
@@ -32,7 +30,7 @@ export default function Ticketcard() {
     <div>
       <div className={styles.Ticketcards}>
         <div className={styles.Card1}>
-          <h1 className={styles.Heading}>Regular</h1>
+          <h2 className={styles.Heading}>Regular</h2>
           <p className={styles.Text}>Provides access to all koncerts, everyday of the festival. Also provides acces to tent area of your choosing </p>
           <p className={styles.Price}>799 DKK</p>
           <div className={styles.Counter}>
@@ -46,8 +44,9 @@ export default function Ticketcard() {
           </div>
           <button className={styles.Button}>Add to Cart</button>
         </div>
+
         <div className={styles.Card2}>
-          <h1 className={styles.Heading}>VIP</h1>
+          <h2 className={styles.Heading}>VIP</h2>
           <p className={styles.Text}>Provides Access to pits, shower facilities, 20% discount on all beverages and includes all regular-ticket benefits. </p>
           <p className={styles.Price}>1299 DKK</p>
           <div className={styles.Counter}>
