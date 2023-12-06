@@ -25,7 +25,7 @@ export default function SingleBand(props) {
           </div>
         );
       } else {
-        return <Image src={data.logo} alt={data.name} height={350} width={350} className={styles.bandImage} />;
+        return <div className={styles.imageWrapper}><Image src={data.logo} alt={data.name} height={350} width={350} className={styles.bandImage} /></div>
       }
     };
     return (

@@ -4,6 +4,8 @@
   background-color: var(--secondary_light);
   max-width: 400px;
   height: fit-content;
+  object-fit: contain;
+  background-color: var(--accent_pink);
 }
 
 .wrapper {
@@ -32,7 +34,7 @@
 .bandImage {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  mix-blend-mode:luminosity;
 }
 .logoCredits {
   color: var(--primary_dark);
