@@ -12,6 +12,8 @@ eventuelt bezier
   --accent_red: #ff2e00;
   --heading_font: "Ruslan Display", sans-serif;
   --text_font: "Actor", sans-serif;
+  --bp_tablet:768px;
+  --bp_desktop:992px;
 }
 * {
   margin: 0;
