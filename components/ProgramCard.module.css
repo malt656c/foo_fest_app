@@ -19,16 +19,19 @@
   display: grid;
   position: relative;
   min-height: 200px;
-place-items: center;
+  place-items: center;
   max-height: 350px;
   width: 100%;
+  background-color: var(--accent_pink);
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 .bandLogo {
   object-fit: cover;
   width: 100%;
   height: fit-content;
   max-height: 350px;
-  border-radius:  0.5rem 0.5rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  mix-blend-mode:color-dodge;
 }
 .imageCredits {
   background-color: var(--secondary_dark);
@@ -57,7 +60,7 @@ place-items: center;
   font-family: var(--heading_font);
   font-size: 2rem;
   color: var(--primary_dark);
-text-align: center;
+  text-align: center;
 }
 .placeAndTime {
   display: grid;
@@ -69,6 +72,6 @@ text-align: center;
   gap: 0.5rem;
   font-size: 1.25rem;
 }
-.venue{
+.venue {
   font-size: 1.25rem;
 }
