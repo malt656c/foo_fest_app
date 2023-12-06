@@ -19,7 +19,9 @@ export default function SingleBand(props) {
         return (
           <div className={styles.imageWrapper}>
             <Image src={url + data.logo} alt={data.name} height={350} width={350} className={styles.bandImage} />
-            <span className={styles.logoCredits}>*credits</span>
+            <a href="#creditId">
+              <span className={styles.logoCredits}>Photo Credits</span>
+            </a>
           </div>
         );
       } else {
@@ -29,22 +31,41 @@ export default function SingleBand(props) {
     return (
       <section className={styles.wrapper}>
         <article className={styles.bandContent}>
-          <h1 className={styles.bandH1}>{data.name}</h1>
-          {imageSource()}
-          <div className={styles.bandInfo}>
-            <div className={styles.bandGeneral}>
-              <h2>Genre: {data.genre}</h2>
-              <div className={styles.bandMembers}>
-                <h3>Members:</h3>
-                {data.members.map((member) => {
-                  return <span key={member}>{member}</span>;
-                })}
+          <div>
+            <h1 className={styles.bandH1}>{data.name}</h1>
+            <div className={styles.deskImg}>{imageSource()}</div>
+          </div>
+          <div className={styles.mobileWrapper}>
+            <div className={styles.mobileImg}>{imageSource()}</div>
+            <div className={styles.bandInfo}>
+              <div className={styles.bandGeneral}>
+                <div className={styles.bandGenre}>
+                  <h2>Genre: </h2>
+                  <h2 className={styles.h2Pink}>{data.genre}</h2>
+                </div>
+                <div className={styles.bandMembers}>
+                  <h3>Members:</h3>
+                  <div>
+                    {data.members.map((member) => {
+                      return <span key={member}>{member}</span>;
+                    })}
+                  </div>
+                </div>
               </div>
+              <p>{data.bio}</p>
+              <p id="creditId"> CREDITS: {data.logoCredits}</p>
             </div>
-            <p>{data.bio}</p>
-            <p>{data.logoCredits}</p>
           </div>
         </article>
+        <div className={styles.youMightAlso}>
+          <h1>You might also like</h1>
+          <div className={styles.youMightAlsoDiv}>
+            <img src="/placeholdecard.png" alt="placeholder" />
+            <img src="/placeholdecard.png" alt="placeholder" />
+            <img src="/placeholdecard.png" alt="placeholder" />
+            <img src="/placeholdecard.png" alt="placeholder" />
+          </div>
+        </div>
       </section>
     );
   }

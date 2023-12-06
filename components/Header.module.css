@@ -8,3 +8,13 @@
 .burgerIcon {
   z-index: 10000;
 }
+
+.cartIcon {
+  width: 35px;
+}
+
+.CartAndMenu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
