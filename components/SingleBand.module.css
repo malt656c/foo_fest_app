@@ -45,6 +45,10 @@
   padding: 1rem;
 }
 
+.deskImg {
+  display: none;
+}
+
 .bandGenre {
   display: flex;
   justify-content: space-evenly;
@@ -82,8 +86,25 @@
   display: grid;
   gap: 0.25rem;
 }
+
 @media (min-width: 768px) {
   .bandContent {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .mobileWrapper {
+    background-color: var(--primary_dark);
+  }
+
+  .bandInfo {
+    color: var(--primary_light);
+  }
+  .bandInfo p {
+    color: var(--primary_light);
+  }
+  .deskImg {
+    display: block;
+  }
+  .mobileImg {
+    display: none;
   }
 }
