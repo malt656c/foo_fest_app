@@ -1,5 +1,6 @@
 import styles from "./Forside.module.css";
 import KoncertCard from "./KoncertCard";
+import News from "./News";
 export default function Forside() {
   return (
     <section className={styles.forsideWrapper}>
@@ -14,6 +15,7 @@ export default function Forside() {
 
       <div className={styles.forsideBanner}>Her skal banneret ind</div>
       <div className={styles.forsideContentBottom}>
+        <News/>
         <h2 className={styles.forsideH2}>13 New Bands Booked for Foofest</h2>
         <div className={styles.forsideMobileGrid}>
           <div className={styles.forsideArrowLeft}></div>
