@@ -7,25 +7,36 @@ export default function News() {
   useEffect(() => {
     async function getEvents() {
       if (events === null) {
-        const ffevents=await FFGet("events")
-        if(ffevents.length!==0)
-        setEvents(ffevents);
+        const ffevents = await FFGet("events");
+        if (ffevents.length !== 0) {
+          setEvents(ffevents);
+        }
       }
     }
     getEvents();
   });
   console.log(events);
-  return (
-    <section>
-      {events?.map((e) => {
-        return (
-          <div key={e.act.act}>
-            <span>{e.act.start}</span>
-            <span>{e.act.send}</span>
-            <span>{e.act.act}</span>
-          </div>
-        );
-      })}
-    </section>
-  );
+  if (events !== null) {
+    return (
+      <section className={styles.newsWrapper}>
+        <h2>Cancellations</h2>
+<div className={styles.newsScroll}>
+          {events.map((e) => {
+            return (
+              <div key={e.act.act} className={styles.newsCard}>
+                <h3>{e.act.act}</h3>
+                <span>{e.scene}</span>
+                <div className={styles.time}>
+                  <span>{e.day}</span>
+                  <span>{e.act.start}</span>
+                  <span>-</span>
+                  <span>{e.act.end}</span>
+                </div>
+              </div>
+            );
+          })}
+</div>
+      </section>
+    );
+  }
 }

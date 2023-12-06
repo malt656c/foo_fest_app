@@ -6,7 +6,7 @@ export default function BookingComplete() {
         <p className={styles.Text}>Vi har sendt en ordrebekræftelselse til e-mailen: xxx@gmail.com. </p>
 
         <p className={styles.Text}>Skulle du have yderligere spørgsmål er du velkommen til at kontakte FooFest på kontakt-foofest@gmail.com</p>
-       <a href="/forside">
+       <a href="/">
         <button className={styles.Button}>Go to Frontpage</button>
         </a>
         </div>

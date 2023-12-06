@@ -88,9 +88,7 @@ export default function ProgramListe() {
         <div className={styles.bandList}>
           {filteredBands().map((band) => {
             return (
-              <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug} start={band.start} end={band.end} venue={band.venue} genre={band.genre}>
-                {" "}
-              </ProgramCard>
+              <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug} start={band.start} end={band.end} venue={band.venue} genre={band.genre}/>
             );
           })}
         </div>

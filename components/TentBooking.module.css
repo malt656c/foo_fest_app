@@ -109,7 +109,7 @@ color: var(--primary_light);
 }
 
 .Tentbtn:hover {
-border: solid rgb(210, 10, 217) 2px;
+outline: solid rgb(210, 10, 217) 2px;
 }
 
 
