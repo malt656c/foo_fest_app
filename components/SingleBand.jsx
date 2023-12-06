@@ -57,6 +57,15 @@ export default function SingleBand(props) {
             </div>
           </div>
         </article>
+        <div className={styles.youMightAlso}>
+          <h1>You might also like</h1>
+          <div className={styles.youMightAlsoDiv}>
+            <img src="/placeholdecard.png" alt="placeholder" />
+            <img src="/placeholdecard.png" alt="placeholder" />
+            <img src="/placeholdecard.png" alt="placeholder" />
+            <img src="/placeholdecard.png" alt="placeholder" />
+          </div>
+        </div>
       </section>
     );
   }

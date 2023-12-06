@@ -87,12 +87,43 @@
   gap: 0.25rem;
 }
 
+.youMightAlso {
+  display: grid;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.youMightAlso h1 {
+  font-family: var(--heading_font);
+  color: var(--primary_light);
+  font-size: 2rem;
+}
+
+.youMightAlsoDiv {
+  justify-content: center;
+}
+
+.youMightAlsoDiv img {
+  max-width: 200px;
+}
+
 @media (min-width: 768px) {
   .bandContent {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 2fr 3fr;
   }
   .mobileWrapper {
     background-color: var(--primary_dark);
+  }
+  .bandH1 {
+    place-content: top;
+  }
+  .bandGeneral {
+    text-align: left;
+    padding: 0px;
+  }
+  .bandGenre {
+    justify-content: left;
   }
 
   .bandInfo {
@@ -100,11 +131,17 @@
   }
   .bandInfo p {
     color: var(--primary_light);
+    font-size: 1rem;
   }
   .deskImg {
     display: block;
   }
   .mobileImg {
     display: none;
+  }
+  .youMightAlsoDiv {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
   }
 }
