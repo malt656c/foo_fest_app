@@ -1,4 +1,11 @@
 import styles from "./GreenCamping.module.css";
+const products = [
+    {
+        id: 3,
+    name: "Green Camping",
+    price: 249,
+    }
+]
 export default async function GreenCamping() {
     return (
 <div className={styles.GCcard}>
