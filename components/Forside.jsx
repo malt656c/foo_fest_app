@@ -13,9 +13,11 @@ export default function Forside() {
         </button>
       </div>
 
-      <div className={styles.forsideBanner}>Her skal banneret ind</div>
+      <div className={styles.forsideBanner}>
+        <marquee>Her skal banneret ind eller bands der spiller nu</marquee>
+      </div>
       <div className={styles.forsideContentBottom}>
-        <News/>
+        <News />
         <h2 className={styles.forsideH2}>13 New Bands Booked for Foofest</h2>
         <div className={styles.forsideMobileGrid}>
           <div className={styles.forsideArrowLeft}></div>

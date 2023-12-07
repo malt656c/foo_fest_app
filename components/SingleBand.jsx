@@ -25,7 +25,11 @@ export default function SingleBand(props) {
           </div>
         );
       } else {
-        return <div className={styles.imageWrapper}><Image src={data.logo} alt={data.name} height={350} width={350} className={styles.bandImage} /></div>
+        return (
+          <div className={styles.imageWrapper}>
+            <Image src={data.logo} alt={data.name} height={350} width={350} className={styles.bandImage} />
+          </div>
+        );
       }
     };
     return (
@@ -53,7 +57,7 @@ export default function SingleBand(props) {
                 </div>
               </div>
               <p>{data.bio}</p>
-              <p id="creditId"> CREDITS: {data.logoCredits}</p>
+              {data.logoCredits && <p id="creditId">CREDITS: {data.logoCredits}</p>}
             </div>
           </div>
         </article>

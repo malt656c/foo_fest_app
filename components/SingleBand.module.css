@@ -34,12 +34,13 @@
 .bandImage {
   width: 100%;
   height: auto;
-  mix-blend-mode:luminosity;
+  mix-blend-mode: luminosity;
 }
 .logoCredits {
   color: var(--primary_dark);
   padding: 1rem;
   word-break: break-all;
+  text-decoration: none;
 }
 .bandInfo {
   display: grid;
