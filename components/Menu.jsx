@@ -7,7 +7,10 @@ import MenuLink from "./MenuLink";
 export default function Menu() {
   const [isOpen, setOpen] = useState(false);
   const [translation, setTranslation] = useState("-100%");
-
+const linkOnClick=()=>{
+  setOpen(false);
+  setTranslation("-100%");
+}
   return (
     <>
       <div className={styles.burgerIcon}>
@@ -37,48 +40,42 @@ export default function Menu() {
           link="/program"
           content="Programme"
           click={() => {
-            setOpen(false);
-            setTranslation("-100%");
+            linkOnClick()
           }}
         />
         <MenuLink
           link="/booking"
           content="Tickets"
           click={() => {
-            setOpen(false);
-            setTranslation("-100%");
+            linkOnClick()
           }}
         />
         <MenuLink
           link="/"
           content="News"
           click={() => {
-            setOpen(false);
-            setTranslation("-100%");
+            linkOnClick()
           }}
         />
         <MenuLink
           link="/"
           content="Volunteer"
           click={() => {
-            setOpen(false);
-            setTranslation("-100%");
+            linkOnClick()
           }}
         />
         <MenuLink
           link="/"
           content="About"
           click={() => {
-            setOpen(false);
-            setTranslation("-100%");
+            linkOnClick()
           }}
         />
         <MenuLink
           link="/"
           content="Contact"
           click={() => {
-            setOpen(false);
-            setTranslation("-100%");
+            linkOnClick()
           }}
         />
       </nav>

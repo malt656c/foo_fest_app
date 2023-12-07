@@ -15,7 +15,6 @@ export default function News() {
     }
     getEvents();
   });
-  console.log(events);
   if (events !== null) {
     return (
       <section className={styles.newsWrapper}>
