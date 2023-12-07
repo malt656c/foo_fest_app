@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Footer.module.css";
 export default function Footer() {
   return (
@@ -7,8 +8,10 @@ export default function Footer() {
           <h3 className={styles.footerH3}>Get Help</h3>
         </div>
         <div>
-          <p>Questions</p>
-          <p>Contact</p>
+          <Link href="/">
+            <p>Questions</p>
+          </Link>
+          <Link href="/">Contact</Link>
         </div>
         <div>
           <p>Cancellation & Refund</p>
@@ -31,7 +34,9 @@ export default function Footer() {
           <h3 className={styles.footerH3}>Follow us on social media</h3>
         </div>
         <div className={styles.footerIcons}>
-          <img className={styles.footerImg} src="/facebook-f.svg" alt="facebook" />
+          <Link href="https://www.facebook.com/">
+            <img className={styles.footerImg} src="/facebook-f.svg" alt="facebook" />
+          </Link>
           <img className={styles.footerImg} src="/instagram(2).svg" alt="instagram" />
           <img className={styles.footerImg} src="/tiktok.svg" alt="tiktok" />
         </div>

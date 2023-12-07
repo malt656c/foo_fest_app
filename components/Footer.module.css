@@ -16,6 +16,11 @@
   font-size: 26px;
 }
 
+.footerGapGrid p {
+  text-decoration: none;
+  color: var(--primary_dark);
+}
+
 .footerIcons {
   display: flex;
   justify-content: space-between;
