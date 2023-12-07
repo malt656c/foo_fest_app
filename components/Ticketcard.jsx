@@ -13,19 +13,19 @@ export default function Ticketcard() {
   function increment() {
     setCount(count + 1);
   }
-
   function decrement() {
-    setCount(count - 1);
+    if (count > 0) {
+      setCount(count - 1);
+    }
   }
-
   function increment2() {
     setCount2(count2 + 1);
   }
-
   function decrement2() {
-    setCount2(count2 - 1);
+    if (count2 > 0) {
+      setCount2(count2 - 1);
+    }
   }
-
   return (
     <div>
       <div className={styles.Ticketcards}>
