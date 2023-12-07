@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Shoppingcart.module.css";
 export default function Shoppingcart({ visibility, products, onProductRemove, onClose, onQuantityChange }) {
   return (
-    <div className="modal" style={{ display: visibility ? "block" : "none" }}>
+    <div className={styles.wrapper} style={{ display: visibility ? "block" : "none" }}>
       <div className="header">
         <h2>Shopping Cart</h2>
         <button className={styles.btn + " " + styles.closebtn} onClick={onClose}>

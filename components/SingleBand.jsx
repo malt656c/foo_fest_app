@@ -7,12 +7,13 @@ export default function SingleBand(props) {
   const [data, setData] = useState(null);
   useEffect(() => {
     async function GetData() {
-      setData(await FFGet(`bands/${props.slug}`));
+      if (data == null) {
+        setData(await FFGet(`bands/${props.slug}`));
+      }
     }
     GetData();
   });
   const url = "http://localhost:8080/logos/";
-  console.log(data);
   if (data !== null) {
     const imageSource = () => {
       if (data.logoCredits || !data.logo.includes("http")) {

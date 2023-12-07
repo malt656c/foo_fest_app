@@ -1,5 +1,5 @@
 "use client";
-import React, {useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 //HIV STATE IND DEL 1
 import { StateContext } from "../src/app/contexts/basketContext";
 import styles from "./Header.module.css";
@@ -13,20 +13,22 @@ export default function Header() {
   //HIV STATE IND DEL 2
   const productsInCart = useContext(StateContext);
   return (
-      <section className={styles.headerBackground}>
-        <Link href={"/"}>
-          <Image src="/mobilelogo.svg" alt="logo" height={48} width={48} />
-        </Link>
-        <div className={styles.CartAndMenu}>
-        <Shoppingcart
-        visibility={cartVisibility}
-        products={productsInCart}></Shoppingcart>
-        <button className={styles.cartIcon}  onClick={() => setCartVisible(true)}> 
-        <Image src="/cart-shopping-solid.svg" alt="Cart" width={50} height={50}></Image>
+    <section className={styles.headerBackground}>
+      <Link href={"/"}>
+        <Image src="/mobilelogo.svg" alt="logo" height={48} width={48} />
+      </Link>
+      <div className={styles.CartAndMenu}>
+        <Shoppingcart visibility={cartVisibility} products={productsInCart}></Shoppingcart>
+        <button
+          className={styles.cartIcon}
+          onClick={() => {
+            cartVisibility ? setCartVisible(false) : setCartVisible(true);
+          }}
+        >
+          <Image src="/cart-shopping-solid.svg" alt="Cart" width={50} height={50}></Image>
         </button>
         <Menu></Menu>
-        </div>
-      </section>
+      </div>
+    </section>
   );
 }
-

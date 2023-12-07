@@ -4,13 +4,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  position: relative;
 }
 .burgerIcon {
   z-index: 10000;
 }
 
 .cartIcon {
-  width: 35px;
+background-color: transparent;
+border: none;
 }
 
 .CartAndMenu {
