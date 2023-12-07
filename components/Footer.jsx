@@ -8,15 +8,23 @@ export default function Footer() {
           <h3 className={styles.footerH3}>Get Help</h3>
         </div>
         <div>
-          <Link href="/">
+          <Link className={styles.footerLink} href="/">
             <p>Questions</p>
           </Link>
-          <Link href="/">Contact</Link>
+          <Link className={styles.footerLink} href="/">
+            <p>Contact</p>
+          </Link>
         </div>
         <div>
-          <p>Cancellation & Refund</p>
-          <p>Terms and Conditions</p>
-          <p>Privacy Policy</p>
+          <Link className={styles.footerLink} href="/">
+            <p>Cancellation & Refund</p>
+          </Link>
+          <Link className={styles.footerLink} href="/">
+            <p>Terms and Conditions</p>
+          </Link>
+          <Link className={styles.footerLink} href="/">
+            <p>Privacy Policy</p>
+          </Link>
         </div>
       </div>
       <div className={styles.footerGapGrid}>
@@ -24,9 +32,15 @@ export default function Footer() {
           <h3 className={styles.footerH3}>About</h3>
         </div>
         <div>
-          <p>Job & Careers</p>
-          <p>Volunteer</p>
-          <p>Sponsers & Partners</p>
+          <Link className={styles.footerLink} href="/">
+            <p>Job & Careers</p>
+          </Link>
+          <Link className={styles.footerLink} href="/">
+            <p>Volunteer</p>
+          </Link>
+          <Link className={styles.footerLink} href="/">
+            <p>Sponsers & Partners</p>
+          </Link>
         </div>
       </div>
       <div className={styles.footerGapGrid}>
@@ -34,11 +48,15 @@ export default function Footer() {
           <h3 className={styles.footerH3}>Follow us on social media</h3>
         </div>
         <div className={styles.footerIcons}>
-          <Link href="https://www.facebook.com/">
+          <Link href="https://www.facebook.com/" target="blank">
             <img className={styles.footerImg} src="/facebook-f.svg" alt="facebook" />
           </Link>
-          <img className={styles.footerImg} src="/instagram(2).svg" alt="instagram" />
-          <img className={styles.footerImg} src="/tiktok.svg" alt="tiktok" />
+          <Link href="https://www.facebook.com/" target="blank">
+            <img className={styles.footerImg} src="/instagram(2).svg" alt="instagram" />
+          </Link>
+          <Link href="https://www.facebook.com/" target="blank">
+            <img className={styles.footerImg} src="/tiktok.svg" alt="tiktok" />
+          </Link>
         </div>
       </div>
     </section>

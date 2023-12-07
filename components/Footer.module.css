@@ -21,6 +21,14 @@
   color: var(--primary_dark);
 }
 
+.footerLink {
+  text-decoration: none;
+}
+
+.footerGapGrid p:hover {
+  color: var(--accent_red);
+}
+
 .footerIcons {
   display: flex;
   justify-content: space-between;
