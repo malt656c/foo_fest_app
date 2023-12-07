@@ -1,12 +1,18 @@
 "use client";
+
 /* TODO:
 lav de enkelte cards til components, det vil spare på javascript. 
 tæller og add to cart kan med fordel også laves til deres
 egne client-side components mens at de andre kort kan laves
 til server-side components */
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "./Ticketcard.module.css";
+//HIV STATE UPDATRE FUNKTION IND, DEL 1
+import { UpdaterContext } from "../src/app/contexts/basketContext";
 export default function Ticketcard() {
+  //HIV STATE UPDATRE FUNKTION IND, DEL 2
+  const setProductsInCart = useContext(UpdaterContext);
+
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
 
@@ -26,6 +32,25 @@ export default function Ticketcard() {
       setCount2(count2 - 1);
     }
   }
+
+  function addToBasketRegular(){
+    setProductsInCart(o=>o.concat({
+      name: "Regular Ticket",
+      price: 799,
+      count: count,
+      id:1
+    }))
+  }
+
+  function addToBasketVip(){
+    setProductsInCart(o=>o.concat({
+      name: "Ticket VIP",
+      price: 799,
+      count: count2,
+      id:2
+    }))
+  }
+
   return (
     <div>
       <div className={styles.Ticketcards}>
@@ -42,7 +67,7 @@ export default function Ticketcard() {
               +
             </button>
           </div>
-          <button className={styles.Button}>Add to Cart</button>
+          <button className={styles.Button} onClick={addToBasketRegular}>Add to Cart</button>
         </div>
 
         <div className={styles.Card2}>
@@ -58,7 +83,7 @@ export default function Ticketcard() {
               +
             </button>
           </div>
-          <button className={styles.Button}>Add to Cart</button>
+          <button className={styles.Button} onClick={addToBasketVip}>Add to Cart</button>
         </div>
       </div>
       <div className={styles.Buttons}>

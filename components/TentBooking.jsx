@@ -1,6 +1,19 @@
 "use client"
 import React, { useState } from 'react';
 import styles from "./TentBooking.module.css";
+
+const products = [
+  {
+    id: 4,
+    name: "2 Person tent",
+    price: 299
+  },
+  {
+    id: 5,
+    name: "3 Person tent",
+    price: 349
+  }
+]
 export default function TentBooking() {
  
         const [count, setCount] = useState(0);
