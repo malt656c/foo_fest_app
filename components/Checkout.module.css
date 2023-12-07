@@ -25,6 +25,7 @@
   border: none;
   background-color: var(--secondary_light);
   height: 2rem;
+  width: 100%;
 }
 
 .checkoutEtage {
@@ -84,10 +85,26 @@
   text-align: center;
 }
 
+.checkoutPromo {
+  display: flex;
+}
+
+.checkoutPromo button {
+  background-color: var(--accent_pink);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-family: var(--text_font);
+}
+
 .checkoutHandelsbetingelser {
   background-color: var(--secondary_light);
   display: flex;
   gap: 1rem;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+  margin: 10% 0%;
 }
 .checkoutConfirmButton {
   background-color: var(--accent_pink);
@@ -97,12 +114,12 @@
   font-size: 2rem;
   padding: 1rem 1.5rem 1rem 1.5rem;
   margin: 1rem;
+  cursor: pointer;
 }
 
 .checkoutConfirmButton:hover {
   background-color: var(--accent_red);
 }
-
 
 @media (min-width: 768px) {
   .checkoutWrapper {

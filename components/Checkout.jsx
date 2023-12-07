@@ -13,12 +13,12 @@ export default function Checkout() {
           <label className={styles.checkoutLabel} for="lastName">
             Efternavn
           </label>
-          <input className={styles.checkoutInput} type="text" id="lastName" name="lastName" placeholder="Jensen"required></input>
+          <input className={styles.checkoutInput} type="text" id="lastName" name="lastName" placeholder="Jensen" required></input>
 
           <label className={styles.checkoutLabel} htmlFor="Adresse">
             Adresse
           </label>
-          <input className={styles.checkoutInput} type="text" name="Adresse" id="adresse" required  placeholder="Østergade 14"/>
+          <input className={styles.checkoutInput} type="text" name="Adresse" id="adresse" required placeholder="Østergade 14" />
 
           <div className={styles.checkoutEtage}>
             <div className={styles.checkoutDoor}>
@@ -31,29 +31,29 @@ export default function Checkout() {
               <label className={styles.checkoutLabel} htmlFor="door">
                 Door
               </label>
-              <input className={styles.checkoutInput} type="text" name="door" id="door" placeholder="tv"/>
+              <input className={styles.checkoutInput} type="text" name="door" id="door" placeholder="tv" />
             </div>
           </div>
 
           <label className={styles.checkoutLabel} htmlFor="postnummer">
             Zip code
           </label>
-          <input className={styles.checkoutInput} type="number" name="zipcode" id="zipcode" placeholder="2200"/>
+          <input className={styles.checkoutInput} type="number" name="zipcode" id="zipcode" placeholder="2200" />
 
           <label className={styles.checkoutLabel} htmlFor="city">
             City
           </label>
-          <input className={styles.checkoutInput} type="text" name="city" id="city" placeholder="København Ø"/>
+          <input className={styles.checkoutInput} type="text" name="city" id="city" placeholder="København Ø" />
 
           <label className={styles.checkoutLabel} for="email">
             Email:
           </label>
-          <input className={styles.checkoutInput} type="email" id="email" name="email" placeholder="poul-erik@mail.dk"required></input>
+          <input className={styles.checkoutInput} type="email" id="email" name="email" placeholder="poul-erik@mail.dk" required></input>
 
           <label className={styles.checkoutLabel} htmlFor="telephonenumber">
             Telephone
           </label>
-          <input className={styles.checkoutInput} type="text" name="telephonenumber" id="telephonenumber" placeholder="12345678" pattern="^[0-9]{8}$"/>
+          <input className={styles.checkoutInput} type="text" name="telephonenumber" id="telephonenumber" placeholder="12345678" pattern="^[0-9]{8}$" />
 
           <label className={styles.checkoutLabel} htmlFor="kommentar">
             Comments
@@ -108,13 +108,13 @@ export default function Checkout() {
           </div>
         </div>
         <div className={styles.checkoutOrdreBottom}>
-          <div>
+          <div className={styles.checkoutPromo}>
             <input className={styles.checkoutInput} type="text" placeholder="Enter Promocode" />
-            <button className={styles.checkoutBetalingsButton}>Send</button>
+            <button>Send</button>
           </div>
           <div className={styles.checkoutHandelsbetingelser}>
-            <input type="checkbox" id="myCheckbox" name="myCheckbox" />
-            <p>jeg accepterer handelsbetingelserne og giver samtykke til at Foo-Fest behandler mine persondata.</p>
+            <input type="checkbox" id="myCheckbox" name="myCheckbox" required />
+            <p>Jeg accepterer handelsbetingelserne og giver samtykke til at Foo-Fest behandler mine persondata.</p>
           </div>
           <div>
             <a href="/payment">
