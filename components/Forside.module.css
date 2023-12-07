@@ -40,6 +40,11 @@
   cursor: pointer;
   margin-top: 50%;
 }
+
+.forsideButton:hover {
+  background-color: var(--accent_red);
+}
+
 .forsideBanner {
   width: 100%;
   height: 50px;
@@ -97,6 +102,10 @@
   background-color: var(--accent_pink);
   color: var(--primary_light);
   cursor: pointer;
+}
+
+.forsideBottomButton:hover {
+  background-color: red;
 }
 
 @media (min-width: 768px) {
