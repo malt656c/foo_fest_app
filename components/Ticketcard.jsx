@@ -41,6 +41,16 @@ export default function Ticketcard() {
       id:1
     }))
   }
+
+  function addToBasketVip(){
+    setProductsInCart(o=>o.concat({
+      name: "Ticket VIP",
+      price: 799,
+      count: count2,
+      id:2
+    }))
+  }
+
   return (
     <div>
       <div className={styles.Ticketcards}>
@@ -73,7 +83,7 @@ export default function Ticketcard() {
               +
             </button>
           </div>
-          <button className={styles.Button}>Add to Cart</button>
+          <button className={styles.Button} onClick={addToBasketVip}>Add to Cart</button>
         </div>
       </div>
       <div className={styles.Buttons}>
