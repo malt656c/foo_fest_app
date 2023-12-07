@@ -1,6 +1,6 @@
 /* vores fetch function der henter data fra vores api med et specificeret endpoint */
 /* OBS
-is server side component skal den bruges i en async funktion for at hente dataen korrekt 
+i server side component skal den bruges i en async funktion for at hente dataen korrekt 
 i client side component skal den bruges i en async funktion sammen med useEffect hook*/
 async function FFGet(endpoint) {
   const url = "http://localhost:8080/";

@@ -1,5 +1,4 @@
 import styles from "./Forside.module.css";
-import KoncertCard from "./KoncertCard";
 import News from "./News";
 import PlayingNow from "./PlayingNow";
 export default function Forside() {
