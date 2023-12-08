@@ -9,7 +9,7 @@
 .wrapper > h2 {
   color: var(--primary_light);
   font-family: var(--heading_font);
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .scrollWrapper {
   display: grid;
@@ -21,23 +21,60 @@
   max-width: 700px;
 }
 .card {
-  display: flex;
-  gap: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
   padding-block: 1rem 0.5rem;
   white-space: nowrap;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .card span {
   color: var(--primary_light);
   font-family: var(--heading_font);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 100;
 }
 .card span:first-child {
   color: var(--accent_pink);
   font-family: var(--heading_font);
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 100;
 }
 
+.card span:nth-child(2) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .wrapper > h2 {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    display: flex;
+    gap: 0.75rem;
+    padding-block: 1rem 0.5rem;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card span {
+    font-size: 1.75rem;
+  }
+
+  .card span:first-child {
+    font-size: 1.75rem;
+  }
+
+  .card span:nth-child(2) {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper > h2 {
+    font-size: 4rem;
+  }
+}
