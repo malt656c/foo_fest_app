@@ -1,9 +1,12 @@
 .Background {
-    margin: 0 auto;
-    width: 350px;
-    background-color: var(--primary_dark);
+  margin: auto;
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+align-items: center;
+    padding-inline: 2rem;
+    gap: 2rem;
 }
-
 .Heading {
     font-size: xxx-large;
     padding-top: 2rem;
@@ -29,15 +32,21 @@ border: none;
 .Button:hover {
   background-color: var(--accent_red);
 }
+.Buttons{
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
 @media (min-width: 768px) {
   .Background {
-    width: 600px;
+grid-template-columns: repeat(2, 1fr);
+  }
+  .Heading,.Buttons{
+    grid-column: span 2;
   }
 }
 
 @media (min-width: 992px) {
-  .Background {
-    width: 600px;
-  }
+
 
 }

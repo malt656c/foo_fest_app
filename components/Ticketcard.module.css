@@ -1,111 +1,85 @@
-
-
 .Card {
-    padding: 2rem;
-    background-color: var(--primary_light);
-    margin: 3rem;
-    
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  padding: 2rem;
+  max-width: 400px;
+  margin: auto;
 }
 
 .Heading {
-    font-size: xx-large;
-    text-align: center;
-    font-family: var(--heading_font);
-    color: var(--secondary_dark)
+  font-size: xx-large;
+  text-align: center;
+  font-family: var(--heading_font);
+  color: var(--secondary_dark);
+  width: 100%;
 }
 
 .btnlink {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .Button {
-display: block;
-margin: 0 auto;
- background-color: var(--accent_pink);
- font-family: var(--heading_font);
- font-size: large;
- padding: 6px 60px;
- border-radius: 30px;
- border: none;
+  display: block;
+  background-color: var(--accent_pink);
+  font-family: var(--heading_font);
+  font-size: large;
+  padding: 6px 60px;
+  border-radius: 30px;
+  border: none;
 }
 
 .Button:hover {
-    background-color: var(--accent_red);
+  background-color: var(--accent_red);
 }
 
 .Price {
-    font-family: var(--heading_font);
-    color: var(--secondary_dark);
-    text-align: center;
-    font-size: x-large;
-
+  font-family: var(--heading_font);
+  color: var(--secondary_dark);
+  text-align: center;
+  font-size: x-large;
 }
 
 .Text {
-    text-align: center;
-    font-family: var(--text_font);
+  text-align: center;
+  font-family: var(--text_font);
 }
 
 .Counter {
-    font-family: var(--display_font);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%;
-    padding: 5px 10px;
-    margin: 0 auto;
-    border: var(--accent_pink) 2px solid;
-    margin-bottom: 10px;
+  font-family: var(--display_font);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  padding: 5px 10px;
+  margin: 0 auto;
+  border: var(--accent_pink) 2px solid;
+  margin-bottom: 10px;
 }
 
 .Counterbtn {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
 }
 
-
-
-
-
-.Heading,
-.Text,
-.Price,
-.Button {
-  margin-bottom: 20px;
-}  
-
-
 @media (min-width: 768px) {
-    .Heading {
-        font-size: xx-large;
-    }
-    .Counter  {
-        width: 40%;
-
-    }
+  .Heading {
+    font-size: xx-large;
   }
-
-  @media (min-width: 992px) {
-    .Ticketcards {
-        justify-content: center;
-        display: flex;
-    }
-    .Card1 {
-        height: 450px;
-        margin: 2rem;
-        padding: 5rem;
-    }
-    .Card2 {
-        height: 450px;
-        margin: 2rem;
-        padding: 5rem;
-    }
-    .Text {
-        width: 250px;
-    }
-    .Counter  {
-        width: 60%;
-
-    }
+  .Counter {
+    width: 40%;
   }
+}
+
+@media (min-width: 992px) {
+  .Card {
+    height: 450px;
+  }
+  .Text {
+    width: 250px;
+  }
+  .Counter {
+    width: 60%;
+  }
+}
