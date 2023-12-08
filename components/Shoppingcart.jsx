@@ -3,11 +3,10 @@ import styles from "./Shoppingcart.module.css";
 export default function Shoppingcart({ visibility, products, onProductRemove, onClose, onQuantityChange }) {
   return (
     <div className={styles.wrapper} style={{ display: visibility ? "block" : "none" }}>
-      <div className="header">
+      <div className={styles.header}>
         <h2>Shopping Cart</h2>
         <button className={styles.btn + " " + styles.closebtn} onClick={onClose}>
-          Kryds ikon her
-        </button>
+<img src="/xmark-solid.svg" alt="Close" />        </button>
       </div>
       <div className={styles.cartproducts}>
         {products.length === 0 && <span className={styles.emptytext}>Your basket is currently empty</span>}
@@ -15,7 +14,9 @@ export default function Shoppingcart({ visibility, products, onProductRemove, on
           <div className={styles.cartproduct} key={product.id}>
             <div className={styles.productinfo}>
               <h3>{product.name}</h3>
-              <span className={styles.productprice}>{(product.price = product.count)}$</span>
+              <span className={styles.productprice}>
+                {product.count}Stk</span>
+                <span>{product.price}DKK</span>
               <select
                 className={styles.count}
                 value={product.count}
@@ -33,8 +34,7 @@ export default function Shoppingcart({ visibility, products, onProductRemove, on
                 })}
               </select>
               <button className={styles.btn + " " + styles.removebtn} onClick={() => onProductRemove(product)}>
-                kryds her
-              </button>
+<img src="/xmark-solid.svg" alt="Close" />              </button>
             </div>
           </div>
         ))}
