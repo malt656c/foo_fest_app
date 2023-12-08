@@ -29,7 +29,6 @@ export default function PlayingNow() {
       }
     }
     getCurrentbands();
-    console.log(currentBands);
   });
   return (
     <>
@@ -38,15 +37,14 @@ export default function PlayingNow() {
         <div className={styles.scrollWrapper}>
           {currentBands?.map((band) => {
             return (
-              <div key={band.venue} className={styles.card} style={{animationPlayState:isPlaying?"running":"paused"}}>
-                <span>{band.act}</span>
-                <span>●</span>
+              <div key={band.venue} className={styles.card} style={{ animationPlayState: isPlaying ? "running" : "paused" }}>
                 <span>{band.venue}</span>
+                <span>●</span>
+                <span>{band.act}</span>
               </div>
             );
           })}
         </div>
-        <button onClick={()=>{isPlaying? setIsPlaying(false):setIsPlaying(true)}}>Press for headache</button>
       </section>
     </>
   );

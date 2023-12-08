@@ -12,28 +12,21 @@
   font-size: 2.5rem;
 }
 .scrollWrapper {
-  display: flex;
-  overflow: hidden;
-  gap: 3rem;
-  max-width: 100%;
+  display: grid;
+  gap: 2rem;
   border-block: 2px solid var(--primary_light);
   padding-inline: 1rem;
-  position: relative;
-  height: 75px;
+  min-width: fit-content;
   width: 100%;
+  max-width: 700px;
 }
 .card {
-  --animation_duration: 24s;
   display: flex;
   gap: 0.75rem;
   padding-block: 1rem 0.5rem;
   white-space: nowrap;
   align-items: center;
   justify-content: center;
-  animation: scroll_kf var(--animation_duration) linear infinite;
-  left: -100vw;
-  position: absolute;
-  width: 100vw;
 }
 .card span {
   color: var(--primary_light);
@@ -41,20 +34,10 @@
   font-size: 1.75rem;
   font-weight: 100;
 }
-.card:nth-of-type(1) {
-  animation-delay: 0s;
+.card span:first-child {
+  color: var(--accent_pink);
+  font-family: var(--heading_font);
+  font-size: 1.75rem;
+  font-weight: 100;
 }
-.card:nth-of-type(2) {
-  animation-delay: calc(var(--animation_duration) / 3);
-}
-.card:nth-of-type(3) {
-  animation-delay: calc((var(--animation_duration) / 3) * 2);
-}
-@keyframes scroll_kf {
-  0% {
-    transform: translateX(0vw);
-  }
-  100% {
-    transform: translateX(300vw);
-  }
-}
+

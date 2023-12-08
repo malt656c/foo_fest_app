@@ -12,25 +12,8 @@ export default function Forside() {
           </a>
         </button>
       </div>
-
-
-<PlayingNow/>
-
-      <div className={styles.forsideContentBottom}>
-        <News />
-        <h2 className={styles.forsideH2}>13 New Bands Booked for Foofest</h2>
-        <div className={styles.forsideMobileGrid}>
-          <div className={styles.forsideArrowLeft}></div>
-          <img src="/placeholdecard.png" width={170} alt="placeholdecard" />
-          <div className={styles.forsideArrowRight}></div>
-        </div>
-
-        <button className={styles.forsideBottomButton}>
-          <a className={styles.forsideAtags} href="/program">
-            See full programme
-          </a>
-        </button>
-      </div>
+      <PlayingNow />
+      <News />
     </section>
   );
 }
