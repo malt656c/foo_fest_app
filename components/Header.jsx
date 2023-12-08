@@ -13,16 +13,14 @@ export default function Header() {
   //HIV STATE IND DEL 2
   const productsInCart = useContext(StateContext);
   return (
-      <section className={styles.headerBackground}>
-        <Link href={"/"}>
-          <Image src="/mobilelogo.svg" alt="logo" height={48} width={48} />
-        </Link>
-        <div className={styles.CartAndMenu}>
-        <Shoppingcart
-        visibility={cartVisibility}
-        products={productsInCart}></Shoppingcart>
-        <button className={styles.cartIcon}  onClick={() => setCartVisible(true)}> 
-        <Image src="/cart-shopping-solid.svg" alt="Cart" width={70} height={70}></Image>
+    <section className={styles.headerBackground}>
+      <Link href={"/"}>
+        <Image src="/mobilelogo.svg" alt="logo" height={48} width={48} />
+      </Link>
+      <div className={styles.CartAndMenu}>
+        <Shoppingcart visibility={cartVisibility} products={productsInCart}></Shoppingcart>
+        <button className={styles.cartIcon} onClick={() => (cartVisibility ? setCartVisible(false) : setCartVisible(true))}>
+          <Image src="/cart-shopping-solid.svg" alt="Cart" width={48} height={48}></Image>
         </button>
         <Menu></Menu>
       </div>
