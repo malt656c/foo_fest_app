@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { FFScheduleToday } from "./utilities";
 import styles from "./PlayingNow.module.css";
+import Link from "next/link";
 export default function PlayingNow() {
   const [currentBands, setCurrentBands] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -34,14 +35,17 @@ export default function PlayingNow() {
     <>
       <section className={styles.wrapper}>
         <h2>Playing Now</h2>
+
         <div className={styles.scrollWrapper}>
           {currentBands?.map((band) => {
             return (
-              <div key={band.venue} className={styles.card} style={{ animationPlayState: isPlaying ? "running" : "paused" }}>
-                <span>{band.venue}</span>
-                <span>●</span>
-                <span>{band.act}</span>
-              </div>
+              <Link href={`/program`}>
+                <div key={band.venue} className={styles.card} style={{ animationPlayState: isPlaying ? "running" : "paused" }}>
+                  <span>{band.venue}</span>
+                  <span>●</span>
+                  <span>{band.act}</span>
+                </div>
+              </Link>
             );
           })}
         </div>
