@@ -5,8 +5,9 @@ export default function Shoppingcart({ visibility, products, onProductRemove, on
     <div className={styles.wrapper} style={{ display: visibility ? "block" : "none" }}>
       <div className={styles.header}>
         <h2>Shopping Cart</h2>
-        <button className={styles.btn + " " + styles.closebtn} onClick={onClose}>
-<img src="/xmark-solid.svg" alt="Close" />        </button>
+        <button className={styles.btn + " " + styles.closebtn} onClick={() => (cartVisibility ? setCartVisible(false) : setCartVisible(true))}>
+       <img src="/xmark-solid.svg" alt="Close" />
+       </button>
       </div>
       <div className={styles.cartproducts}>
         {products.length === 0 && <span className={styles.emptytext}>Your basket is currently empty</span>}
@@ -14,10 +15,12 @@ export default function Shoppingcart({ visibility, products, onProductRemove, on
           <div className={styles.cartproduct} key={product.id}>
             <div className={styles.productinfo}>
               <h3>{product.name}</h3>
+              <div className={styles.prdct}>
               <span className={styles.productprice}>
                 {product.count}Stk</span>
+                <div className={styles.pricaandremove}>
                 <span>{product.price}DKK</span>
-              <select
+           {/*    <select
                 className={styles.count}
                 value={product.count}
                 onChange={(event) => {
@@ -32,13 +35,17 @@ export default function Shoppingcart({ visibility, products, onProductRemove, on
                     </option>
                   );
                 })}
-              </select>
+              </select> */}
               <button className={styles.btn + " " + styles.removebtn} onClick={() => onProductRemove(product)}>
-<img src="/xmark-solid.svg" alt="Close" />              </button>
+              <img src="/xmark-solid.svg" alt="Close" /></button>
+            </div>
+            </div>
             </div>
           </div>
         ))}
+        <div className={styles.probtn}>
         {products.length > 0 && <button className={styles.btn + " " + styles.checkoutbt}>Proceed to checkout</button>}
+        </div>
       </div>
     </div>
   );
