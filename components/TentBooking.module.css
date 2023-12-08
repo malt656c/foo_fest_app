@@ -101,7 +101,7 @@ margin: 0 auto;
 }
 
 .Tentbtn {
-    background-color: var(--secondary_dark);
+background-color: var(--secondary_dark);
 border: solid black 1px; 
 border-radius: 15px;  
 padding: 25px 8px; 
@@ -112,6 +112,35 @@ color: var(--primary_light);
 outline: solid rgb(210, 10, 217) 2px;
 }
 
+
+
+.mapsection {
+    text-align: center;
+}
+
+.campingbtn {
+    color: var(--primary_light);
+    margin-bottom: 2rem;
+    font-family: var(--heading_font);
+    border: none;
+    border-radius: 30px;
+    padding: 1rem;
+   background-color: var(--accent_pink);
+}
+
+.campingbtn:hover {
+    background-color: var(--accent_red);
+}
+
+
+button.active {
+    background-color: var(--accent_red);
+}
+
+.image {
+    width: 700px;
+    margin-bottom: 2rem;
+}
 
 @media (min-width: 768px) {
     .TentCard {

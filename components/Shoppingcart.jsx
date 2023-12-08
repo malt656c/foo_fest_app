@@ -43,9 +43,11 @@ export default function Shoppingcart({ visibility, products, onProductRemove, on
             </div>
           </div>
         ))}
+        <a href="/checkout">
         <div className={styles.probtn}>
         {products.length > 0 && <button className={styles.btn + " " + styles.checkoutbt}>Proceed to checkout</button>}
         </div>
+        </a>
       </div>
     </div>
   );
