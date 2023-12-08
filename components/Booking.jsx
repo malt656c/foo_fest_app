@@ -1,6 +1,6 @@
 import styles from "./Booking.module.css";
 import Ticketcard from "./Ticketcard";
-
+import Link from "next/link";
 const products = [
   {
     id: 1,
@@ -25,12 +25,12 @@ export default async function Booking() {
         return <Ticketcard key={ticket.id} name={ticket.name} price={ticket.price} description={ticket.description} bgColor={ticket.bgColor} product={ticket}></Ticketcard>;
       })}
             <div className={styles.Buttons}>
-        <a href="/tentbooking" className={styles.btnlink}>
+        <Link href="/tentbooking" className={styles.btnlink}>
           <button className={styles.Button}>Go to Tent Booking</button>
-        </a>
-        <a href="/checkout" className={styles.btnlink}>
+        </Link>
+        <Link href="/checkout" className={styles.btnlink}>
           <button className={styles.Button}>Skip Tent Booking</button>
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -14,7 +14,6 @@ export default function Ticketcard(props) {
   const setProductsInCart = useContext(UpdaterContext);
 
   const [count, setCount] = useState(0);
-  const [count2, setCount2] = useState(0);
 
   function increment() {
     setCount(count + 1);
@@ -24,28 +23,10 @@ export default function Ticketcard(props) {
       setCount(count - 1);
     }
   }
-  function increment2() {
-    setCount2(count2 + 1);
-  }
-  function decrement2() {
-    if (count2 > 0) {
-      setCount2(count2 - 1);
-    }
-  }
 
-  function addToBasketRegular() {
+  function addToBasket() {
     setProductsInCart((o) => o.concat({ ...props.product, count: count }));
-  }
 
-  function addToBasketVip() {
-    setProductsInCart((o) =>
-      o.concat({
-        name: "Ticket VIP",
-        price: 799,
-        count: count2,
-        id: 2,
-      })
-    );
   }
 
   return (
@@ -64,7 +45,7 @@ export default function Ticketcard(props) {
               +
             </button>
           </div>
-          <button className={styles.Button} onClick={addToBasketRegular}>
+          <button className={styles.Button} onClick={addToBasket}>
             Add to Cart
           </button>
         </div>

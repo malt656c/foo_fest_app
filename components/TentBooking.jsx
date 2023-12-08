@@ -1,6 +1,7 @@
 "use client"
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from "./TentBooking.module.css";
+import Link from 'next/link';
 
 const products = [
   {
@@ -56,12 +57,12 @@ export default function TentBooking() {
 <div className={styles.Counter}>
    <button className={styles.Counterbtn} onClick={decrement2}>-</button> {count2} <button className={styles.Counterbtn} onClick={increment2}>+</button>
 </div>
-<a href="/greencamping" className={styles.alink}>
+<Link href="/greencamping" className={styles.alink}>
 <button className={styles.Button}>Add to Cart</button>
-</a>
-<a href="/checkout" className={styles.alink}>
+</Link>
+<Link href="/checkout" className={styles.alink}>
 <button className={styles.Button}>skip</button>
-</a>
+</Link>
 </div>
 <div className={styles.ChooseTent}>
 <h2 className={styles.Tentheadline}>Choose your camping area</h2>

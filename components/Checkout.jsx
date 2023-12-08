@@ -1,5 +1,10 @@
+'use client'
 import styles from "./Checkout.module.css";
+import { useContext } from "react";
+import { StateContext } from "../src/app/contexts/basketContext";
 export default function Checkout() {
+  const productsInCart = useContext(StateContext);
+console.log(productsInCart)
   return (
     <section className={styles.checkoutWrapper}>
       <div className={styles.checkoutOplysninger}>
