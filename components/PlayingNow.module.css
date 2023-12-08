@@ -60,6 +60,10 @@
     justify-content: center;
   }
 
+  .card span:hover {
+    color: var(--accent_red);
+  }
+
   .card span {
     font-size: 1.75rem;
   }
@@ -76,5 +80,12 @@
 @media (min-width: 992px) {
   .wrapper > h2 {
     font-size: 4rem;
+  }
+  .card span {
+    font-size: 2rem;
+  }
+
+  .card span:first-child {
+    font-size: 2rem;
   }
 }

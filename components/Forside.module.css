@@ -23,7 +23,7 @@
 
 .forsideHeader {
   font-family: var(--heading_font);
-  font-size: 4rem;
+  font-size: 4.5rem;
   color: var(--primary_light);
   margin-top: 25%;
   margin-bottom: 1rem; /* Juster efter behov */
@@ -112,6 +112,7 @@
   .forsideHeader {
     margin-top: 10%;
     margin-bottom: 6rem;
+    font-size: 7rem;
   }
 
   .forsideButton {
@@ -120,6 +121,10 @@
 }
 
 @media (min-width: 992px) {
+  .forsideHeader {
+    font-size: 8rem;
+  }
+
   .forsideH2 {
     font-size: 3rem;
   }
