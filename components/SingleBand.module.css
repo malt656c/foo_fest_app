@@ -24,7 +24,7 @@
 .bandH1 {
   color: var(--primary_light);
   font-family: var(--heading_font);
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .mobileWrapper {
@@ -57,6 +57,10 @@
   justify-content: space-evenly;
 }
 
+.bandGenre h2 {
+  font-size: 2rem;
+}
+
 .h2Pink {
   color: var(--accent_pink);
 }
@@ -66,10 +70,11 @@
   color: var(--primary_dark);
   font-family: var(--text_font);
   text-align: left;
+  font-size: 1rem;
 }
 .bandInfo > h1 {
   margin: auto;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: var(--heading_font);
 }
 .bandGeneral {
@@ -84,10 +89,15 @@
   gap: 0.25rem;
 }
 
+.bandMembers h3 {
+  font-size: 1.5rem;
+}
+
 .bandMembers div {
   color: var(--accent_pink);
   display: grid;
   gap: 0.25rem;
+  font-size: 1.5rem;
 }
 
 .youMightAlso {
@@ -96,7 +106,7 @@
   text-align: center;
 }
 
-.youMightAlso h1 {
+.youMightAlso h2 {
   font-family: var(--heading_font);
   color: var(--primary_light);
   font-size: 2rem;
@@ -120,6 +130,7 @@
   }
   .bandH1 {
     place-content: top;
+    font-size: 4.5rem;
   }
   .bandGeneral {
     text-align: left;
@@ -129,6 +140,13 @@
     justify-content: left;
   }
 
+  .bandGenre h2 {
+    font-size: 3rem;
+  }
+
+  .bandMembers h3 {
+    font-size: 2rem;
+  }
   .bandInfo {
     color: var(--primary_light);
   }
@@ -146,5 +164,29 @@
     display: flex;
     gap: 5%;
     justify-content: center;
+  }
+
+  .youMightAlso h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .bandH1 {
+    place-content: top;
+    font-size: 5rem;
+  }
+
+  .bandGenre h2 {
+    font-size: 3.5rem;
+  }
+  .bandMembers h3 {
+    font-size: 2.5rem;
+  }
+  .bandInfo p {
+    font-size: 1.25rem;
+  }
+  .youMightAlso h2 {
+    font-size: 3.5rem;
   }
 }
