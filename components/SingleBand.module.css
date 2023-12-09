@@ -14,6 +14,7 @@
   padding: 1rem;
   margin: 0 auto;
 }
+
 .bandContent {
   display: grid;
   gap: 1rem;
@@ -29,6 +30,7 @@
 
 .mobileWrapper {
   background-color: var(--secondary_light);
+  justify-items: center;
 }
 
 .bandImage {
@@ -176,7 +178,6 @@
     place-content: top;
     font-size: 5rem;
   }
-
   .bandGenre h2 {
     font-size: 3.5rem;
   }

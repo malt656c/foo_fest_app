@@ -1,52 +1,51 @@
 .Background {
   margin: auto;
-    width: 100%;
-    max-width: 1100px;
-    display: grid;
-align-items: center;
-    padding-inline: 2rem;
-    gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  align-items: center;
+  padding-inline: 2rem;
+  gap: 2rem;
 }
 .Heading {
-    font-size: xxx-large;
-    padding-top: 2rem;
-    text-align: center;
-    font-family: var(--heading_font);
-    color: var(--primary_light);
+  font-size: 3rem;
+  padding-top: 2rem;
+  text-align: center;
+  font-family: var(--heading_font);
+  color: var(--primary_light);
 }
 .btnlink {
   text-decoration: none;
 }
 
 .Button {
-display: block;
-margin: 0 auto;
-background-color: var(--accent_pink);
-font-family: var(--heading_font);
-font-size: large;
-padding: 6px 60px;
-border-radius: 30px;
-border: none;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--accent_pink);
+  font-family: var(--heading_font);
+  font-size: large;
+  padding: 6px 60px;
+  border-radius: 30px;
+  border: none;
 }
 
 .Button:hover {
   background-color: var(--accent_red);
 }
-.Buttons{
+.Buttons {
   display: grid;
   gap: 1rem;
   padding: 1rem;
 }
 @media (min-width: 768px) {
   .Background {
-grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-  .Heading,.Buttons{
+  .Heading,
+  .Buttons {
     grid-column: span 2;
   }
 }
 
 @media (min-width: 992px) {
-
-
 }

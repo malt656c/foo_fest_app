@@ -25,6 +25,10 @@
   text-decoration: none;
 }
 
+.footerLink p {
+  font-size: 1rem;
+}
+
 .footerGapGrid p:hover {
   color: var(--accent_red);
 }
@@ -49,5 +53,8 @@
   .footerBackground {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footerLink p {
+    font-size: 1.25rem;
   }
 }
