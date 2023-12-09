@@ -12,8 +12,23 @@ eventuelt bezier
   --accent_red: #ff2e00;
   --heading_font: "Ruslan Display", sans-serif;
   --text_font: "Actor", sans-serif;
-  --bp_tablet:768px;
-  --bp_desktop:992px;
+  --bp_tablet: 768px;
+  --bp_desktop: 992px;
+  --mobile_display: 4.5rem;
+  --mobile_title: 3rem;
+  --mobile_heading: 2rem;
+  --mobile_subheading: 1.5rem;
+  --mobile_body: 1rem;
+  --tablet_display: 7rem;
+  --tablet_title: 4.5rem;
+  --tablet_heading: 3rem;
+  --tablet_subheading: 1.75rem;
+  --tablet_body: 1rem;
+  --desktop_display: 8rem;
+  --desktop_title: 5rem;
+  --desktop_heading: 3.5rem;
+  --desktop_subheading: 2rem;
+  --desktop_body: 1.25rem;
 }
 * {
   margin: 0;

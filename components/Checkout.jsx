@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import styles from "./Checkout.module.css";
 import { useContext } from "react";
 import { StateContext } from "../src/app/contexts/basketContext";
 export default function Checkout() {
   const productsInCart = useContext(StateContext);
-console.log(productsInCart)
+  console.log(productsInCart);
   return (
     <section className={styles.checkoutWrapper}>
       <div className={styles.checkoutOplysninger}>
@@ -69,10 +69,10 @@ console.log(productsInCart)
             Payment method
           </label>
           <div className={styles.checkoutButtonGrid}>
-            <button className={styles.checkoutBetalingsButton}>Card/visa</button>
-            <button className={styles.checkoutBetalingsButton}>Mobilepay</button>
-            <button className={styles.checkoutBetalingsButton}>Gavekort</button>
-            <button className={styles.checkoutBetalingsButton}>Viabill</button>
+            <button>Card/visa</button>
+            <button>Mobilepay</button>
+            <button>Gavekort</button>
+            <button>Viabill</button>
           </div>
         </form>
       </div>

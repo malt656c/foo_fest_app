@@ -6,7 +6,7 @@
 .checkoutH2 {
   font-family: var(--heading_font);
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--mobile_subheading);
   padding-top: 3rem;
 }
 
@@ -44,12 +44,12 @@
   gap: 1rem;
 }
 
-.checkoutBetalingsButton {
+.checkoutButtonGrid button {
   border: none;
   background-color: var(--secondary_light);
   height: 2rem;
   font-family: var(--text_font);
-  font-size: 1rem;
+  font-size: var(--mobile_body);
 }
 
 .checkoutOrderWrapper {
@@ -73,6 +73,10 @@
   display: flex;
   justify-content: space-between;
   margin: 2rem;
+}
+
+.checkoutOrdreResumeFlex p {
+  font-size: var(--mobile_body);
 }
 
 .checkoutLine {
@@ -103,15 +107,19 @@
   gap: 1rem;
   padding: 1rem;
   text-align: left;
-  font-size: 1rem;
   margin: 10% 0%;
 }
+
+.checkoutHandelsbetingelser p {
+  font-size: var(--mobile_body);
+}
+
 .checkoutConfirmButton {
   background-color: var(--accent_pink);
   border: none;
   border-radius: 50px;
   font-family: var(--text_font);
-  font-size: 2rem;
+  font-size: var(--mobile_subheading);
   padding: 1rem 1.5rem 1rem 1.5rem;
   margin: 1rem;
   cursor: pointer;
@@ -127,6 +135,14 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .checkoutH2 {
+    font-size: var(--tablet_subheading);
+  }
+
+  .checkoutButtonGrid button {
+    font-size: var(--tablet_body);
+  }
+
   .checkoutOrderWrapper {
     background-color: var(--secondary_dark);
   }
@@ -136,5 +152,12 @@
   .checkoutWrapper {
     display: grid;
     grid-template-columns: 3fr 2fr;
+  }
+
+  .checkoutH2 {
+    font-size: var(--desktop_subheading);
+  }
+  .checkoutButtonGrid button {
+    font-size: var(--desktop_body);
   }
 }

@@ -8,7 +8,7 @@
   gap: 2rem;
 }
 .Heading {
-  font-size: 3rem;
+  font-size: var(--mobile_title);
   padding-top: 2rem;
   text-align: center;
   font-family: var(--heading_font);
@@ -23,7 +23,7 @@
   margin: 0 auto;
   background-color: var(--accent_pink);
   font-family: var(--heading_font);
-  font-size: large;
+  font-size: var(--mobile_subheading);
   padding: 6px 60px;
   border-radius: 30px;
   border: none;
@@ -45,7 +45,19 @@
   .Buttons {
     grid-column: span 2;
   }
+  .Heading {
+    font-size: var(--tablet_title);
+  }
+  .Button {
+    font-size: var(--tablet_subheading);
+  }
 }
 
 @media (min-width: 992px) {
+  .Heading {
+    font-size: var(--desktop_title);
+  }
+  .Button {
+    font-size: var(--desktop_subheading);
+  }
 }

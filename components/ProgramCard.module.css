@@ -31,7 +31,7 @@
   height: fit-content;
   max-height: 350px;
   border-radius: 0.5rem 0.5rem 0 0;
-  mix-blend-mode:luminosity;
+  mix-blend-mode: luminosity;
 }
 .imageCredits {
   background-color: var(--secondary_dark);
