@@ -1,29 +1,29 @@
 .linkText {
-    color: var(--primary_light);
-    font-family: var(--heading_font);
-    font-size: 42px;
-    position: relative;
-    display: inline-block;
-    transition: opacity 0s ease, transform 0.1s ease;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .linkText:hover {
-    color: var(--secondary_dark);
-  }
-  
-  .effectText {
-    color: var(--primary_light);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0s ease, transform 0.1s ease;
-  }
-  
-  .linkText:hover .effectText {
-    opacity: 1;
-    transform: translate(-4px, -4px);
-    text-shadow: 2px 2px 0px var(--accent_pink);
-  }
+  color: var(--primary_light);
+  font-family: var(--heading_font);
+  font-size: var(--mobile_title);
+  position: relative;
+  display: inline-block;
+  transition: opacity 0s ease, transform 0.1s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.linkText:hover {
+  color: var(--secondary_dark);
+}
+
+.effectText {
+  color: var(--primary_light);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0s ease, transform 0.1s ease;
+}
+
+.linkText:hover .effectText {
+  opacity: 1;
+  transform: translate(-4px, -4px);
+  text-shadow: 2px 2px 0px var(--accent_pink);
+}

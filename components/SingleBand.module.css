@@ -25,7 +25,7 @@
 .bandH1 {
   color: var(--primary_light);
   font-family: var(--heading_font);
-  font-size: 3rem;
+  font-size: var(--mobile_title);
 }
 
 .mobileWrapper {
@@ -60,7 +60,7 @@
 }
 
 .bandGenre h2 {
-  font-size: 2rem;
+  font-size: var(--mobile_heading);
 }
 
 .h2Pink {
@@ -72,7 +72,7 @@
   color: var(--primary_dark);
   font-family: var(--text_font);
   text-align: left;
-  font-size: 1rem;
+  font-size: var(--mobile_body);
 }
 .bandInfo > h1 {
   margin: auto;
@@ -92,14 +92,14 @@
 }
 
 .bandMembers h3 {
-  font-size: 1.5rem;
+  font-size: var(--mobile_subheading);
 }
 
 .bandMembers div {
   color: var(--accent_pink);
   display: grid;
   gap: 0.25rem;
-  font-size: 1.5rem;
+  font-size: var(--mobile_subheading);
 }
 
 .youMightAlso {
@@ -111,7 +111,7 @@
 .youMightAlso h2 {
   font-family: var(--heading_font);
   color: var(--primary_light);
-  font-size: 2rem;
+  font-size: var(--mobile_heading);
 }
 
 .youMightAlsoDiv {
@@ -132,7 +132,7 @@
   }
   .bandH1 {
     place-content: top;
-    font-size: 4.5rem;
+    font-size: var(--tablet_title);
   }
   .bandGeneral {
     text-align: left;
@@ -143,18 +143,18 @@
   }
 
   .bandGenre h2 {
-    font-size: 3rem;
+    font-size: var(--tablet_heading);
   }
 
   .bandMembers h3 {
-    font-size: 2rem;
+    font-size: var(--tablet_subheading);
   }
   .bandInfo {
     color: var(--primary_light);
   }
   .bandInfo p {
     color: var(--primary_light);
-    font-size: 1rem;
+    font-size: var(--tablet_body);
   }
   .deskImg {
     display: block;
@@ -169,25 +169,25 @@
   }
 
   .youMightAlso h2 {
-    font-size: 3rem;
+    font-size: var(--tablet_heading);
   }
 }
 
 @media (min-width: 992px) {
   .bandH1 {
     place-content: top;
-    font-size: 5rem;
+    font-size: var(--desktop_title);
   }
   .bandGenre h2 {
-    font-size: 3.5rem;
+    font-size: var(--desktop_heading);
   }
   .bandMembers h3 {
-    font-size: 2.5rem;
+    font-size: var(--desktop_subheading);
   }
   .bandInfo p {
-    font-size: 1.25rem;
+    font-size: var(--desktop_body);
   }
   .youMightAlso h2 {
-    font-size: 3.5rem;
+    font-size: var(--desktop_heading);
   }
 }

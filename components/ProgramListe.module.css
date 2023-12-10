@@ -14,7 +14,7 @@
 }
 .filterGroup > select {
   padding: 0.75rem;
-  font-size: 1rem;
+  font-size: var(--mobile_body);
   border-radius: 1rem;
   border-right: 0.75rem solid transparent;
 }
@@ -31,9 +31,15 @@
   .filterSection {
     grid-template-columns: repeat(2, 1fr);
   }
+  .filterGroup > select {
+    font-size: var(--tablet_body);
+  }
 }
 @media (min-width: 992px) {
   .bandList {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .filterGroup > select {
+    font-size: var(--desktop_body);
   }
 }

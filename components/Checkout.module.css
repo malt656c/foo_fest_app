@@ -17,7 +17,7 @@
 
 .checkoutLabel {
   font-family: var(--heading_font);
-  font-size: 1.5rem;
+  font-size: var(--mobile_subheading);
   margin-top: 1rem;
 }
 
@@ -26,6 +26,7 @@
   background-color: var(--secondary_light);
   height: 2rem;
   width: 100%;
+  font-size: var(--mobile_body);
 }
 
 .checkoutEtage {
@@ -93,12 +94,18 @@
   display: flex;
 }
 
+.checkoutPromo input {
+  font-size: var(--mobile_body);
+  height: 2rem;
+}
+
 .checkoutPromo button {
   background-color: var(--accent_pink);
   border: none;
-  padding: 0.5rem;
+  padding: 0.4rem;
   cursor: pointer;
   font-family: var(--text_font);
+  font-size: var(--mobile_body);
 }
 
 .checkoutHandelsbetingelser {
@@ -139,12 +146,35 @@
     font-size: var(--tablet_subheading);
   }
 
+  .checkoutLabel {
+    font-size: var(--tablet_subheading);
+  }
+
+  .checkoutInput {
+    font-size: var(--tablet_body);
+  }
+
   .checkoutButtonGrid button {
     font-size: var(--tablet_body);
   }
 
   .checkoutOrderWrapper {
     background-color: var(--secondary_dark);
+  }
+  .checkoutOrdreResumeFlex p {
+    font-size: var(--tablet_body);
+  }
+
+  .checkoutPromo input {
+    font-size: var(--tablet_body);
+  }
+
+  .checkoutPromo button {
+    font-size: var(--tablet_body);
+  }
+
+  .checkoutConfirmButton {
+    font-size: var(--tablet_subheading);
   }
 }
 
@@ -157,7 +187,29 @@
   .checkoutH2 {
     font-size: var(--desktop_subheading);
   }
+  .checkoutLabel {
+    font-size: var(--desktop_subheading);
+  }
+  .checkoutInput {
+    font-size: var(--desktop_body);
+  }
   .checkoutButtonGrid button {
     font-size: var(--desktop_body);
+  }
+  .checkoutOrdreResumeFlex p {
+    font-size: var(--desktop_body);
+  }
+
+  .checkoutPromo input {
+    font-size: var(--desktop_body);
+    height: 2.3rem;
+  }
+
+  .checkoutPromo button {
+    font-size: var(--desktop_body);
+  }
+
+  .checkoutConfirmButton {
+    font-size: var(--desktop_subheading);
   }
 }

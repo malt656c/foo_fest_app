@@ -58,7 +58,7 @@
 }
 .bandName {
   font-family: var(--heading_font);
-  font-size: 2rem;
+  font-size: var(--mobile_heading);
   color: var(--primary_dark);
   text-align: center;
 }
@@ -70,8 +70,32 @@
 .time {
   display: flex;
   gap: 0.5rem;
-  font-size: 1.25rem;
+  font-size: var(--mobile_subheading);
 }
 .venue {
-  font-size: 1.25rem;
+  font-size: var(--mobile_subheading);
+}
+
+@media (min-width: 768px) {
+  .bandName {
+    font-size: var(--tablet_subheading);
+  }
+  .time {
+    font-size: var(--tablet_body);
+  }
+  .venue {
+    font-size: var(--tablet_subheading);
+  }
+}
+
+@media (min-width: 992px) {
+  .bandName {
+    font-size: var(--desktop_subheading);
+  }
+  .time {
+    font-size: var(--desktop_body);
+  }
+  .venue {
+    font-size: var(--desktop_subheading);
+  }
 }
