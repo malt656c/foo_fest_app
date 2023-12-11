@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./Shoppingcart.module.css";
-export default function Shoppingcart({ visibility, products, onProductRemove, onClose, onQuantityChange }) {
+
+export default function Shoppingcart({ visibility, products, onProductRemove, setCartVisible, onQuantityChange }){
   return (
     <div className={styles.wrapper} style={{ display: visibility ? "block" : "none" }}>
       <div className={styles.header}>
         <h2>Shopping Cart</h2>
-        <button className={styles.btn + " " + styles.closebtn} onClick={() => (cartVisibility ? setCartVisible(false) : setCartVisible(true))}>
-       <img src="/xmark-solid.svg" alt="Close" />
-       </button>
+        <button className={`${styles.btn} ${styles.closebtn}`} onClick={() => setCartVisible(false)}>
+          <img src="/xmark-solid.svg" alt="Close" />
+        </button>
       </div>
       <div className={styles.cartproducts}>
         {products.length === 0 && <span className={styles.emptytext}>Your basket is currently empty</span>}
