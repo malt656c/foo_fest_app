@@ -37,12 +37,9 @@ export default function SingleBand(props) {
     return (
       <section className={styles.wrapper}>
         <article className={styles.bandContent}>
-          <div>
             <h1 className={styles.bandH1}>{data.name}</h1>
-            <div className={styles.deskImg}>{imageSource()}</div>
-          </div>
-          <div className={styles.mobileWrapper}>
-            <div className={styles.mobileImg}>{imageSource()}</div>
+            {imageSource()}
+
             <div className={styles.bandInfo}>
               <div className={styles.bandGeneral}>
                 <div className={styles.bandGenre}>
@@ -59,9 +56,8 @@ export default function SingleBand(props) {
                 </div>
               </div>
               <p>{data.bio}</p>
-              {data.logoCredits && <p id="creditId">CREDITS: </p>}
             </div>
-          </div>
+
         </article>
         <div className={styles.youMightAlso}>
           <h2>You might also like</h2>

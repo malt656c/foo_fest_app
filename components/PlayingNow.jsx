@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FFScheduleToday } from "./utilities";
+import { FFGet, FFScheduleToday } from "./utilities";
 import styles from "./PlayingNow.module.css";
 import Link from "next/link";
 export default function PlayingNow() {
@@ -10,6 +10,7 @@ export default function PlayingNow() {
     async function getCurrentbands() {
       if (currentBands == null) {
         const bandsToday = await FFScheduleToday();
+        const Bands = await FFGet("bands");
         const currentDay = new Date();
         const currentTime = currentDay.getHours();
         const playingBands = [];
@@ -19,18 +20,24 @@ export default function PlayingNow() {
             return parseInt(string.substring(0, 2));
           };
           let filteredBand = allBands.filter((i) => timeStringToNumber(i.end) >= currentTime && currentTime >= timeStringToNumber(i.start) && i.act !== "break")[0];
+          const getBand = Bands.filter((band)=>filteredBand.act==band.name);
+
           let band = {
             ...filteredBand,
             venue: Object.keys(venue)[0],
+            slug: getBand[0].slug
           };
-
           playingBands.push(band);
         });
         setCurrentBands(playingBands);
+          console.log(playingBands)
+
+
       }
     }
     getCurrentbands();
   });
+ 
   return (
     <>
       <section className={styles.wrapper}>
@@ -39,7 +46,7 @@ export default function PlayingNow() {
         <div className={styles.scrollWrapper}>
           {currentBands?.map((band) => {
             return (
-              <Link href="/program" key={band.venue} className={styles.playingNowLink}>
+              <Link href={`/band/${band.slug}`} key={band.venue} className={styles.playingNowLink}>
                 <div  className={styles.card}>
                   <span>{band.venue}</span>
                   <span>●</span>
