@@ -19,7 +19,7 @@ export default function News() {
     return (
       <section className={styles.newsWrapper}>
         <h2>Cancellations</h2>
-<div className={styles.newsScroll}>
+        <div className={styles.newsScroll}>
           {events.map((e) => {
             return (
               <div key={e.act.act} className={styles.newsCard}>
@@ -34,7 +34,7 @@ export default function News() {
               </div>
             );
           })}
-</div>
+        </div>
       </section>
     );
   }
