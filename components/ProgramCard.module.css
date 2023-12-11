@@ -5,6 +5,11 @@
   color: var(--primary_dark);
   height: 100%;
 }
+
+.linkWrapper:hover {
+  transform: scale(1.05);
+}
+
 .card {
   display: grid;
   background-color: var(--secondary_light);
