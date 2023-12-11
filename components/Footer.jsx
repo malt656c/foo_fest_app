@@ -45,7 +45,7 @@ export default function Footer() {
       </div>
       <div className={styles.footerGapGrid}>
         <div>
-          <h3 className={styles.footerH3}>Follow us on social media</h3>
+          <h3 className={styles.footerH3}>Follow Foofest on:</h3>
         </div>
         <div className={styles.footerIcons}>
           <Link href="https://www.facebook.com/" target="blank">
