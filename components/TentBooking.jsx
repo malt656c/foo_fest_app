@@ -1,7 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styles from "./TentBooking.module.css";
 import Link from "next/link";
+import { UpdaterContext } from "../src/app/contexts/basketContext";
+
 
 const products = [
   {
@@ -15,10 +17,19 @@ const products = [
     price: 349,
   },
 ];
-export default function TentBooking() {
+export default function TentBooking(props) {
   const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
   const [btnState, setBtnState] = useState(false);
   const [clickedColor, setClickedColor] = useState("");
+  const setProductsInCart = useContext(UpdaterContext);
+  
+
+
+  function addToBasket() {
+    setProductsInCart((o) => o.concat({ ...props.product, count: count }));
+
+  }
 
   function handleColorChange(color) {
     setClickedColor(color); // Opdater tilstanden med den valgte farve
@@ -36,7 +47,6 @@ export default function TentBooking() {
 
   function decrement() {}
 
-  const [count2, setCount2] = useState(0);
 
   function increment2() {
     setCount2(count2 + 1);
@@ -65,8 +75,11 @@ export default function TentBooking() {
             +
           </button>
         </div>
+        <div>
+          <button className={styles.Button} onClick={addToBasket}>Add to Cart</button>
+          </div>
         <div className={styles.Info}>
-          <p className={styles.Text}>3 persons</p>
+          <p className={styles.Text}>{props.name}</p>
           <p className={styles.Price}>349 DKK</p>
         </div>
         <div className={styles.Counter}>
@@ -77,13 +90,11 @@ export default function TentBooking() {
           <button className={styles.Counterbtn} onClick={increment2}>
             +
           </button>
+        
         </div>
-        <Link href="/greencamping" className={styles.alink}>
-          <button className={styles.Button}>Add to Cart</button>
-        </Link>
-        <Link href="/checkout" className={styles.alink}>
-          <button className={styles.Button}>skip</button>
-        </Link>
+        <div>
+          <button className={styles.Button} onClick={addToBasket}>Add to Cart</button>
+          </div>
       </div>
       <div className={styles.ChooseTent}>
         <h2 className={styles.Tentheadline}>Choose your camping area</h2>
@@ -106,6 +117,9 @@ export default function TentBooking() {
         </div>
         {btnState && <img src="/Foofestmap.jpg" alt="foofestmap" className={styles.image} />}
       </div>
+      <Link href="/checkout" className={styles.alink}>
+          <button className={styles.Button}>skip</button>
+        </Link>
     </div>
   );
 }
