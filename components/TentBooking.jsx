@@ -17,22 +17,41 @@ const products = [
     price: 349,
   },
 ];
+
+const CampArea = [
+  {
+    id: 6,
+    name: "Nilfheim",
+  },
+  {
+    id: 7,
+    name: "Melheim",
+  },
+  {
+    id: 8,
+    name: "Muspleheim",
+  },
+  {
+    id: 9,
+    name: "Alfheim",
+  },
+  {
+    id: 10,
+    name: "Surprise",
+  },
+];
 export default function TentBooking(props) {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
   const [btnState, setBtnState] = useState(false);
-  const [clickedColor, setClickedColor] = useState("");
   const setProductsInCart = useContext(UpdaterContext);
-  
-
 
   function addToBasket() {
-    setProductsInCart((o) => o.concat({ ...props.product, count: count }));
-
+    setProductsInCart((o) => o.concat({ ...props.products, count: count}));
   }
 
-  function handleColorChange(color) {
-    setClickedColor(color); // Opdater tilstanden med den valgte farve
+  function addToBasket2() {
+    setProductsInCart((o) => o.concat({ ...props.products, count: count2}));
   }
 
   function handleClick() {
@@ -45,7 +64,10 @@ export default function TentBooking(props) {
     setCount(count + 1);
   }
 
-  function decrement() {}
+  function decrement() {
+    if (count > 0)
+    setCount(count - 1);
+  }
 
 
   function increment2() {
@@ -53,6 +75,7 @@ export default function TentBooking(props) {
   }
 
   function decrement2() {
+    if (count > 0)
     setCount2(count2 - 1);
   }
 
@@ -63,8 +86,8 @@ export default function TentBooking(props) {
         <h3 className={styles.h3}>Do you want a tent with that?</h3>
         <p className={styles.Text}>We will make sure to setup a tent for you and your fellow campers so you do not have to worry about anything else but to party.</p>
         <div className={styles.Info}>
-          <p className={styles.Text}>2 persons</p>
-          <p className={styles.Price}>299 DKK</p>
+          <p className={styles.Text}>{products[0].name}</p>
+          <p className={styles.Price}>{products[0].price} DKK</p>
         </div>
         <div className={styles.Counter}>
           <button className={styles.Counterbtn} onClick={decrement}>
@@ -79,8 +102,8 @@ export default function TentBooking(props) {
           <button className={styles.Button} onClick={addToBasket}>Add to Cart</button>
           </div>
         <div className={styles.Info}>
-          <p className={styles.Text}>{props.name}</p>
-          <p className={styles.Price}>349 DKK</p>
+          <p className={styles.Text}>{products[1].name}</p>
+          <p className={styles.Price}>{products[1].price} DKK</p>
         </div>
         <div className={styles.Counter}>
           <button className={styles.Counterbtn} onClick={decrement2}>
@@ -93,15 +116,13 @@ export default function TentBooking(props) {
         
         </div>
         <div>
-          <button className={styles.Button} onClick={addToBasket}>Add to Cart</button>
+          <button className={styles.Button} onClick={addToBasket2}>Add to Cart</button>
           </div>
       </div>
       <div className={styles.ChooseTent}>
         <h2 className={styles.Tentheadline}>Choose your camping area</h2>
         <div className={styles.Tentareas}>
-          <h3 className={`${styles.Tentbtn} ${clickedColor === "red" ? styles.red : ""}`} onClick={() => handleColorChange("red")}>
-            svartheim
-          </h3>
+          <h3 className={styles.Tentbtn}>svartheim </h3>
           <h3 className={styles.Tentbtn}>nilfheim</h3>
           <h3 className={styles.Tentbtn}>helheim</h3>
           <h3 className={styles.Tentbtn}>muspleheim</h3>
@@ -116,10 +137,14 @@ export default function TentBooking(props) {
           </button>
         </div>
         {btnState && <img src="/Foofestmap.jpg" alt="foofestmap" className={styles.image} />}
-      </div>
+      </div> 
+      <Link href="/greencamping" className={styles.alink}>
+          <button className={styles.Button}>Next</button>
+        </Link>
       <Link href="/checkout" className={styles.alink}>
           <button className={styles.Button}>skip</button>
         </Link>
+       
     </div>
   );
 }
