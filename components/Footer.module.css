@@ -13,7 +13,7 @@
 }
 
 .footerH3 {
-  font-size: 26px;
+  font-size: var(--mobile_subheading);
 }
 
 .footerGapGrid p {
@@ -23,6 +23,10 @@
 
 .footerLink {
   text-decoration: none;
+}
+
+.footerLink p {
+  font-size: var(--mobile_body);
 }
 
 .footerGapGrid p:hover {
@@ -43,11 +47,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .footerH3 {
+    font-size: var(--tablet_subheading);
+  }
 }
 
 @media (min-width: 992px) {
   .footerBackground {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footerH3 {
+    font-size: var(--desktop_subheading);
+  }
+
+  .footerLink p {
+    font-size: var(--desktop_body);
   }
 }

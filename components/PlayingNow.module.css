@@ -9,7 +9,7 @@
 .wrapper > h2 {
   color: var(--primary_light);
   font-family: var(--heading_font);
-  font-size: 2rem;
+  font-size: var(--mobile_heading);
 }
 .scrollWrapper {
   display: grid;
@@ -24,7 +24,7 @@
   display: grid;
   gap: 0.5rem;
   padding-block: 1rem 0.5rem;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -32,13 +32,13 @@
 .card span {
   color: var(--primary_light);
   font-family: var(--heading_font);
-  font-size: 1.5rem;
+  font-size: var(--mobile_subheading);
   font-weight: 100;
 }
 .card span:first-child {
   color: var(--accent_pink);
   font-family: var(--heading_font);
-  font-size: 2rem;
+  font-size: var(--mobile_heading);
   font-weight: 100;
 }
 
@@ -48,7 +48,7 @@
 
 @media (min-width: 768px) {
   .wrapper > h2 {
-    font-size: 2.5rem;
+    font-size: var(--tablet_heading);
   }
 
   .card {
@@ -65,11 +65,11 @@
   }
 
   .card span {
-    font-size: 1.75rem;
+    font-size: var(--tablet_subheading);
   }
 
   .card span:first-child {
-    font-size: 1.75rem;
+    font-size: var(--tablet_subheading);
   }
 
   .card span:nth-child(2) {
@@ -79,13 +79,13 @@
 
 @media (min-width: 992px) {
   .wrapper > h2 {
-    font-size: 4rem;
+    font-size: var(--desktop_heading);
   }
   .card span {
-    font-size: 2rem;
+    font-size: var(--desktop_subheading);
   }
 
   .card span:first-child {
-    font-size: 2rem;
+    font-size: var(--desktop_subheading);
   }
 }

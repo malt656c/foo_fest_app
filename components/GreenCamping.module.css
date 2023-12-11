@@ -1,81 +1,93 @@
-
 .GCcard {
-    background-image: url(../public/frontpagebg.jpg);
-    background-size: cover;
-    margin: 0 auto;
-    width: 350px;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
+  background-image: url(../public/frontpagebg.jpg);
+  background-size: cover;
+  margin: 0 auto;
+  width: 350px;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
 }
 
 .Heading {
-    font-family: var(--heading_font);
-    color: var(--primary_light);
+  font-family: var(--heading_font);
+  color: var(--primary_light);
+  font-size: var(--mobile_heading);
 }
 
 .Price {
-    font-family: var(--heading_font);
-    color: var(--primary_light);
-    font-size: x-large;
-    margin-bottom: 1rem;
+  font-family: var(--heading_font);
+  color: var(--primary_light);
+  font-size: var(--mobile_subheading);
+  margin-bottom: 1rem;
 }
 
 .alink {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .Button {
-display: block;
-margin: 0 auto;
-background-color: var(--accent_pink);
-font-family: var(--heading_font);
-font-size: large;
-padding: 6px 60px;
-border-radius: 30px;
-margin-bottom: 1rem;
-border: none;
-color: var(--primary_light);
+  display: block;
+  margin: 0 auto;
+  background-color: var(--accent_pink);
+  font-family: var(--heading_font);
+  font-size: var(--mobile_subheading);
+  padding: 6px 60px;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+  border: none;
+  color: var(--primary_light);
 }
 
 .Button:hover {
-    background-color: var(--accent_red);
+  background-color: var(--accent_red);
 }
 
-.Text{
-    color: var(--primary_light);
-    font-family: var(--text_font);
+.Text {
+  color: var(--primary_light);
+  font-family: var(--text_font);
+  font-size: var(--mobile_body);
 }
 
 .Heading,
 .Text {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-    .GCcard {
-        display: grid;
-        justify-content: center;
+  .GCcard {
+    display: grid;
+    justify-content: center;
     height: 500px;
-      width: 600px;
-    }
-    .Heading {
-        font-size: xx-large;
-    } .Text {
-        width: 450px;
-    }
+    width: 600px;
+  }
+  .Heading {
+    font-size: var(--tablet_heading);
   }
 
-  @media (min-width: 992px) {
-    .GCcard {
-      width: 650px;
-    }
-    .Heading {
-        font-size: xx-large;
-    }
-    .Text {
-    width: 400px;
-   }
+  .Price {
+    font-size: var(--tablet_subheading);
   }
-    
-  
+  .Text {
+    width: 450px;
+    font-size: var(--tablet_body);
+  }
+  .Button {
+    font-size: var(--tablet_subheading);
+  }
+}
+
+@media (min-width: 992px) {
+  .GCcard {
+    width: 650px;
+  }
+  .Heading {
+    font-size: var(--desktop_heading);
+  }
+  .Text {
+    width: 400px;
+    font-size: var(--desktop_body);
+  }
+  .Button {
+    font-size: var(--desktop_subheading);
+  }
+}

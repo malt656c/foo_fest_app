@@ -14,6 +14,7 @@
   padding: 1rem;
   margin: 0 auto;
 }
+
 .bandContent {
   display: grid;
   gap: 1rem;
@@ -24,11 +25,12 @@
 .bandH1 {
   color: var(--primary_light);
   font-family: var(--heading_font);
-  font-size: 2rem;
+  font-size: var(--mobile_title);
 }
 
 .mobileWrapper {
   background-color: var(--secondary_light);
+  justify-items: center;
 }
 
 .bandImage {
@@ -57,6 +59,10 @@
   justify-content: space-evenly;
 }
 
+.bandGenre h2 {
+  font-size: var(--mobile_heading);
+}
+
 .h2Pink {
   color: var(--accent_pink);
 }
@@ -66,10 +72,11 @@
   color: var(--primary_dark);
   font-family: var(--text_font);
   text-align: left;
+  font-size: var(--mobile_body);
 }
 .bandInfo > h1 {
   margin: auto;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: var(--heading_font);
 }
 .bandGeneral {
@@ -84,10 +91,15 @@
   gap: 0.25rem;
 }
 
+.bandMembers h3 {
+  font-size: var(--mobile_subheading);
+}
+
 .bandMembers div {
   color: var(--accent_pink);
   display: grid;
   gap: 0.25rem;
+  font-size: var(--mobile_subheading);
 }
 
 .youMightAlso {
@@ -96,10 +108,10 @@
   text-align: center;
 }
 
-.youMightAlso h1 {
+.youMightAlso h2 {
   font-family: var(--heading_font);
   color: var(--primary_light);
-  font-size: 2rem;
+  font-size: var(--mobile_heading);
 }
 
 .youMightAlsoDiv {
@@ -120,6 +132,7 @@
   }
   .bandH1 {
     place-content: top;
+    font-size: var(--tablet_title);
   }
   .bandGeneral {
     text-align: left;
@@ -129,12 +142,19 @@
     justify-content: left;
   }
 
+  .bandGenre h2 {
+    font-size: var(--tablet_heading);
+  }
+
+  .bandMembers h3 {
+    font-size: var(--tablet_subheading);
+  }
   .bandInfo {
     color: var(--primary_light);
   }
   .bandInfo p {
     color: var(--primary_light);
-    font-size: 1rem;
+    font-size: var(--tablet_body);
   }
   .deskImg {
     display: block;
@@ -146,5 +166,28 @@
     display: flex;
     gap: 5%;
     justify-content: center;
+  }
+
+  .youMightAlso h2 {
+    font-size: var(--tablet_heading);
+  }
+}
+
+@media (min-width: 992px) {
+  .bandH1 {
+    place-content: top;
+    font-size: var(--desktop_title);
+  }
+  .bandGenre h2 {
+    font-size: var(--desktop_heading);
+  }
+  .bandMembers h3 {
+    font-size: var(--desktop_subheading);
+  }
+  .bandInfo p {
+    font-size: var(--desktop_body);
+  }
+  .youMightAlso h2 {
+    font-size: var(--desktop_heading);
   }
 }

@@ -6,7 +6,7 @@
 }
 .newsWrapper > h2 {
   font-family: var(--heading_font);
-  font-size: 2rem;
+  font-size: var(--mobile_heading);
   color: var(--accent_red);
   background-color: var(--primary_light);
   padding: 0.5rem 0.5rem 0 0.5rem;
@@ -37,11 +37,30 @@
 
 .newsCard > h3 {
   font-family: var(--heading_font);
-  font-size: 1.5rem;
+  font-size: var(--mobile_subheading);
   font-weight: 100;
   margin: auto;
 }
 .time {
   display: flex;
   gap: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .newsWrapper > h2 {
+    font-size: var(--tablet_heading);
+  }
+
+  .newsCard > h3 {
+    font-size: var(--tablet_subheading);
+  }
+}
+
+@media (min-width: 992px) {
+  .newsWrapper > h2 {
+    font-size: var(--desktop_heading);
+  }
+  .newsCard > h3 {
+    font-size: var(--desktop_subheading);
+  }
 }
