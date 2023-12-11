@@ -2,14 +2,15 @@
 import styles from "./Payment.module.css";
 import { useContext } from "react";
 import { userContext } from "../src/app/contexts/basketContext";
+import Link from "next/link";
 export default function Payment() {
-  const {userInfo, setUserInfo}=useContext(userContext)
-  console.log(userInfo)
+  const { userInfo, setUserInfo } = useContext(userContext);
+  console.log(userInfo);
   return (
     <section className={styles.paymentWrapper}>
       <div className={styles.paymentOplysninger}>
         <h2 className={styles.paymentH2}>Payment Details</h2>
-
+        <span>{"(bare tryk på Confirm Payment, vi leger bare)"}</span>
         <form className={styles.paymentFormGrid}>
           <label className={styles.paymentLabel} htmlFor="navn">
             Navn På Kortet
@@ -35,9 +36,9 @@ export default function Payment() {
           </div>
         </form>
         <div className={styles.paymentButtonContainer}>
-          <a href="/ordercomplete">
+          <Link href="/ordercomplete">
             <button className={styles.paymentConfirmButton}>Confirm Payment</button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

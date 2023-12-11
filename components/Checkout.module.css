@@ -1,63 +1,73 @@
-.checkoutOplysninger {
+.checkoutWrapper {
   background-color: var(--primary_light);
   color: var(--primary_dark);
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  gap: 2rem;
 }
-
-.checkoutH2 {
-  font-family: var(--heading_font);
+.checkoutWrapper h2 {
+  font-family: var(--text_font);
   text-align: center;
   font-size: var(--mobile_subheading);
-  padding-top: 3rem;
 }
-
-.checkoutForm {
+.checkoutWrapper form {
   display: grid;
   padding: 2rem;
   gap: 1rem;
 }
-
-.checkoutForm label {
-  font-family: var(--heading_font);
-  font-size: var(--mobile_subheading);
-  margin-top: 1rem;
+.checkoutWrapper form label {
+  font-family: var(--text_font);
+  font-size: var(--desktop_body);
+  text-rendering: optimizeLegibility;
 }
-
-.checkoutForm input {
+.checkoutWrapper form input {
   border: none;
+  border-radius:0.25rem ;
   background-color: var(--secondary_light);
-  height: 2rem;
+  padding: 0.5rem;
   width: 100%;
   font-size: var(--mobile_body);
 }
-
 .checkoutEtage {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-
-.checkoutEtage div {
-  display: grid;
-}
-
-.checkoutButtonGrid {
+.paymentOptions {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-
-.checkoutButtonGrid button {
-  border: none;
+.paymentOptions h3 {
+  grid-column: span 2;
+  text-align: center;
+}
+.paymentOptions div {
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
   background-color: var(--secondary_light);
-  height: 2rem;
+}
+.paymentOptions div label {
   font-family: var(--text_font);
   font-size: var(--mobile_body);
+  width: 100%;
+  text-align: center;
 }
-
-.checkoutOrderWrapper {
+.paymentOptions div input {
+  display: none;
+}
+.paymentOptions div:has(input:checked) {
+  background-color: var(--accent_pink);
+  color: var(--primary_light);
+}
+.termsWrapper {
   background-color: var(--primary_dark);
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
 }
-
 .checkoutOrdreResume {
   background-color: var(--secondary_dark);
   margin: 2rem;
@@ -66,11 +76,6 @@
   padding-bottom: 1rem;
   padding-top: 1rem;
 }
-
-.checkoutH3 {
-  text-align: center;
-}
-
 .checkoutOrdreResumeFlex {
   display: flex;
   justify-content: space-between;
@@ -86,54 +91,64 @@
   margin: 1rem 2rem 1rem 2rem;
 }
 
-.checkoutOrdreBottom {
-  margin: 2rem;
-  text-align: center;
-}
-
-.checkoutPromo {
-  display: flex;
-}
-
-.checkoutPromo input {
-  font-size: var(--mobile_body);
-  height: 2rem;
-}
-
-.checkoutPromo button {
-  background-color: var(--accent_pink);
-  border: none;
-  padding: 0.4rem;
-  cursor: pointer;
-  font-family: var(--text_font);
-  font-size: var(--mobile_body);
-}
-
-.checkoutHandelsbetingelser {
+.termsOfService {
   background-color: var(--secondary_light);
   display: flex;
-  gap: 1rem;
   padding: 1rem;
-  text-align: left;
-  margin: 10% 0%;
+  align-items: center;
+  border-radius: 0.25rem;
 }
-
-.checkoutHandelsbetingelser p {
-  font-size: var(--mobile_body);
+.termsOfService>label[for="myCheckbox"]{
+  font-size: 1rem;
 }
-
-.checkoutConfirmButton {
+.termsOfService>input[name="myCheckbox"]{
+  min-height: 1.5rem;
+height: 100%;
+max-height: 2rem;
+transition: all 0.1s ease-in-out;
+}
+.termsOfService input[name="myCheckbox"]:checked{
+animation: checked_kf 1s ease 0s ;
+}
+@keyframes checked_kf{
+  0%{
+rotate: 0deg;
+scale: 1;
+  }
+  40%{
+    rotate: 360deg;
+    scale: 1.2;
+  }
+  60%{
+    rotate: 360deg;
+    scale: 1.3;
+  }
+  80%{
+    rotate: 360deg;
+    scale: 0.9;
+  }
+  100%{
+    rotate: 360deg;
+    scale: 1;
+  }
+}
+.checkoutButtonLink{
+  margin: auto;
+}
+.checkoutButton {
   background-color: var(--accent_pink);
+  color: var(--primary_light);
   border: none;
   border-radius: 50px;
   font-family: var(--text_font);
   font-size: var(--mobile_subheading);
   padding: 1rem 1.5rem 1rem 1.5rem;
-  margin: auto;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.checkoutConfirmButton:hover {
+.checkoutButton:hover {
   background-color: var(--accent_red);
 }
 
