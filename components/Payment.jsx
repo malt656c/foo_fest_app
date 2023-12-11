@@ -1,8 +1,10 @@
 "use client";
 import styles from "./Payment.module.css";
-import { useEffect } from "react";
-
+import { useContext } from "react";
+import { userContext } from "../src/app/contexts/basketContext";
 export default function Payment() {
+  const {userInfo, setUserInfo}=useContext(userContext)
+  console.log(userInfo)
   return (
     <section className={styles.paymentWrapper}>
       <div className={styles.paymentOplysninger}>

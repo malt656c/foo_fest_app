@@ -10,18 +10,18 @@
   padding-top: 3rem;
 }
 
-.checkoutFormGrid {
+.checkoutForm {
   display: grid;
   padding: 2rem;
+  gap: 1rem;
 }
 
-.checkoutLabel {
+.checkoutForm label {
   font-family: var(--heading_font);
   font-size: 1.5rem;
-  margin-top: 1rem;
 }
 
-.checkoutInput {
+.checkoutForm input {
   border: none;
   background-color: var(--secondary_light);
   height: 2rem;
@@ -34,7 +34,7 @@
   gap: 1rem;
 }
 
-.checkoutDoor {
+.checkoutEtage div {
   display: grid;
 }
 
@@ -44,7 +44,7 @@
   gap: 1rem;
 }
 
-.checkoutBetalingsButton {
+.checkoutButtonGrid button {
   border: none;
   background-color: var(--secondary_light);
   height: 2rem;
@@ -113,7 +113,7 @@
   font-family: var(--text_font);
   font-size: 2rem;
   padding: 1rem 1.5rem 1rem 1.5rem;
-  margin: 1rem;
+  margin: auto;
   cursor: pointer;
 }
 
