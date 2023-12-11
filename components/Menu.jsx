@@ -11,6 +11,7 @@ const linkOnClick=()=>{
   setOpen(false);
   setTranslation("-100%");
 }
+/* TODO: accesability på burger menu */
   return (
     <>
       <div className={styles.burgerIcon}>

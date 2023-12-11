@@ -45,7 +45,20 @@
 .card span:nth-child(2) {
   display: none;
 }
-
+.playingNowLink {
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+.playingNowLink * {
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+.playingNowLink:hover {
+  transform: scale(1.05);
+}
+.playingNowLink:hover span {
+  color: var(--accent_red);
+}
 @media (min-width: 768px) {
   .wrapper > h2 {
     font-size: var(--tablet_heading);
@@ -60,20 +73,12 @@
     justify-content: center;
   }
 
-  .card span:hover {
-    color: var(--accent_red);
-  }
-
   .card span {
     font-size: var(--tablet_subheading);
   }
 
   .card span:first-child {
     font-size: var(--tablet_subheading);
-  }
-
-  .card span:nth-child(2) {
-    display: block;
   }
 }
 

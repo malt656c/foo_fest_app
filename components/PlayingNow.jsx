@@ -39,8 +39,8 @@ export default function PlayingNow() {
         <div className={styles.scrollWrapper}>
           {currentBands?.map((band) => {
             return (
-              <Link href={`/program`}>
-                <div key={band.venue} className={styles.card} style={{ animationPlayState: isPlaying ? "running" : "paused" }}>
+              <Link href="/program" key={band.venue} className={styles.playingNowLink}>
+                <div  className={styles.card}>
                   <span>{band.venue}</span>
                   <span>●</span>
                   <span>{band.act}</span>

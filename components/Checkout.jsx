@@ -1,5 +1,4 @@
 "use client";
-"use client";
 import styles from "./Checkout.module.css";
 import { useContext,  } from "react";
 import { StateContext,userContext } from "../src/app/contexts/basketContext";
