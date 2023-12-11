@@ -43,6 +43,7 @@
 
 .forsideButton:hover {
   background-color: var(--accent_red);
+  transform: scale(1.05);
 }
 
 .forsideBanner {

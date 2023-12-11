@@ -41,9 +41,15 @@
   font-weight: 100;
   margin: auto;
 }
+
+.newsCard > :nth-child(2) {
+  color: var(--primary_dark);
+  font-size: var(--mobile_subheading);
+}
 .time {
   display: flex;
   gap: 0.25rem;
+  font-size: var(--mobile_body);
 }
 
 @media (min-width: 768px) {
@@ -54,6 +60,13 @@
   .newsCard > h3 {
     font-size: var(--tablet_subheading);
   }
+
+  .newsCard :nth-child(2) {
+    font-size: var(--tablet_subheading);
+  }
+  .time {
+    font-size: var(--tablet_body);
+  }
 }
 
 @media (min-width: 992px) {
@@ -62,5 +75,12 @@
   }
   .newsCard > h3 {
     font-size: var(--desktop_subheading);
+  }
+
+  .newsCard :nth-child(2) {
+    font-size: var(--desktop_subheading);
+  }
+  .time {
+    font-size: var(--desktop_body);
   }
 }
