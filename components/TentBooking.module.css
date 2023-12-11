@@ -1,167 +1,219 @@
 .TentCard {
-    background-image: url(../public/frontpagebg.jpg);
-    background-size: cover;
-    text-align: center;
-    width: 400px;
-    padding: 2rem;
-    margin: 0 auto;
-
+  background-image: url(../public/frontpagebg.jpg);
+  background-size: cover;
+  text-align: center;
+  width: 400px;
+  padding: 2rem;
+  margin: 0 auto;
 }
 
 .Heading {
-    font-size: xx-large;
-    text-align: center;
-    font-family: var(--heading_font);
-    color: var(--secondary_light)
+  font-size: var(--mobile_title);
+  text-align: center;
+  font-family: var(--heading_font);
+  color: var(--secondary_light);
 }
 
-.H3 {
-    font-family: var(--text_font);
-    color: var(--primary_light);
-    margin-bottom: 1rem;
+.h3 {
+  font-family: var(--text_font);
+  color: var(--primary_light);
+  margin-bottom: 1rem;
+  font-size: var(--mobile_subheading);
 }
 
 .Info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0px 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0px 25px;
 }
 
 .Counter {
-    font-family: var(--display_font);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%;
-    padding: 5px 10px;
-    margin: 0 auto;
-    border: var(--accent_pink) 2px solid;
-    margin-bottom: 10px;
-    color: var(--primary_light);
+  font-family: var(--display_font);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  padding: 5px 10px;
+  margin: 0 auto;
+  border: var(--accent_pink) 2px solid;
+  margin-bottom: 10px;
+  color: var(--primary_light);
 }
 
 .Counterbtn {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    color: var(--primary_light);
-
+  background: none;
+  border: none;
+  font-size: var(--mobile_subheading);
+  color: var(--primary_light);
 }
 
 .alink {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .Button {
-color: var(--primary_light);
-display: block;
-margin: 0 auto;
- background-color: var(--accent_pink);
- font-family: var(--heading_font);
- font-size: large;
- padding: 6px 60px;
- border-radius: 30px;
- border: none;
+  color: var(--primary_light);
+  display: block;
+  margin: 0 auto;
+  background-color: var(--accent_pink);
+  font-family: var(--heading_font);
+  font-size: var(--mobile_subheading);
+  padding: 6px 60px;
+  border-radius: 30px;
+  border: none;
 }
 .Button:hover {
-    background-color: var(--accent_red);
+  background-color: var(--accent_red);
 }
 
 .Price,
 .Text {
-    color: var(--primary_light);
-    font-family: var(--text_font);
+  color: var(--primary_light);
+  font-family: var(--text_font);
+  font-size: var(--mobile_body);
 }
 
 .Heading,
 .Button,
 .Text,
 .Counter {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .ChooseTent {
-   
-    font-family: var(--heading_font);
-    margin: 4rem auto;
-    text-align: center;
-    width: 350px;
+  font-family: var(--heading_font);
+  margin: 4rem auto;
+  text-align: center;
+  width: 350px;
 }
 
 .Tentareas {
-    gap: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .Tentheadline {
-    color: var(--secondary_light);
-    font-family: var(--heading_font);
-    margin-bottom: 2rem;
+  color: var(--secondary_light);
+  font-family: var(--heading_font);
+  margin-bottom: 2rem;
+  font-size: var(--mobile_heading);
 }
 
 .Tentbtn {
-background-color: var(--secondary_dark);
-border: solid black 1px; 
-border-radius: 15px;  
-padding: 25px 8px; 
-color: var(--primary_light);
+  background-color: var(--secondary_dark);
+  border: solid black 1px;
+  border-radius: 15px;
+  padding: 25px 8px;
+  color: var(--primary_light);
+  font-size: var(--mobile_body);
 }
 
 .Tentbtn:hover {
-outline: solid rgb(210, 10, 217) 2px;
+  outline: solid rgb(210, 10, 217) 2px;
 }
 
-
-
 .mapsection {
-    text-align: center;
+  text-align: center;
 }
 
 .campingbtn {
-    color: var(--primary_light);
-    margin-bottom: 2rem;
-    font-family: var(--heading_font);
-    border: none;
-    border-radius: 30px;
-    padding: 1rem;
-   background-color: var(--accent_pink);
+  color: var(--primary_light);
+  margin-bottom: 2rem;
+  font-family: var(--heading_font);
+  border: none;
+  border-radius: 30px;
+  padding: 1rem;
+  background-color: var(--accent_pink);
+  font-size: var(--mobile_body);
 }
 
 .campingbtn:hover {
-    background-color: var(--accent_red);
+  background-color: var(--accent_red);
 }
 
-
 button.active {
-    background-color: var(--accent_red);
+  background-color: var(--accent_red);
 }
 
 .image {
-    width: 700px;
-    margin-bottom: 2rem;
+  width: 700px;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-    .TentCard {
-      width: 600px;
-    }
-    .Heading {
-        font-size: xx-large;
-    }
-    .Counter {
-        width: 40%;
-    }
-    .Info {
-        margin: 0 120px;
-    }
+  .TentCard {
+    width: 600px;
+  }
+  .Heading {
+    font-size: var(--tablet_title);
+  }
+  .h3 {
+    font-size: var(--tablet_subheading);
+  }
+  .Price,
+  .Text {
+    font-size: var(--tablet_body);
+  }
+  .Counter {
+    width: 40%;
+  }
+  .Counterbtn {
+    font-size: var(--tablet_subheading);
+  }
+  .Info {
+    margin: 0 120px;
   }
 
-  @media (min-width: 992px) {
-    .TentCard {
-      width: 650px;
-    }
-    .Heading {
-        font-size: xx-large;
-    }
+  .Button {
+    font-size: var(--tablet_subheading);
   }
+
+  .ChooseTent {
+    width: 550px;
+  }
+  .Tentheadline {
+    font-size: var(--tablet_heading);
+  }
+  .Tentbtn {
+    font-size: var(--tablet_subheading);
+  }
+  .campingbtn {
+    font-size: var(--tablet_subheading);
+  }
+}
+
+@media (min-width: 992px) {
+  .TentCard {
+    width: 650px;
+  }
+  .Heading {
+    font-size: var(--desktop_title);
+  }
+  .h3 {
+    font-size: var(--desktop_subheading);
+  }
+  .Price,
+  .Text {
+    font-size: var(--desktop_body);
+  }
+  .Counterbtn {
+    font-size: var(--desktop_subheading);
+  }
+  .Button {
+    font-size: var(--desktop_subheading);
+  }
+
+  .ChooseTent {
+    width: 650px;
+  }
+  .Tentheadline {
+    font-size: var(--desktop_heading);
+  }
+  .Tentbtn {
+    font-size: var(--desktop_subheading);
+  }
+  .campingbtn {
+    font-size: var(--desktop_subheading);
+  }
+}
