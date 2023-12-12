@@ -3,14 +3,14 @@ import styles from "./UsersOrder.module.css";
 import { dataContext } from "../src/app/contexts/basketContext";
 export default function UsersOrder() {
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
-  console.log(productsInCart)
-  if(productsInCart.length!==0){
-      const totalPrice = productsInCart
-    .map((product) => product.price * product.count)
-    .reduce(function (a, b) {
-      return a + b;
-    });
-    const taxRate = 0.25;
+  console.log(productsInCart);
+  if (productsInCart.length !== 0) {
+    const totalPrice = productsInCart
+      .map((product) => product.price * product.count)
+      .reduce(function (a, b) {
+        return a + b;
+      });
+    const taxRate = 0.2;
     const fixed = 99;
     return (
       <div className={styles.wrapper}>
@@ -36,7 +36,7 @@ export default function UsersOrder() {
             booking fee: <b>{fixed},-</b>
           </span>
           <span>
-            taxes: <b>{totalPrice * taxRate},- </b>
+            taxes: <b>{(totalPrice + fixed) * taxRate},- </b>
             <small>{`(${taxRate * 100}%)`}</small>
           </span>
           <span>
