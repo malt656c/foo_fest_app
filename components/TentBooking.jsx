@@ -81,6 +81,25 @@ export default function TentBooking() {
 
   return (
     <div>
+      <div className={styles.ChooseTent}>
+        <h2 className={styles.Tentheadline}>Choose your camping area</h2>
+        <div className={styles.Tentareas}>
+          <h3 className={styles.Tentbtn}>svartheim </h3>
+          <h3 className={styles.Tentbtn}>nilfheim</h3>
+          <h3 className={styles.Tentbtn}>helheim</h3>
+          <h3 className={styles.Tentbtn}>muspleheim</h3>
+          <h3 className={styles.Tentbtn}>alfheim</h3>
+          <h3 className={styles.Tentbtn}>Surprise me</h3>
+        </div>
+      </div>
+      <div className={styles.mapsection}>
+        <div>
+          <button className={`${toggleClassCheck} ${styles.campingbtn}`} onClick={handleClick}>
+            Check out our camping areas
+          </button>
+        </div>
+        {btnState && <img src="/Foofestmap.jpg" alt="foofestmap" className={styles.image} />}
+      </div> 
       <div className={styles.TentCard}>
         <h1 className={styles.Heading}>Tents</h1>
         <h3 className={styles.h3}>Do you want a tent with that?</h3>
@@ -113,38 +132,17 @@ export default function TentBooking() {
           <button className={styles.Counterbtn} onClick={increment2}>
             +
           </button>
-        
         </div>
         <div>
           <button className={styles.Button} onClick={addToBasket2}>Add to Cart</button>
           </div>
       </div>
-      <div className={styles.ChooseTent}>
-        <h2 className={styles.Tentheadline}>Choose your camping area</h2>
-        <div className={styles.Tentareas}>
-          <h3 className={styles.Tentbtn}>svartheim </h3>
-          <h3 className={styles.Tentbtn}>nilfheim</h3>
-          <h3 className={styles.Tentbtn}>helheim</h3>
-          <h3 className={styles.Tentbtn}>muspleheim</h3>
-          <h3 className={styles.Tentbtn}>alfheim</h3>
-          <h3 className={styles.Tentbtn}>Surprise me</h3>
-        </div>
-      </div>
-      <div className={styles.mapsection}>
-        <div>
-          <button className={`${toggleClassCheck} ${styles.campingbtn}`} onClick={handleClick}>
-            Check out our camping areas
-          </button>
-        </div>
-        {btnState && <img src="/Foofestmap.jpg" alt="foofestmap" className={styles.image} />}
-      </div> 
       <Link href="/greencamping" className={styles.alink}>
           <button className={styles.Button}>Next</button>
         </Link>
       <Link href="/checkout" className={styles.alink}>
           <button className={styles.Button}>skip</button>
         </Link>
-       
     </div>
   );
 }
