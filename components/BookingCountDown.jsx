@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import styles from "./BookingCountDown.module.css";
-export default function BookingCountDown(props) {
-  const [isRunning, setIsRunning] = useState(props.isPlaying);
+import { dataContext } from "../src/app/contexts/basketContext";
+export default function BookingCountDown() {
+  const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
   const [timeLeft, setTimeLeft] = useState(300);
   useEffect(() => {
-    if (isRunning == true) {
+    if (productsInCart.length !== 0) {
       if (timeLeft <= 0) {
         return;
       }
@@ -14,17 +15,13 @@ export default function BookingCountDown(props) {
       return () => clearInterval(counter);
     }
   });
-
-  return (
-    <div className={styles.countdownWrapper}>
-      <span className={styles.time}>{timeLeft}</span>
-      <button
-        onClick={() => {
-          isRunning ? setIsRunning(false) : setIsRunning(true);
-        }}
-      >
-        klik
-      </button>
-    </div>
-  );
+  if (productsInCart.length !== 0) {
+    return (
+      <div className={styles.countdownWrapper}>
+        <span className={styles.time}>{timeLeft}</span>
+      </div>
+    );
+  } else {
+    return;
+  }
 }
