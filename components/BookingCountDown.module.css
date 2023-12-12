@@ -8,5 +8,10 @@
     height: 3rem;
     display: grid;
     place-items: center;
-    border-radius: 1rem;
+}
+.progressBar {
+  height: 0.5rem;
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
 }

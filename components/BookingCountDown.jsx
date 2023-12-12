@@ -3,7 +3,8 @@ import styles from "./BookingCountDown.module.css";
 import { dataContext } from "../src/app/contexts/basketContext";
 export default function BookingCountDown() {
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
-  const [timeLeft, setTimeLeft] = useState(300);
+  const seconds = 300;
+  const [timeLeft, setTimeLeft] = useState(seconds);
   useEffect(() => {
     if (productsInCart.length !== 0) {
       if (timeLeft <= 0) {
@@ -19,6 +20,8 @@ export default function BookingCountDown() {
     return (
       <div className={styles.countdownWrapper} style={{}}>
         <span className={styles.time}>{timeLeft}</span>
+        <span className={styles.progressBar} style={{ width: `${(timeLeft / seconds) * 100}%`,
+    backgroundColor:`color-mix(in hsl, red, green ${(timeLeft / seconds) * 100}%)` }}></span>
       </div>
     );
   } else {
