@@ -5,6 +5,7 @@
   outline: 1px solid var(--primary_light);
   padding: 1rem;
   background-color: var(--secondary_dark);
+  margin-top: 4rem;
 }
 .wrapper h3 {
   font-family: var(--text_font);

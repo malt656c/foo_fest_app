@@ -4,6 +4,8 @@
   padding-block: 2rem;
   padding-inline: 1rem;
   gap: 2rem;
+  display: grid;
+  place-items: center;
 }
 .checkoutWrapper h2 {
   font-family: var(--text_font);
@@ -13,6 +15,12 @@
 .checkoutWrapper form {
   display: grid;
   padding: 2rem;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  max-width: 1100px;
+}
+.inputWrapper {
+  display: grid;
   gap: 1rem;
 }
 .checkoutWrapper form label {
@@ -154,11 +162,24 @@
 }
 
 @media (min-width: 768px) {
-  .checkoutWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .checkoutWrapper form {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
   }
-
+  .inputWrapper {
+    grid-column: 1/2;
+    height: fit-content;
+  }
+  .inputWrapper {
+    grid-row: 1/5;
+  }
+  .checkoutButton {
+    grid-row: 3/4;
+  }
+  .termsWrapper {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
   .checkoutH2 {
     font-size: var(--tablet_subheading);
   }
@@ -196,11 +217,6 @@
 }
 
 @media (min-width: 992px) {
-  .checkoutWrapper {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-  }
-
   .checkoutH2 {
     font-size: var(--desktop_subheading);
   }
