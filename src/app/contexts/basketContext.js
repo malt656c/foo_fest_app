@@ -9,6 +9,7 @@ export const userContext = createContext({userInfo:null, setUserInfo:()=>{}});
 export const BasketProvider = ({ children }) => {
   const [productsInCart, setProductsInCart] = useState([]);
   const [userInfo, setUserInfo] = useState([]);
+  console.log(userInfo)
   return (
     <StateContext.Provider value={productsInCart}>
       <UpdaterContext.Provider value={setProductsInCart}>

@@ -2,10 +2,12 @@
 import { useContext, useEffect } from "react";
 import styles from "./BookingComplete.module.css";
 import { userContext } from "../src/app/contexts/basketContext";
+import Link from "next/link";
 export default function BookingComplete() {
-  const { userInfo, setUserInfo } = useContext(userContext);
+  const { userInfo} = useContext(userContext);
   console.log(userInfo);
-  const userdata = JSON.parse(userInfo);
+  const userdata = userInfo;
+  console.log(userdata)
   useEffect(() => {
     async function sendData(content) {
       let headersList = {

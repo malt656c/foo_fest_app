@@ -40,18 +40,18 @@ const CampArea = [
     name: "Surprise",
   },
 ];
-export default function TentBooking(props) {
+export default function TentBooking() {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
   const [btnState, setBtnState] = useState(false);
   const setProductsInCart = useContext(UpdaterContext);
 
   function addToBasket() {
-    setProductsInCart((o) => o.concat({ ...props.products, count: count}));
+    setProductsInCart((o) => o.concat({ ...products[0], count: count}));
   }
 
   function addToBasket2() {
-    setProductsInCart((o) => o.concat({ ...props.products, count: count2}));
+    setProductsInCart((o) => o.concat({ ...products[1], count: count2}));
   }
 
   function handleClick() {

@@ -7,12 +7,13 @@ import UsersOrder from "./UsersOrder";
 import CheckoutInput from "./CheckoutInput";
 export default function Checkout() {
   const { userInfo, setUserInfo } = useContext(userContext);
-
+  const productsInCart = useContext(StateContext);
   const router = useRouter()
   const SubmitEvent =(event)=>{
     event.preventDefault();
     const formData=new FormData(event.target)
-    const data=Object.fromEntries(formData)
+    const data={...Object.fromEntries(formData),productsBought:[...productsInCart]}
+   delete data.myCheckbox
     setUserInfo(data)
 router.push("/payment")
   }

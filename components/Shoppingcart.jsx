@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Shoppingcart.module.css";
-
+import Link from "next/link";
 export default function Shoppingcart({ visibility, products, onProductRemove, setCartVisible, onQuantityChange }){
   return (
     <div className={styles.wrapper} style={{ display: visibility ? "block" : "none" }}>
@@ -44,11 +44,11 @@ export default function Shoppingcart({ visibility, products, onProductRemove, se
             </div>
           </div>
         ))}
-        <a href="/checkout">
+        <Link href="/checkout">
         <div className={styles.probtn}>
         {products.length > 0 && <button className={styles.btn + " " + styles.checkoutbt}>Proceed to checkout</button>}
         </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

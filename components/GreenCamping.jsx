@@ -9,15 +9,16 @@ const products = [
     id: 3,
     name: "Green Camping",
     price: 249,
+    count:1
     }
    ]
 
 
-export default async function GreenCamping(props) {
+export default function GreenCamping() {
 
 const setProductsInCart = useContext(UpdaterContext);
 function addToBasket() {
-    setProductsInCart((o) => o.concat({ ...props.products}));
+    setProductsInCart((o) => o.concat({ ...products[0]}));
   }
     return (
     <div className={styles.GCcard}>
