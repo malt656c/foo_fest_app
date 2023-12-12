@@ -51,10 +51,10 @@ export default function Footer() {
           <Link href="https://www.facebook.com/" target="blank">
             <img className={styles.footerImg} src="/facebook-f.svg" alt="facebook" />
           </Link>
-          <Link href="https://www.facebook.com/" target="blank">
+          <Link href="https://www.instagram.com/" target="blank">
             <img className={styles.footerImg} src="/instagram(2).svg" alt="instagram" />
           </Link>
-          <Link href="https://www.facebook.com/" target="blank">
+          <Link href="https://www.tiktok.com/" target="blank">
             <img className={styles.footerImg} src="/tiktok.svg" alt="tiktok" />
           </Link>
         </div>
