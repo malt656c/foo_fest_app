@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import styles from "./TentBooking.module.css";
 import Link from "next/link";
+import { FFGet } from "./Utilities";
 import { dataContext } from "../src/app/contexts/basketContext";
 const products = [
   {
@@ -50,13 +51,16 @@ export default function TentBooking() {
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
   useEffect(() => {
     async function fetchData() {
+      // const response = await fetch("http://localhost:8080/available-spots");
+      // const areaSpots = await response.json();
+      // console.log(areaSpots);
       try {
-        const response = await fetch("http://localhost:8080/available-spots");
+        const res = await fetch("http://localhost:8080/available-spots");
 
-        if (!response.ok) {
+        if (!res.ok) {
           throw new Error("ERROR");
         }
-        const data = await response.json();
+        const data = await res.json();
 
         setAvailableData(data);
       } catch (error) {
@@ -66,6 +70,8 @@ export default function TentBooking() {
 
     fetchData();
   }, []);
+
+  //const response = await FFGet("available-spots");
 
   function getAvailableSpots(areaName) {
     const area = available.find((data) => data.area === areaName);
@@ -99,8 +105,7 @@ export default function TentBooking() {
   }
 
   function decrement2() {
-    if (count2 > 0)
-    setCount2(count2 - 1);
+    if (count > 0) setCount2(count2 - 1);
   }
 
   return (
@@ -166,8 +171,8 @@ export default function TentBooking() {
         </div>
       </div>
       <Link href="/greencamping" className={styles.alink}>
-          <button className={styles.Button}>Next</button>
-        </Link>
+        <button className={styles.Button}>Next</button>
+      </Link>
     </div>
   );
 }
