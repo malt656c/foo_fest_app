@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import styles from "./TentBooking.module.css";
 import Link from "next/link";
-import { UpdaterContext } from "../src/app/contexts/basketContext";
+import { dataContext } from "../src/app/contexts/basketContext";
 const products = [
   {
     id: 4,
@@ -47,8 +47,7 @@ export default function TentBooking() {
   const [count2, setCount2] = useState(0);
   const [btnState, setBtnState] = useState(false);
   const [available, setAvailableData] = useState([]);
-  const setProductsInCart = useContext(UpdaterContext);
-
+  const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
   useEffect(() => {
     async function fetchData() {
       try {

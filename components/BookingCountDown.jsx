@@ -17,7 +17,7 @@ export default function BookingCountDown() {
   });
   if (productsInCart.length !== 0) {
     return (
-      <div className={styles.countdownWrapper}>
+      <div className={styles.countdownWrapper} style={{}}>
         <span className={styles.time}>{timeLeft}</span>
       </div>
     );
