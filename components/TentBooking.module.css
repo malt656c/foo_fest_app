@@ -101,7 +101,7 @@
   color: var(--secondary_light);
   font-family: var(--heading_font);
   margin-bottom: 2rem;
-  font-size: var(--mobile_heading);
+  font-size: var(--mobile_title);
 }
 
 .Tentbtn {
@@ -118,6 +118,13 @@
 
 .Tentbtn:hover {
   outline: solid rgb(210, 10, 217) 2px;
+}
+
+.spotsAvailable {
+  color: var(--primary_light);
+  font-size: var(--mobile_body);
+  padding-top: 0.5rem;
+  font-family: var(--text_font);
 }
 
 .mapsection {
@@ -184,7 +191,7 @@ button.active {
     width: 550px;
   }
   .Tentheadline {
-    font-size: var(--tablet_heading);
+    font-size: var(--tablet_title);
   }
   .Tentbtn {
     font-size: var(--tablet_subheading);
@@ -219,7 +226,7 @@ button.active {
     width: 650px;
   }
   .Tentheadline {
-    font-size: var(--desktop_heading);
+    font-size: var(--desktop_title);
   }
   .Tentbtn {
     font-size: var(--desktop_subheading);
