@@ -1,28 +1,29 @@
-.wrapper{
-    display: grid;
-    gap: 1rem;
-    color: var(--primary_dark);
-    outline: 1px solid var(--primary_dark);
-    padding: 1rem;
+.wrapper {
+  display: grid;
+  gap: 1rem;
+  color: var(--primary_light);
+  outline: 1px solid var(--primary_light);
+  padding: 1rem;
+  background-color: var(--secondary_dark);
 }
-.wrapper h2{
-font-family: var(--text_font);
+.wrapper h2 {
+  font-family: var(--text_font);
 }
 .productCard {
   display: grid;
   padding: 0.5rem;
   gap: 0.25rem;
-  border-bottom: 1px solid var(--primary_dark);
+  border-bottom: 1px solid var(--primary_light);
 }
-.name{
-    font-family: var(--text_font);
-    font-size: 1.25rem;
+.name {
+  font-family: var(--text_font);
+  font-size: 1.25rem;
 }
 .totalAndTaxes {
   display: grid;
   gap: 0.5rem;
   padding: 0.5rem;
 }
-.totalAndTaxes small{
-    color: var(--secondary_dark);
+.totalAndTaxes small {
+  color: var(--secondary_dark);
 }

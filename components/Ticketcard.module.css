@@ -28,10 +28,15 @@
   padding: 6px 60px;
   border-radius: 30px;
   border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  color: var(--primary_light);
 }
 
 .Button:hover {
   background-color: var(--accent_red);
+  transform: scale(1.05);
 }
 
 .Price {

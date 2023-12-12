@@ -1,7 +1,7 @@
 "use client";
 import ProgramCard from "./ProgramCard";
 import styles from "./ProgramListe.module.css";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { FFGet, FFSchedule, FFScheduleToday } from "./utilities";
 export default function ProgramListe() {
   const [filter, setFilter] = useState(null);
@@ -9,7 +9,7 @@ export default function ProgramListe() {
   useEffect(() => {
     async function fetchSchedule() {
       if (filter == null) {
-        setBands(await FFGet("bands"))
+        setBands(await FFGet("bands"));
         setFilter(await FFScheduleToday());
       }
     }
@@ -76,7 +76,7 @@ export default function ProgramListe() {
         <div className={styles.filterGroup}>
           <label htmlFor="venueFilter">filter by venue</label>
           <select name="venue" id="venueFilter">
-            <option value="all">all</option>
+            <option value="all">All</option>
             <option value="Midgard">Midgard</option>
             <option value="Vanaheim">Vanaheim</option>
             <option value="Jotunheim">Jotunheim</option>
@@ -84,15 +84,11 @@ export default function ProgramListe() {
         </div>
       </form>
 
-
-        <div className={styles.bandList}>
-          {filteredBands().map((band) => {
-            return (
-              <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug} start={band.start} end={band.end} venue={band.venue} genre={band.genre}/>
-            );
-          })}
-        </div>
-
+      <div className={styles.bandList}>
+        {filteredBands().map((band) => {
+          return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug} start={band.start} end={band.end} venue={band.venue} genre={band.genre} />;
+        })}
+      </div>
     </section>
   );
 }

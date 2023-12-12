@@ -31,6 +31,7 @@
 
 .footerGapGrid p:hover {
   color: var(--accent_red);
+  transform: scale(1.05);
 }
 
 .footerIcons {
@@ -40,6 +41,10 @@
 
 .footerImg {
   height: 49px;
+}
+
+.footerImg:hover {
+  transform: scale(1.05);
 }
 
 @media (min-width: 768px) {

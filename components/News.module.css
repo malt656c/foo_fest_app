@@ -80,6 +80,7 @@
   .newsCard :nth-child(2) {
     font-size: var(--desktop_subheading);
   }
+
   .time {
     font-size: var(--desktop_body);
   }

@@ -61,9 +61,13 @@
   padding: 6px 60px;
   border-radius: 30px;
   border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 .Button:hover {
   background-color: var(--accent_red);
+  transform: scale(1.05);
 }
 
 .Price,
@@ -107,6 +111,9 @@
   padding: 25px 8px;
   color: var(--primary_light);
   font-size: var(--mobile_body);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .Tentbtn:hover {
@@ -118,7 +125,6 @@
 }
 
 .campingbtn {
-  color: var(--primary_light);
   margin-bottom: 2rem;
   font-family: var(--heading_font);
   border: none;
@@ -126,10 +132,15 @@
   padding: 1rem;
   background-color: var(--accent_pink);
   font-size: var(--mobile_body);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  color: var(--primary_light);
 }
 
 .campingbtn:hover {
   background-color: var(--accent_red);
+  transform: scale(1.05);
 }
 
 button.active {

@@ -18,7 +18,7 @@ export default function Header() {
         <Image src="/mobilelogo.svg" alt="logo" height={48} width={48} />
       </Link>
       <div className={styles.CartAndMenu}>
-        <Shoppingcart visibility={cartVisibility} products={productsInCart}></Shoppingcart>
+        <Shoppingcart visibility={cartVisibility} products={productsInCart} setCartVisible={setCartVisible}></Shoppingcart>
         <button className={styles.cartIcon} onClick={() => (cartVisibility ? setCartVisible(false) : setCartVisible(true))}>
           <Image src="/cart-shopping-solid.svg" alt="Cart" width={48} height={48}></Image>
         </button>
