@@ -17,8 +17,8 @@
   font-size: var(--mobile_body);
   border-radius: 1rem;
   border-right: 0.75rem solid transparent;
-  background-color: var(--accent_pink);
-  color: var(--primary_light);
+  background-color: var(--primary_light);
+  color: var(--primary_dark);
 }
 .bandList {
   display: grid;
