@@ -24,12 +24,9 @@ export default async function Booking() {
       {products.map((ticket) => {
         return <Ticketcard key={ticket.id} name={ticket.name} price={ticket.price} description={ticket.description} bgColor={ticket.bgColor} product={ticket}></Ticketcard>;
       })}
-            <div className={styles.Buttons}>
+      <div className={styles.Buttons}>
         <Link href="/tentbooking" className={styles.btnlink}>
           <button className={styles.Button}>Go to Tent Booking</button>
-        </Link>
-        <Link href="/checkout" className={styles.btnlink}>
-          <button className={styles.Button}>Skip Tent Booking</button>
         </Link>
       </div>
     </div>
