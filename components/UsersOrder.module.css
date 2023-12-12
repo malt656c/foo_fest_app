@@ -6,8 +6,10 @@
   padding: 1rem;
   background-color: var(--secondary_dark);
 }
-.wrapper h2 {
+.wrapper h3 {
   font-family: var(--text_font);
+  text-align: center;
+  font-size: var(--mobile_subheading);
 }
 .productCard {
   display: grid;
@@ -17,7 +19,7 @@
 }
 .name {
   font-family: var(--text_font);
-  font-size: 1.25rem;
+  font-size: var(--mobile_subheading);
 }
 .totalAndTaxes {
   display: grid;
@@ -26,4 +28,22 @@
 }
 .totalAndTaxes small {
   color: var(--secondary_dark);
+}
+
+@media (min-width: 768px) {
+  .wrapper h3 {
+    font-size: var(--tablet_subheading);
+  }
+  .name {
+    font-size: var(--tablet_subheading);
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper h3 {
+    font-size: var(--desktop_subheading);
+  }
+  .name {
+    font-size: var(--desktop_subheading);
+  }
 }
