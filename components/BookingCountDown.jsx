@@ -20,8 +20,7 @@ export default function BookingCountDown() {
     return (
       <div className={styles.countdownWrapper} style={{}}>
         <span className={styles.time}>{timeLeft}</span>
-        <span className={styles.progressBar} style={{ width: `${(timeLeft / seconds) * 100}%`,
-    backgroundColor:`color-mix(in hsl, red, green ${(timeLeft / seconds) * 100}%)` }}></span>
+        <span className={styles.progressBar} style={{ width: `${(timeLeft / seconds) * 100}%`, backgroundColor: `color-mix(in hsl, #EA4BC8, green ${(timeLeft / seconds) * 100}%)` }}></span>
       </div>
     );
   } else {

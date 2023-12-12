@@ -1,17 +1,25 @@
-.countdownWrapper{
-    background-color: var(--primary_light);
-    position: absolute;
-    top: 0.5rem;
-    left: 50%;
-    translate: -50%;
-    width: 100px;
-    height: 3rem;
-    display: grid;
-    place-items: center;
+.countdownWrapper {
+  background-color: var(--primary_light);
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  translate: -50%;
+  width: 100px;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  color: var(--primary_dark);
+  font-size: var(--mobile_subheading);
+  font-family: var(--text_font);
 }
 .progressBar {
   height: 0.5rem;
   position: absolute;
   left: 0;
   bottom: -0.5rem;
+  top: 2.5rem;
+}
+
+.time {
+  margin-top: -0.5rem;
 }
