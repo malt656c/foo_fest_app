@@ -36,7 +36,7 @@ export default function UsersOrder() {
             booking fee: <b>{fixed},-</b>
           </span>
           <span>
-            taxes: <b>{(totalPrice + fixed) * taxRate},- </b>
+            taxes: <b>{((totalPrice + fixed) * taxRate).toFixed(2)},- </b>
             <small>{`(${taxRate * 100}%)`}</small>
           </span>
           <span>
