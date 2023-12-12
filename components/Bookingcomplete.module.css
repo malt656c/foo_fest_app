@@ -1,5 +1,5 @@
 .CompleteCard {
-  background-color: rgba(226, 207, 248, 0.47);
+  background-color: var(--secondary_light);
   background-size: cover;
   text-align: center;
   width: 350px;
@@ -8,7 +8,7 @@
 }
 
 .Heading {
-  font-size: xx-large;
+  font-size: var(--mobile_heading);
   text-align: center;
   font-family: var(--heading_font);
   color: var(--primary_dark);
@@ -16,44 +16,67 @@
 }
 
 .Button {
+  text-decoration: none !important;
   color: var(--primary_light);
   display: block;
   margin: 0 auto;
   background-color: var(--accent_pink);
   font-family: var(--heading_font);
-  font-size: large;
+  font-size: var(--mobile_subheading);
   padding: 6px 60px;
   border-radius: 30px;
   border: none;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 .Button:hover {
   background-color: var(--accent_red);
+  transform: scale(1.05);
 }
 
-.Text {
+.CompleteCard p {
   color: var(--primary_dark);
   font-family: var(--text_font);
   margin-bottom: 2rem;
-}
-
-.Button {
-  margin-bottom: 1rem;
+  font-size: var(--mobile_body);
 }
 
 @media (min-width: 768px) {
+  .CompleteCard {
+    width: 550px;
+  }
+
   .GCcard {
     width: 600px;
   }
   .Heading {
-    font-size: xx-large;
+    font-size: var(--tablet_heading);
+  }
+  .Button {
+    font-size: var(--tablet_subheading);
+  }
+
+  .CompleteCard p {
+    font-size: var(--tablet_body);
   }
 }
 
 @media (min-width: 992px) {
+  .CompleteCard {
+    width: 650px;
+  }
   .GCcard {
     width: 650px;
   }
   .Heading {
-    font-size: xx-large;
+    font-size: var(--desktop_heading);
+  }
+  .Button {
+    font-size: var(--desktop_subheading);
+  }
+  .CompleteCard p {
+    font-size: var(--tablet_body);
   }
 }
