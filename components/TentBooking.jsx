@@ -2,9 +2,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import styles from "./TentBooking.module.css";
 import Link from "next/link";
-import { dataContext } from "../src/app/contexts/basketContext";
-
-
+import { UpdaterContext } from "../src/app/contexts/basketContext";
 const products = [
   {
     id: 4,
@@ -18,25 +16,29 @@ const products = [
   },
 ];
 
-const CampArea = [
+const CampAreas = [
   {
     id: 6,
-    name: "Nilfheim",
+    name: "Svartheim",
   },
   {
     id: 7,
-    name: "Melheim",
+    name: "Nilfheim",
   },
   {
     id: 8,
-    name: "Muspleheim",
+    name: "Helheim",
   },
   {
     id: 9,
-    name: "Alfheim",
+    name: "Muspelheim",
   },
   {
     id: 10,
+    name: "Alfheim",
+  },
+  {
+    id: 11,
     name: "Surprise",
   },
 ];
@@ -44,14 +46,39 @@ export default function TentBooking() {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
   const [btnState, setBtnState] = useState(false);
-  const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
+  const [available, setAvailableData] = useState([]);
+  const setProductsInCart = useContext(UpdaterContext);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("http://localhost:8080/available-spots");
+
+        if (!response.ok) {
+          throw new Error("ERROR");
+        }
+        const data = await response.json();
+
+        setAvailableData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error.message);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  function getAvailableSpots(areaName) {
+    const area = available.find((data) => data.area === areaName);
+    return area ? area.available : "Surprise";
+  }
 
   function addToBasket() {
-    setProductsInCart((o) => o.concat({ ...products[0], count: count}));
+    setProductsInCart((o) => o.concat({ ...products[0], count: count }));
   }
 
   function addToBasket2() {
-    setProductsInCart((o) => o.concat({ ...products[1], count: count2}));
+    setProductsInCart((o) => o.concat({ ...products[1], count: count2 }));
   }
 
   function handleClick() {
@@ -65,18 +92,15 @@ export default function TentBooking() {
   }
 
   function decrement() {
-    if (count > 0)
-    setCount(count - 1);
+    if (count > 0) setCount(count - 1);
   }
-
 
   function increment2() {
     setCount2(count2 + 1);
   }
 
   function decrement2() {
-    if (count > 0)
-    setCount2(count2 - 1);
+    if (count > 0) setCount2(count2 - 1);
   }
 
   return (
@@ -84,12 +108,12 @@ export default function TentBooking() {
       <div className={styles.ChooseTent}>
         <h2 className={styles.Tentheadline}>Choose your camping area</h2>
         <div className={styles.Tentareas}>
-          <h3 className={styles.Tentbtn}>svartheim </h3>
-          <h3 className={styles.Tentbtn}>nilfheim</h3>
-          <h3 className={styles.Tentbtn}>helheim</h3>
-          <h3 className={styles.Tentbtn}>muspleheim</h3>
-          <h3 className={styles.Tentbtn}>alfheim</h3>
-          <h3 className={styles.Tentbtn}>Surprise me</h3>
+          {CampAreas.map((area) => (
+            <div key={area.id}>
+              <h3 className={styles.Tentbtn}>{area.name}</h3>
+              <p className={styles.spotsAvailable}>{`Available spots: ${getAvailableSpots(area.name)}`}</p>
+            </div>
+          ))}
         </div>
       </div>
       <div className={styles.mapsection}>
@@ -99,7 +123,7 @@ export default function TentBooking() {
           </button>
         </div>
         {btnState && <img src="/Foofestmap.jpg" alt="foofestmap" className={styles.image} />}
-      </div> 
+      </div>
       <div className={styles.TentCard}>
         <h1 className={styles.Heading}>Tents</h1>
         <h3 className={styles.h3}>Do you want a tent with that?</h3>
@@ -118,8 +142,10 @@ export default function TentBooking() {
           </button>
         </div>
         <div>
-          <button className={styles.Button} onClick={addToBasket}>Add to Cart</button>
-          </div>
+          <button className={styles.Button} onClick={addToBasket}>
+            Add to Cart
+          </button>
+        </div>
         <div className={styles.Info}>
           <p className={styles.Text}>{products[1].name}</p>
           <p className={styles.Price}>{products[1].price} DKK</p>
@@ -134,15 +160,17 @@ export default function TentBooking() {
           </button>
         </div>
         <div>
-          <button className={styles.Button} onClick={addToBasket2}>Add to Cart</button>
-          </div>
+          <button className={styles.Button} onClick={addToBasket2}>
+            Add to Cart
+          </button>
+        </div>
       </div>
       <Link href="/greencamping" className={styles.alink}>
-          <button className={styles.Button}>Next</button>
-        </Link>
+        <button className={styles.Button}>Next</button>
+      </Link>
       <Link href="/checkout" className={styles.alink}>
-          <button className={styles.Button}>skip</button>
-        </Link>
+        <button className={styles.Button}>skip</button>
+      </Link>
     </div>
   );
 }
