@@ -1,13 +1,10 @@
-"use client";
+"use client"
 import { useContext, useEffect } from "react";
 import styles from "./BookingComplete.module.css";
-import { userContext } from "../src/app/contexts/basketContext";
+import { dataContext } from "../src/app/contexts/basketContext";
 import Link from "next/link";
 export default function BookingComplete() {
-  const { userInfo} = useContext(userContext);
-  console.log(userInfo);
-  const userdata = userInfo;
-  console.log(userdata)
+  const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
   useEffect(() => {
     async function sendData(content) {
       let headersList = {
@@ -27,7 +24,7 @@ export default function BookingComplete() {
       let data = await response.text();
       console.log(data);
     }
-    sendData(userdata);
+    sendData(userInfo);
   });
 
   return (

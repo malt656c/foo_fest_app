@@ -8,10 +8,10 @@ til server-side components */
 import React, { useState, useContext } from "react";
 import styles from "./Ticketcard.module.css";
 //HIV STATE UPDATRE FUNKTION IND, DEL 1
-import { UpdaterContext } from "../src/app/contexts/basketContext";
+import { dataContext} from "../src/app/contexts/basketContext";
 export default function Ticketcard(props) {
   //HIV STATE UPDATRE FUNKTION IND, DEL 2
-  const setProductsInCart = useContext(UpdaterContext);
+  const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
 
   const [count, setCount] = useState(0);
 

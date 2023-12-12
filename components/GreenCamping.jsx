@@ -2,7 +2,7 @@
 import React, {useContext } from "react";
 import Link from "next/link";
 import styles from "./GreenCamping.module.css";
-import { UpdaterContext } from "../src/app/contexts/basketContext";
+import { dataContext } from "../src/app/contexts/basketContext";
 
 const products = [
     {
@@ -16,7 +16,7 @@ const products = [
 
 export default function GreenCamping() {
 
-const setProductsInCart = useContext(UpdaterContext);
+const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
 function addToBasket() {
     setProductsInCart((o) => o.concat({ ...products[0]}));
   }

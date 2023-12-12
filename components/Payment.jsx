@@ -1,10 +1,10 @@
 "use client";
 import styles from "./Payment.module.css";
 import { useContext } from "react";
-import { userContext } from "../src/app/contexts/basketContext";
+import { dataContext } from "../src/app/contexts/basketContext";
 import Link from "next/link";
 export default function Payment() {
-  const { userInfo, setUserInfo } = useContext(userContext);
+  const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
   
   console.log(userInfo);
   return (

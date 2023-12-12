@@ -1,13 +1,12 @@
 "use client";
 import styles from "./Checkout.module.css";
 import { useContext } from "react";
-import { StateContext, userContext } from "../src/app/contexts/basketContext";
+import { dataContext } from "../src/app/contexts/basketContext";
 import { useRouter } from "next/navigation";
 import UsersOrder from "./UsersOrder";
 import CheckoutInput from "./CheckoutInput";
 export default function Checkout() {
-  const { userInfo, setUserInfo } = useContext(userContext);
-  const productsInCart = useContext(StateContext);
+  const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
   const router = useRouter()
   const SubmitEvent =(event)=>{
     event.preventDefault();

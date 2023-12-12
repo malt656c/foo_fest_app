@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useContext } from "react";
 //HIV STATE IND DEL 1
-import { StateContext } from "../src/app/contexts/basketContext";
+import { dataContext } from "../src/app/contexts/basketContext";
 import styles from "./Header.module.css";
 import Image from "next/image";
 import Menu from "./Menu";
@@ -11,7 +11,7 @@ export default function Header() {
   const [cartVisibility, setCartVisible] = useState(false);
   //const [productsInCart, setProducts] = useState([]);
   //HIV STATE IND DEL 2
-  const productsInCart = useContext(StateContext);
+  const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
   return (
     <section className={styles.headerBackground}>
       <Link href={"/"}>

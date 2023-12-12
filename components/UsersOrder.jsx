@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import styles from "./UsersOrder.module.css";
-import { StateContext } from "../src/app/contexts/basketContext";
+import { dataContext } from "../src/app/contexts/basketContext";
 export default function UsersOrder() {
-  const productsInCart = useContext(StateContext);
+  const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
   console.log(productsInCart)
   if(productsInCart.length!==0){
       const totalPrice = productsInCart

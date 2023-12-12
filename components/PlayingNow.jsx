@@ -19,6 +19,7 @@ export default function PlayingNow() {
           const timeStringToNumber = (string) => {
             return parseInt(string.substring(0, 2));
           };
+   
           let filteredBand = allBands.filter((i) => timeStringToNumber(i.end) >= currentTime && currentTime >= timeStringToNumber(i.start) && i.act !== "break")[0];
           const getBand = Bands.filter((band)=>filteredBand.act==band.name);
 
@@ -27,6 +28,7 @@ export default function PlayingNow() {
             venue: Object.keys(venue)[0],
             slug: getBand[0].slug
           };
+                 console.log(band)
           playingBands.push(band);
         });
         setCurrentBands(playingBands);
