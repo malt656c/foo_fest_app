@@ -5,6 +5,7 @@ import { userContext } from "../src/app/contexts/basketContext";
 import Link from "next/link";
 export default function Payment() {
   const { userInfo, setUserInfo } = useContext(userContext);
+  
   console.log(userInfo);
   return (
     <section className={styles.paymentWrapper}>

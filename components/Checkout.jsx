@@ -7,6 +7,7 @@ import UsersOrder from "./UsersOrder";
 import CheckoutInput from "./CheckoutInput";
 export default function Checkout() {
   const { userInfo, setUserInfo } = useContext(userContext);
+
   const router = useRouter()
   const SubmitEvent =(event)=>{
     event.preventDefault();
@@ -22,7 +23,7 @@ router.push("/payment")
       <form className={styles.checkoutForm} onSubmit={SubmitEvent}>
         <CheckoutInput name="firstName" label="First Name" required />
         <CheckoutInput name="lastName" label="Last Name" required />
-        <CheckoutInput name="Address" label="Address" required />
+        <CheckoutInput name="address" label="Address" required />
         <div className={styles.checkoutEtage}>
           <CheckoutInput name="floor" label="Floor" />
           <CheckoutInput name="door" label="Door" />
