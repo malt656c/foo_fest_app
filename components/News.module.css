@@ -24,6 +24,7 @@
 }
 .newsCard {
   background-color: var(--secondary_light);
+  color: var(--primary_dark);
   display: grid;
   padding: 1rem;
   gap: 0.5rem;
@@ -40,6 +41,10 @@
   font-size: var(--mobile_subheading);
   font-weight: 100;
   margin: auto;
+}
+
+.Scene {
+  font-size: var(--mobile_subheading);
 }
 
 /* .newsCard > :nth-child(2) {
@@ -62,7 +67,7 @@
     font-size: var(--tablet_subheading);
   }
 
-  .newsCard :nth-child(2) {
+  .Scene {
     font-size: var(--tablet_subheading);
   }
   .time {
@@ -77,11 +82,9 @@
   .newsCard > h3 {
     font-size: var(--desktop_subheading);
   }
-
-  .newsCard :nth-child(2) {
+  .Scene {
     font-size: var(--desktop_subheading);
   }
-
   .time {
     font-size: var(--desktop_body);
   }
