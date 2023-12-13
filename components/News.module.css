@@ -24,6 +24,7 @@
 }
 .newsCard {
   background-color: var(--secondary_light);
+  color: var(--primary_dark);
   display: grid;
   padding: 1rem;
   gap: 0.5rem;
@@ -42,10 +43,15 @@
   margin: auto;
 }
 
-.newsCard > :nth-child(2) {
-  color: var(--primary_dark);
+.Scene {
   font-size: var(--mobile_subheading);
 }
+
+/* .newsCard > :nth-child(2) {
+  color: var(--primary_dark);
+  font-size: var(--mobile_subheading);
+} */
+
 .time {
   display: flex;
   gap: 0.25rem;
@@ -61,7 +67,7 @@
     font-size: var(--tablet_subheading);
   }
 
-  .newsCard :nth-child(2) {
+  .Scene {
     font-size: var(--tablet_subheading);
   }
   .time {
@@ -76,11 +82,9 @@
   .newsCard > h3 {
     font-size: var(--desktop_subheading);
   }
-
-  .newsCard :nth-child(2) {
+  .Scene {
     font-size: var(--desktop_subheading);
   }
-
   .time {
     font-size: var(--desktop_body);
   }

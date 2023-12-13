@@ -2,8 +2,10 @@
 import Image from "next/image";
 import styles from "./SingleBand.module.css";
 import { FFGet } from "./utilities";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 export default function SingleBand(props) {
+  const router = useRouter();
   const [data, setData] = useState(null);
   useEffect(() => {
     async function GetData() {
@@ -58,6 +60,9 @@ export default function SingleBand(props) {
             <p>{data.bio}</p>
           </div>
         </article>
+        <button className={styles.ButtonBack} type="button" onClick={() => router.back()}>
+          Back
+        </button>
       </section>
     );
   }

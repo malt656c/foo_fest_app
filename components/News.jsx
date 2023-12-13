@@ -24,7 +24,7 @@ export default function News() {
             return (
               <div key={e.act.act} className={styles.newsCard}>
                 <h3>{e.act.act}</h3>
-                <span>{e.scene}</span>
+                <span className={styles.Scene}>{e.scene}</span>
                 <div className={styles.time}>
                   <span>{e.day}</span>
                   <span>{e.act.start}</span>
