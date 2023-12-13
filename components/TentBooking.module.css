@@ -155,7 +155,7 @@ button.active {
 }
 
 .image {
-  width: 700px;
+  width: 350px;
   margin-bottom: 2rem;
 }
 
@@ -198,6 +198,10 @@ button.active {
   }
   .campingbtn {
     font-size: var(--tablet_subheading);
+  }
+  .image {
+    width: 700px;
+    margin-bottom: 2rem;
   }
 }
 
