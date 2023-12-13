@@ -3,7 +3,7 @@
 i server side component skal den bruges i en async funktion for at hente dataen korrekt 
 i client side component skal den bruges i en async funktion sammen med useEffect hook*/
 async function FFGet(endpoint) {
-  const url = "http://localhost:8080/";
+  const url = "https://tranquil-groovy-fossa.glitch.me/";
   const res = await fetch(url + endpoint);
   const data = await res.json().catch((err) => console.error(err));
   return data;

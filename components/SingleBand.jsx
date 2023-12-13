@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function SingleBand(props) {
   const data = await FFGet(`bands/${props.slug}`);
 
-  const url = "http://localhost:8080/logos/";
+  const url = "https://tranquil-groovy-fossa.glitch.me/logos/";
   if (data !== null) {
     const imageSource = () => {
       if (data.logoCredits || !data.logo.includes("http")) {

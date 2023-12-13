@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./ProgramCard.module.css";
 import Link from "next/link";
 export default function ProgramCard(props) {
-  const url = "http://localhost:8080/logos/";
+  const url = "https://tranquil-groovy-fossa.glitch.me/logos/";
   
   const imageSource = () => {
     if (props.imageCredits || !props.image.includes("http")) {

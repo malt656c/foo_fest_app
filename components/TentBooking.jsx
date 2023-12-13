@@ -51,11 +51,8 @@ export default function TentBooking() {
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
   useEffect(() => {
     async function fetchData() {
-      // const response = await fetch("http://localhost:8080/available-spots");
-      // const areaSpots = await response.json();
-      // console.log(areaSpots);
       try {
-        const res = await fetch("http://localhost:8080/available-spots");
+        const res = await fetch("https://tranquil-groovy-fossa.glitch.me//available-spots");
 
         if (!res.ok) {
           throw new Error("ERROR");
