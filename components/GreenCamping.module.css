@@ -57,6 +57,10 @@
   margin-bottom: 2rem;
 }
 
+.ButtonDiv {
+  margin-top: 4rem;
+}
+
 @media (min-width: 768px) {
   .GCcard {
     display: grid;

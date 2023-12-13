@@ -54,7 +54,7 @@
 .Button {
   color: var(--primary_light);
   display: block;
-  margin: 1rem auto;
+  margin: 2rem auto;
   background-color: var(--accent_pink);
   font-family: var(--heading_font);
   font-size: var(--mobile_subheading);
@@ -159,6 +159,26 @@ button.active {
   margin-bottom: 2rem;
 }
 
+.ButtonBottom {
+  color: var(--primary_light);
+  display: block;
+  margin: 3rem auto;
+  background-color: var(--accent_pink);
+  font-family: var(--heading_font);
+  font-size: var(--mobile_subheading);
+  padding: 6px 60px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ButtonBottom:hover {
+  background-color: var(--accent_red);
+  transform: scale(1.05);
+}
+
 @media (min-width: 768px) {
   .TentCard {
     width: 600px;
@@ -203,6 +223,9 @@ button.active {
     width: 700px;
     margin-bottom: 2rem;
   }
+  .ButtonBottom {
+    font-size: var(--tablet_subheading);
+  }
 }
 
 @media (min-width: 992px) {
@@ -236,6 +259,9 @@ button.active {
     font-size: var(--desktop_subheading);
   }
   .campingbtn {
+    font-size: var(--desktop_subheading);
+  }
+  .ButtonBottom {
     font-size: var(--desktop_subheading);
   }
 }

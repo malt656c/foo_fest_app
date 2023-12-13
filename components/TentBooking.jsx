@@ -171,7 +171,7 @@ export default function TentBooking() {
         </div>
       </div>
       <Link href="/greencamping" className={styles.alink}>
-        <button className={styles.Button}>Next</button>
+        <button className={styles.ButtonBottom}>Next</button>
       </Link>
     </div>
   );

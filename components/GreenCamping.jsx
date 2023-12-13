@@ -19,20 +19,24 @@ export default function GreenCamping() {
     setProductsInCart((o) => o.concat({ ...products[0] }));
   }
   return (
-    <div className={styles.GCcard}>
-      <h1 className={styles.Heading}>Green Camping?</h1>
-      <p className={styles.Text}>
-        Do you want to add green camping to your ticket? Green camping makes sure to sustainably remove your tent after the festival and adds reusable cups and straws for the whole camp. We try to be good to the enviroment, will you help us?{" "}
-      </p>
-      <p className={styles.Price}>+ 249 DKK</p>
-      <Link href="/checkout" className={styles.alink}>
-        <button className={styles.Button} onClick={addToBasket}>
-          Add to basket
-        </button>
-      </Link>
-      <Link href="/checkout" className={styles.alink}>
-        <button className={styles.Button}>SKIP</button>
-      </Link>
+    <div>
+      <div className={styles.GCcard}>
+        <h1 className={styles.Heading}>Green Camping?</h1>
+        <p className={styles.Text}>
+          Do you want to add green camping to your ticket? Green camping makes sure to sustainably remove your tent after the festival and adds reusable cups and straws for the whole camp. We try to be good to the enviroment, will you help us?{" "}
+        </p>
+        <p className={styles.Price}>+ 249 DKK</p>
+        <Link href="/checkout" className={styles.alink}>
+          <button className={styles.Button} onClick={addToBasket}>
+            Add to basket
+          </button>
+        </Link>
+      </div>
+      <div className={styles.ButtonDiv}>
+        <Link href="/checkout" className={styles.alink}>
+          <button className={styles.Button}>SKIP</button>
+        </Link>
+      </div>
     </div>
   );
 }
