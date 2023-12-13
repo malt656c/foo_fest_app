@@ -13,7 +13,6 @@
   gap: 1rem;
   padding: 1rem;
   margin: 0 auto;
-
 }
 
 .bandContent {
@@ -104,24 +103,24 @@
   font-size: var(--mobile_subheading);
 }
 
-.youMightAlso {
-  display: grid;
-  margin-top: 5rem;
-  text-align: center;
-}
-
-.youMightAlso h2 {
-  font-family: var(--heading_font);
+.ButtonBack {
   color: var(--primary_light);
-  font-size: var(--mobile_heading);
+  display: block;
+  margin: 3rem auto;
+  background-color: var(--accent_pink);
+  font-family: var(--heading_font);
+  font-size: var(--mobile_subheading);
+  padding: 6px 60px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.youMightAlsoDiv {
-  justify-content: center;
-}
-
-.youMightAlsoDiv img {
-  max-width: 200px;
+.ButtonBack:hover {
+  background-color: var(--accent_red);
+  transform: scale(1.05);
 }
 
 @media (min-width: 768px) {
@@ -133,12 +132,12 @@
     background-color: var(--primary_dark);
   }
   .bandH1 {
-text-align: center;
+    text-align: center;
     font-size: var(--tablet_title);
     grid-column: 1/3;
     grid-row: 1/2;
   }
-  .imageWrapper{
+  .imageWrapper {
     grid-column: 1/2;
     grid-row: 2/3;
   }
@@ -170,14 +169,8 @@ text-align: center;
   .mobileImg {
     display: none;
   }
-  .youMightAlsoDiv {
-    display: flex;
-    gap: 5%;
-    justify-content: center;
-  }
-
-  .youMightAlso h2 {
-    font-size: var(--tablet_heading);
+  .ButtonBack {
+    font-size: var(--tablet_subheading);
   }
 }
 
@@ -195,7 +188,7 @@ text-align: center;
   .bandInfo p {
     font-size: var(--desktop_body);
   }
-  .youMightAlso h2 {
-    font-size: var(--desktop_heading);
+  .ButtonBack {
+    font-size: var(--desktop_subheading);
   }
 }

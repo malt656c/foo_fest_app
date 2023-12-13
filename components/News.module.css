@@ -42,10 +42,11 @@
   margin: auto;
 }
 
-.newsCard > :nth-child(2) {
+/* .newsCard > :nth-child(2) {
   color: var(--primary_dark);
   font-size: var(--mobile_subheading);
-}
+} */
+
 .time {
   display: flex;
   gap: 0.25rem;
