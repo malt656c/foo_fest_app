@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./News.module.css";
-import { FFGet } from "./utilities";
+import { FFGet } from "./Utilities";
 export default function News() {
   const [events, setEvents] = useState(null);
   useEffect(() => {

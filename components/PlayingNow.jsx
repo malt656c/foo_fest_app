@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FFGet, FFScheduleToday } from "./utilities";
+import { FFGet, FFScheduleToday } from "./Utilities";
 import styles from "./PlayingNow.module.css";
 import Link from "next/link";
 export default function PlayingNow() {

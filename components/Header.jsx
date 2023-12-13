@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <section className={styles.headerBackground}>
       <Link href={"/"}>
-        <Image src="/mobilelogo.svg" alt="logo" height={48} width={48} />
+        <Image src="/mobilelogo.svg" alt="logo" height={48} width={48} priority/>
       </Link>
       <BookingCountDown></BookingCountDown>
       <div className={styles.CartAndMenu}>

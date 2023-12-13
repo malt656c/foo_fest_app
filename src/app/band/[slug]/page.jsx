@@ -1,5 +1,6 @@
 import AppWrapper from "../../../../components/AppWrapper";
 import SingleBand from "../../../../components/SingleBand";
+import { FFGet } from "../../../../components/Utilities";
 export default async function Page({ params }) {
   return (
     <main>
@@ -8,4 +9,11 @@ export default async function Page({ params }) {
       </AppWrapper>
     </main>
   );
+}
+export async function generateStaticParams() {
+  const posts = await FFGet('bands')
+ 
+  return posts.map((post) => ({
+    slug: post.slug,
+  }))
 }

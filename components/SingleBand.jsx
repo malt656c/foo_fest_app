@@ -1,27 +1,17 @@
-"use client";
 import Image from "next/image";
 import styles from "./SingleBand.module.css";
-import { FFGet } from "./utilities";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-export default function SingleBand(props) {
-  const router = useRouter();
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    async function GetData() {
-      if (data == null) {
-        setData(await FFGet(`bands/${props.slug}`));
-      }
-    }
-    GetData();
-  });
+import { FFGet } from "./Utilities";
+import Link from "next/link";
+export default async function SingleBand(props) {
+  const data = await FFGet(`bands/${props.slug}`);
+
   const url = "http://localhost:8080/logos/";
   if (data !== null) {
     const imageSource = () => {
       if (data.logoCredits || !data.logo.includes("http")) {
         return (
           <div className={styles.imageWrapper}>
-            <Image src={url + data.logo} alt={data.name} height={350} width={350} className={styles.bandImage} />
+            <Image src={url + data.logo} alt={data.name} height={350} width={350} className={styles.bandImage}/>
             <details className={styles.logoCredits}>
               <summary>photo credits</summary>
               <p>{data.logoCredits}</p>
@@ -31,7 +21,7 @@ export default function SingleBand(props) {
       } else {
         return (
           <div className={styles.imageWrapper}>
-            <Image src={data.logo} alt={data.name} height={350} width={350} className={styles.bandImage} />
+            <Image src={data.logo} alt={data.name} height={350} width={350} className={styles.bandImage}/>
           </div>
         );
       }
@@ -60,9 +50,9 @@ export default function SingleBand(props) {
             <p>{data.bio}</p>
           </div>
         </article>
-        <button className={styles.ButtonBack} type="button" onClick={() => router.back()}>
+        <Link href={"/program"} className={styles.ButtonBack} type="button">
           Back
-        </button>
+        </Link>
       </section>
     );
   }

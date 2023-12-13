@@ -3,19 +3,19 @@ import styles from "./ProgramCard.module.css";
 import Link from "next/link";
 export default function ProgramCard(props) {
   const url = "http://localhost:8080/logos/";
-
+  
   const imageSource = () => {
     if (props.imageCredits || !props.image.includes("http")) {
       return (
         <div className={styles.imageWrapper}>
-          <Image src={url + props.image} alt={props.name} height={350} width={350} className={styles.bandLogo} />
+          <Image src={url + props.image} alt={props.name} height={350} width={350} className={styles.bandLogo}/>
           <span className={styles.imageCredits}>{props.imageCredits}</span>
         </div>
       );
     } else {
       return (
         <div className={styles.imageWrapper}>
-          <Image src={props.image} alt={props.name} height={350} width={350} className={styles.bandLogo} />
+          <Image src={props.image} alt={props.name} height={350} width={350} className={styles.bandLogo}/>
         </div>
       );
     }

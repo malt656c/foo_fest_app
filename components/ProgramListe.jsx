@@ -2,8 +2,10 @@
 import ProgramCard from "./ProgramCard";
 import styles from "./ProgramListe.module.css";
 import { useState, useEffect } from "react";
-import { FFGet, FFSchedule, FFScheduleToday } from "./utilities";
+import { FFGet, FFSchedule, FFScheduleToday } from "./Utilities";
+
 export default function ProgramListe() {
+
   const [filter, setFilter] = useState(null);
   const [bands, setBands] = useState(null);
   useEffect(() => {
@@ -84,11 +86,16 @@ export default function ProgramListe() {
         </div>
       </form>
 
-      <div className={styles.bandList}>
-        {filteredBands().map((band) => {
-          return <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug} start={band.start} end={band.end} venue={band.venue} genre={band.genre} />;
-        })}
-      </div>
+  
+        <div className={styles.bandList}>
+
+          {filteredBands().map((band) => {
+            return  <ProgramCard key={band.slug} name={band.name} image={band.logo} imageCredits={band.logoCredits} slug={band.slug} start={band.start} end={band.end} venue={band.venue} genre={band.genre} />
+
+          })}
+
+        </div>
+
     </section>
   );
 }
