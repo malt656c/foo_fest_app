@@ -2,7 +2,6 @@
 import { useContext, useEffect } from "react";
 import styles from "./BookingComplete.module.css";
 import { dataContext } from "../src/app/contexts/basketContext";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 export default function BookingComplete() {
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
