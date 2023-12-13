@@ -3,8 +3,10 @@ import { useContext, useEffect } from "react";
 import styles from "./BookingComplete.module.css";
 import { dataContext } from "../src/app/contexts/basketContext";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 export default function BookingComplete() {
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
+  const router =useRouter()
   useEffect(() => {
     async function sendData(content) {
       let headersList = {
@@ -23,6 +25,7 @@ export default function BookingComplete() {
 
       let data = await response.text();
       console.log(data);
+      return;
     }
     sendData(userInfo);
   });
@@ -33,9 +36,9 @@ export default function BookingComplete() {
       <p className={styles.Text}>Vi har sendt en ordrebekræftelselse til e-mailen: {userInfo.email}. </p>
 
       <p className={styles.Text}>Skulle du have yderligere spørgsmål er du velkommen til at kontakte FooFest på kontakt-foofest@gmail.com</p>
-      <Link href="/">
-        <button className={styles.Button}>Go to Frontpage</button>
-      </Link>
+{/*       <Link href="/"> */}
+        <button className={styles.Button} onClick={()=>{setProductsInCart([]);router.push("/")} }>Go to Frontpage</button>
+{/*       </Link> */}
     </div>
   );
 }
