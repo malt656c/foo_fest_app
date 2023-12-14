@@ -6,14 +6,14 @@ const products = [
     id: 1,
     name: "Regular Ticket",
     price: 799,
-    description: "Provides access to all koncerts, everyday of the festival. Also provides acces to tent area of your choosing ",
+    description: "Provides access to all concerts, everyday of the festival. Also provides acces to tent area of your choosing. ",
     bgColor: "var(--primary_light)",
   },
   {
     id: 2,
     name: "VIP Ticket",
     price: 1299,
-    description: "Provides Access to pits, shower facilities, 20% discount on all beverages and includes all regular-ticket benefits.",
+    description: "Provides access to pits, shower facilities, 20% discount on all beverages and includes all regular-ticket benefits.",
     bgColor: "var(--secondary_light)",
   },
 ];
