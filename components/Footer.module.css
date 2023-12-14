@@ -5,6 +5,7 @@
   font-family: var(--heading_font);
   gap: 2rem;
   padding: 2rem;
+  margin-top: 4rem;
 }
 
 .footerGapGrid {
