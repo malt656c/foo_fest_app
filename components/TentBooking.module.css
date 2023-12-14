@@ -1,5 +1,8 @@
 .wrapper {
   padding-top: 5rem;
+  display: grid;
+  gap: 2rem;
+  place-items: center;
 }
 .TentCard {
   background-image: url(../public/frontpagebg.jpg);
@@ -88,8 +91,11 @@
 }
 
 .ChooseTent {
+  display: grid;
+  gap: 2rem;
+  padding-block: 2rem;
   font-family: var(--heading_font);
-  margin: 4rem auto;
+  margin: auto;
   text-align: center;
   width: 350px;
 }
@@ -98,31 +104,50 @@
   gap: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: fit-content;
 }
-
-.Tentheadline {
-  color: var(--secondary_light);
-  font-family: var(--heading_font);
-  margin-bottom: 2rem;
-  font-size: var(--mobile_title);
-}
-
-.Tentbtn {
+.tentAreaButton {
+  height: max-content;
+  width: 100%;
   background-color: var(--secondary_dark);
   border: solid black 1px;
   border-radius: 15px;
-  padding: 25px 8px;
+position: relative;
   color: var(--primary_light);
-  font-size: var(--mobile_body);
-  cursor: pointer;
+
   transition: all 0.1s ease-in-out;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
-
-.Tentbtn:hover {
-  outline: solid rgb(210, 10, 217) 2px;
+.tentAreaButton > label {
+  display: grid;
+  font-size: 2rem;
+  width: 100%;
+  height: 5rem;
+  place-items: center;
+  cursor: pointer;
 }
-
+.tentAreaButton > input {
+  display: none;
+}
+.tentAreaButton > p {
+  font-size: 0.75rem;
+  font-family: var(--text_font);
+  position: absolute;
+}
+.tentAreaButton:has(input:checked) {
+background-color: var(--accent_pink);
+}
+.tentAreaButton:has(p[data-available="0"]) {
+pointer-events: none;
+filter: opacity(60%) saturate(70%);
+box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.2);
+cursor: default;
+  }
+.Tentheadline {
+  color: var(--secondary_light);
+  font-family: var(--heading_font);
+  font-size: var(--mobile_title);
+}
 .spotsAvailable {
   color: var(--primary_light);
   font-size: var(--mobile_body);
@@ -132,10 +157,11 @@
 
 .mapsection {
   text-align: center;
+  display: grid;
+  gap: 1rem;
 }
 
 .campingbtn {
-  margin-bottom: 2rem;
   font-family: var(--heading_font);
   border: none;
   border-radius: 30px;
@@ -147,7 +173,6 @@
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   color: var(--primary_light);
 }
-
 .campingbtn:hover {
   background-color: var(--accent_red);
   transform: scale(1.05);

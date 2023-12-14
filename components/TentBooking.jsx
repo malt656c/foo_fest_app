@@ -104,19 +104,28 @@ export default function TentBooking() {
   function decrement2() {
     if (count2 > 1) setCount2(count2 - 1);
   }
-
+const ChooseArea =(e)=>{
+  const data=new FormData(e.currentTarget)
+  const area = data.get("tentArea")
+console.log(area)
+}
+const GetNumberOfTickets=()=>{
+  
+}
   return (
     <div className={styles.wrapper}>
       <div className={styles.ChooseTent}>
+        <span>{GetNumberOfTickets()}</span>
         <h2 className={styles.Tentheadline}>Choose your camping area</h2>
-        <div className={styles.Tentareas}>
+        <form className={styles.Tentareas} onChange={(e)=>{ChooseArea(e)}}>
           {CampAreas.map((area) => (
-            <div key={area.id}>
-              <h3 className={styles.Tentbtn}>{area.name}</h3>
-              <p className={styles.spotsAvailable}>{`Available spots: ${getAvailableSpots(area.name)}`}</p>
+            <div key={area.id} className={styles.tentAreaButton}>
+              <label htmlFor={area.name}>{area.name}</label>
+              <input type="radio" name="tentArea" id={area.name} value={area.name}/>
+              <p className={styles.spotsAvailable} data-available={getAvailableSpots(area.name)}>{`Available spots: ${getAvailableSpots(area.name)}`}</p>
             </div>
           ))}
-        </div>
+        </form>
       </div>
       <div className={styles.mapsection}>
         <div>
