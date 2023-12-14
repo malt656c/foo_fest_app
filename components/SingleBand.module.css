@@ -116,6 +116,7 @@
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }
 
 .ButtonBack:hover {
