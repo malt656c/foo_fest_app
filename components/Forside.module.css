@@ -1,7 +1,5 @@
 .forsideWrapper {
   height: 100%;
-  /* display: grid; */
-  place-items: center;
 }
 
 .forsideAtags {
@@ -10,10 +8,8 @@
 }
 
 .forsideContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+display: grid;
+place-items: center;
   height: 100vh;
   background-image: url("/frontpagebg.jpg");
   background-size: cover;
@@ -25,7 +21,6 @@
   font-family: var(--heading_font);
   font-size: var(--mobile_display);
   color: var(--primary_light);
-  margin-top: 25%;
   margin-bottom: 1rem; /* Juster efter behov */
 }
 
@@ -37,8 +32,6 @@
   font-size: var(--mobile_subheading);
   background-color: var(--accent_pink);
   color: var(--primary_light);
-  cursor: pointer;
-  margin-top: 50%;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -107,13 +100,11 @@
 
 @media (min-width: 768px) {
   .forsideHeader {
-    margin-top: 10%;
     margin-bottom: 6rem;
     font-size: var(--tablet_display);
   }
 
   .forsideButton {
-    margin-top: 10%;
     font-size: var(--tablet_subheading);
   }
 }

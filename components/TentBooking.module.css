@@ -1,3 +1,6 @@
+.wrapper{
+  padding-top: 5rem;
+}
 .TentCard {
   background-image: url(../public/frontpagebg.jpg);
   background-size: cover;

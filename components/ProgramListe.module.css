@@ -1,6 +1,7 @@
 .list {
   display: grid;
   gap: 1rem;
+  padding-top: 5rem;
 }
 .filterSection {
   display: grid;

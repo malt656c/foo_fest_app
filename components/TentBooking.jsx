@@ -106,7 +106,7 @@ export default function TentBooking() {
   }
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <div className={styles.ChooseTent}>
         <h2 className={styles.Tentheadline}>Choose your camping area</h2>
         <div className={styles.Tentareas}>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Forside.module.css";
 import News from "./News";
 import PlayingNow from "./PlayingNow";
@@ -6,11 +7,10 @@ export default function Forside() {
     <section className={styles.forsideWrapper}>
       <div className={styles.forsideContent}>
         <h1 className={styles.forsideHeader}>FooFest</h1>
-        <button className={styles.forsideButton}>
-          <a className={styles.forsideAtags} href="/booking">
-            Buy tickets
-          </a>
-        </button>
+
+        <Link className={styles.forsideAtags} href="/booking">
+          <button className={styles.forsideButton}> Buy tickets</button>
+        </Link>
       </div>
       <PlayingNow />
       <News />

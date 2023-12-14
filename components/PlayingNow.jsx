@@ -33,8 +33,6 @@ export default function PlayingNow() {
         });
         setCurrentBands(playingBands);
           console.log(playingBands)
-
-
       }
     }
     getCurrentbands();
