@@ -29,6 +29,7 @@ eventuelt bezier
   --desktop_heading: 3.5rem;
   --desktop_subheading: 2rem;
   --desktop_body: 1.25rem;
+  --header_height:5rem;
 }
 * {
   margin: 0;

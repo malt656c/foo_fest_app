@@ -15,16 +15,16 @@ export default function Shoppingcart() {
         onClick={() => {
           cartVisibility ? setCartVisibility(false) : setCartVisibility(true);
         }}
+        tabIndex={0}
+        role="button"
       >
         <Image src="/cart-shopping-solid.svg" alt="Cart" width={48} height={48}></Image>
       </div>
       <section className={styles.wrapper} style={{ translate: cartVisibility ? "0%" : "100%" }}>
-        <div className={styles.header}>
+        <button className={styles.closeButton} onClick={() => setCartVisibility(false)}>
+          <Image src="/xmark-solid.svg" alt="Close" width={24} height={24} />
+        </button>
           <h2>Shopping Cart</h2>
-          <button className={`${styles.btn} ${styles.closebtn}`} onClick={() => setCartVisibility(false)}>
-            <Image src="/xmark-solid.svg" alt="Close" width={16} height={16} />
-          </button>
-        </div>
         <div className={styles.cartproducts}>
           {productsInCart?.length === 0 && <span className={styles.emptytext}>Your basket is currently empty</span>}
           {productsInCart.map((product) => (
@@ -37,7 +37,11 @@ export default function Shoppingcart() {
               </button>
             </div>
           ))}
-          <Link href="/checkout">{productsInCart?.length && <button className={styles.btn + " " + styles.checkoutbt}>Proceed to checkout</button>}</Link>
+          {productsInCart.length > 0 && (
+            <Link href="/checkout" className={styles.checkoutButton}>
+              Proceed to checkout
+            </Link>
+          )}
         </div>
       </section>
     </>

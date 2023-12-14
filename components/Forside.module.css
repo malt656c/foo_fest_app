@@ -10,6 +10,7 @@
 .forsideContent {
 display: grid;
 place-items: center;
+padding-top: 5rem;
   height: 100vh;
   background-image: url("/frontpagebg.jpg");
   background-size: cover;
