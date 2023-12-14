@@ -5,13 +5,13 @@ import { dataContext } from "../src/app/contexts/basketContext";
 import Link from "next/link";
 export default function Payment() {
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
-  
+
   console.log(userInfo);
   return (
     <section className={styles.paymentWrapper}>
       <div className={styles.paymentOplysninger}>
         <h2 className={styles.paymentH2}>Payment Details</h2>
-        <span>{"(bare tryk på Confirm Payment, vi leger bare)"}</span>
+        {/* <span>{"(bare tryk på Confirm Payment, vi leger bare)"}</span> */}
         <form className={styles.paymentFormGrid}>
           <label className={styles.paymentLabel} htmlFor="navn">
             Navn På Kortet
