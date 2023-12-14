@@ -94,7 +94,7 @@ export default function TentBooking() {
   }
 
   function decrement() {
-    if (count > 0) setCount(count - 1);
+    if (count > 1) setCount(count - 1);
   }
 
   function increment2() {
@@ -102,8 +102,7 @@ export default function TentBooking() {
   }
 
   function decrement2() {
-    if (count2 > 0) 
-    setCount2(count2 - 1);
+    if (count2 > 1) setCount2(count2 - 1);
   }
 
   return (
