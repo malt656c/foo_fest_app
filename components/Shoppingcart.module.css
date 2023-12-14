@@ -1,51 +1,67 @@
 .wrapper {
   position: absolute;
   background-color: var(--primary_light);
-  padding: 1rem;
   height: calc(100vh - var(--header_height));
+  min-width: 270px;
   width: fit-content;
+  max-width: 100vw;
   display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
   right: 0;
   top: var(--header_height);
   transition: all 0.2s ease-in-out;
+  padding-bottom: 1rem;
 }
-
-.wrapper button{
+.wrapper button {
   background: transparent;
   border: none;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
-.closeButton{
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-.closeButton:hover{
-transform: scale(1.15);
-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.12));
-}
 .header {
-  margin: 0 auto;
-  justify-content: space-between;
-  gap: 2rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  gap: 1rem;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.closeButton:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.12));
+}
+.header h2 {
   color: var(--primary_dark);
   font-family: var(--heading_font);
-
+  text-align: center;
+  white-space: nowrap;
 }
-
-.cartproducts{
-display: grid;
+.cartproducts {
+  height: fit-content;
+  display: grid;
+  gap: 1rem;
   align-items: start;
 }
 
 .cartProduct {
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.cartProductInfo {
+  display: grid;
+  gap: 0.25rem;
+  
+}
+.cartProductInfo span {
+  display: flex;  font-family: var(--text_font);
   justify-content: space-between;
-  display: flex;
-  margin-bottom: 1rem;
-  font-family: var(--display_font);
 }
 
 .checkoutButton {
@@ -55,8 +71,11 @@ display: grid;
   padding: 0.5rem;
   background-color: var(--accent_pink);
   border: none;
+  margin: auto;
   text-decoration: none;
+  width: fit-content;
 }
-.probtn {
-  text-align: center;
+
+.emptyCart{
+  margin: auto;
 }

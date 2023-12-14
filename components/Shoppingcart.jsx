@@ -21,28 +21,35 @@ export default function Shoppingcart() {
         <Image src="/cart-shopping-solid.svg" alt="Cart" width={48} height={48}></Image>
       </div>
       <section className={styles.wrapper} style={{ translate: cartVisibility ? "0%" : "100%" }}>
-        <button className={styles.closeButton} onClick={() => setCartVisibility(false)}>
-          <Image src="/xmark-solid.svg" alt="Close" width={24} height={24} />
-        </button>
-          <h2>Shopping Cart</h2>
+        <div className={styles.header}>
+          <h2>Shopping Cart</h2>{" "}
+          <button className={styles.closeButton} onClick={() => setCartVisibility(false)}>
+            <Image src="/xmark-solid.svg" alt="Close" width={24} height={24} />
+          </button>
+        </div>
         <div className={styles.cartproducts}>
-          {productsInCart?.length === 0 && <span className={styles.emptytext}>Your basket is currently empty</span>}
+          {productsInCart?.length === 0 && <span className={styles.emptyCart}>Your basket is currently empty</span>}
           {productsInCart.map((product) => (
             <div className={styles.cartProduct} key={product.id}>
-              <h3>{product.name}</h3>
-              <span className={styles.productCount}>{product.count}Stk</span>
-              <span className={styles.productPrice}>{product.price}DKK</span>
-              <button className={styles.btn + " " + styles.removebtn} onClick={() => setProductsInCart(productsInCart.filter((i) => i.id !== product.id))}>
+              <div className={styles.cartProductInfo}>
+                <h3 className={styles.productName}>{product.name}</h3>
+                <span className={styles.productCount}>amount: <b>{product.count}</b></span>
+                <span className={styles.productPrice}>individual price: <b>{product.price}</b></span>
+                <span className={styles.productPriceToatal}>total price: <b>{product.price*product.count}</b></span>
+              </div>
+              <button onClick={() => setProductsInCart(productsInCart.filter((i) => i.id !== product.id))} className={styles.closeButton}>
                 <Image src="/xmark-solid.svg" alt="Close" width={16} height={16} />
               </button>
             </div>
           ))}
-          {productsInCart.length > 0 && (
-            <Link href="/checkout" className={styles.checkoutButton}>
-              Proceed to checkout
-            </Link>
-          )}
-        </div>
+        </div>{" "}
+        {productsInCart.length > 0 && (
+          <Link href="/checkout" className={styles.checkoutButton}         onClick={() => {
+            cartVisibility ? setCartVisibility(false) : setCartVisibility(true);
+          }}>
+            Proceed to checkout
+          </Link>
+        )}
       </section>
     </>
   );
