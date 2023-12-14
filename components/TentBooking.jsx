@@ -13,7 +13,7 @@ const products = [
   {
     id: 5,
     name: "3 Person tent",
-    price: 349,
+    price: 399,
   },
 ];
 
@@ -44,8 +44,8 @@ const CampAreas = [
   },
 ];
 export default function TentBooking() {
-  const [count, setCount] = useState(0);
-  const [count2, setCount2] = useState(0);
+  const [count, setCount] = useState(1);
+  const [count2, setCount2] = useState(1);
   const [btnState, setBtnState] = useState(false);
   const [available, setAvailableData] = useState([]);
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
