@@ -21,7 +21,7 @@ export default function BookingCountDown() {
       }, 1000);
       return () => clearInterval(counter);
     }
-  }, [reservationId, setProductsInCart, timeLeft, setTimeLeft, router]);
+  }, [reservationId, setProductsInCart, timeLeft, setTimeLeft, router, productsInCart]);
   if (reservationId !== null && productsInCart.length < 0) {
     return (
       <div className={styles.countdownWrapper}>
