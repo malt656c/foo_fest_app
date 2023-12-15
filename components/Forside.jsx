@@ -3,6 +3,7 @@ import styles from "./Forside.module.css";
 import News from "./News";
 import PlayingNow from "./PlayingNow";
 export default function Forside() {
+
   return (
     <section className={styles.forsideWrapper}>
       <div className={styles.forsideContent}>

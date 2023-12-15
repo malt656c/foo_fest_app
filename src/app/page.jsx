@@ -1,12 +1,14 @@
+"use client"
+import { useEffect } from "react";
 import AppWrapper from "../../components/AppWrapper";
 import Forside from "../../components/Forside";
-import Head from "next/head";
 export default function Home() {
+  useEffect(() => {
+    document.title = "FooFest";
+  }, []);
+
   return (
     <main>
-      <Head>
-        <title>FooFest</title>
-      </Head>
       <AppWrapper>
         <Forside></Forside>
       </AppWrapper>
