@@ -6,14 +6,27 @@ import MenuLink from "./MenuLink";
 export default function Menu() {
   const [isOpen, setOpen] = useState(false);
   const [translation, setTranslation] = useState("-100%");
-const linkOnClick=()=>{
-  setOpen(false);
-  setTranslation("-100%");
-}
-/* TODO: accesability på burger menu */
+  const linkOnClick = () => {
+    setOpen(false);
+    setTranslation("-100%");
+  };
+  /* TODO: accesability på burger menu */
   return (
     <>
-      <div className={styles.burgerIcon}>
+      <button
+        className={styles.burgerIcon}
+        tabIndex={0}
+        aria-expanded="true"
+        aria-label="Main menu"
+        onKeyDown={(e) => {
+          e.preventDefault();
+          if (e.key === " " || e.key === "Enter") {
+            isOpen ? setOpen(false) : setOpen(true);
+            !isOpen ? setTranslation("0%") : setTranslation("-100%");
+            e.currentTarget.nextElementSibling.firstChild.focus();
+          }
+        }}
+      >
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
@@ -29,54 +42,70 @@ const linkOnClick=()=>{
             }
           }}
         />
-      </div>
+      </button>
       <nav
         className={styles.menuBackground}
+        role="navigation"
         style={{
           transform: `translateY(${translation})`,
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Escape") {
+            e.preventDefault();
+            isOpen ? setOpen(false) : setOpen(true);
+            !isOpen ? setTranslation("0%") : setTranslation("-100%");
+            e.currentTarget.blur();
+            e.target.blur();
+          }
         }}
       >
         <MenuLink
           link="/program"
-          content="Programme"
+          content="Program"
           click={() => {
-            linkOnClick()
+            linkOnClick();
           }}
+          isVisible={isOpen}
         />
         <MenuLink
           link="/booking"
           content="Tickets"
           click={() => {
-            linkOnClick()
+            linkOnClick();
           }}
+          isVisible={isOpen}
         />
         <MenuLink
           link="/"
           content="News"
           click={() => {
-            linkOnClick()
+            linkOnClick();
           }}
+          isVisible={isOpen}
         />
         <MenuLink
           link="/"
           content="Volunteer"
           click={() => {
-            linkOnClick()
+            linkOnClick();
           }}
+          isVisible={isOpen}
         />
         <MenuLink
           link="/"
           content="About"
           click={() => {
-            linkOnClick()
+            linkOnClick();
           }}
+          isVisible={isOpen}
         />
         <MenuLink
           link="/"
           content="Contact"
           click={() => {
-            linkOnClick()
+            linkOnClick();
           }}
+          isVisible={isOpen}
         />
       </nav>
     </>
