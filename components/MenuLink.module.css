@@ -1,7 +1,7 @@
 .linkText {
   color: var(--primary_light);
   font-family: var(--heading_font);
-  font-size: var(--mobile_title);
+  font-size: 3rem;
   position: relative;
   display: inline-block;
   transition: opacity 0s ease, transform 0.1s ease;
