@@ -14,7 +14,7 @@
 }
 
 .footerH3 {
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
 }
 
 .footerGapGrid p {
@@ -27,7 +27,7 @@
 }
 
 .footerLink p {
-  font-size: var(--mobile_body);
+  font-size: var(--body);
 }
 
 .footerGapGrid p:hover {
@@ -52,23 +52,5 @@
   .footerBackground {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  .footerH3 {
-    font-size: var(--tablet_subheading);
-  }
-}
-
-@media (min-width: 992px) {
-  .footerBackground {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .footerH3 {
-    font-size: var(--desktop_subheading);
-  }
-
-  .footerLink p {
-    font-size: var(--desktop_body);
   }
 }
