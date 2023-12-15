@@ -15,7 +15,7 @@
 .paymentH2 {
   font-family: var(--heading_font);
   text-align: center;
-  font-size: var(--mobile_heading);
+  font-size: var(--heading);
   padding-top: 3rem;
 }
 
@@ -26,7 +26,7 @@
 
 .paymentLabel {
   font-family: var(--heading_font);
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
   margin-top: 1rem;
 }
 
@@ -60,7 +60,7 @@
   border: none;
   border-radius: 50px;
   font-family: var(--text_font);
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
   padding: 1rem 1.5rem 1rem 1.5rem;
   margin: 1rem;
   color: var(--primary_light);
@@ -75,44 +75,20 @@
 }
 
 @media (min-width: 768px) {
-  .paymentH2 {
-    font-size: var(--tablet_heading);
-  }
   .paymentOplysninger {
     max-width: 500px;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
   }
-  .paymentLabel {
-    font-size: var(--tablet_subheading);
-  }
-  .paymentConfirmButton {
-    font-size: var(--tablet_subheading);
-  }
 }
 
 @media (min-width: 992px) {
-  .paymentH2 {
-    font-size: var(--desktop_heading);
-  }
   .paymentOplysninger {
     max-width: 650px;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-  }
-  /* .paymentWrapper {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-  } */
-  .paymentLabel {
-    font-size: var(--desktop_subheading);
-  }
-  .paymentConfirmButton {
-    font-size: var(--desktop_subheading);
   }
 }
