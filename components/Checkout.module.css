@@ -1,8 +1,8 @@
 .checkoutWrapper {
   background-color: var(--primary_light);
   color: var(--primary_dark);
-  padding-bottom: 2rem; 
-   padding-top: 7rem;
+  padding-bottom: 2rem;
+  padding-top: 7rem;
   padding-inline: 1rem;
   gap: 2rem;
   display: grid;
@@ -11,7 +11,7 @@
 .checkoutWrapper h2 {
   font-family: var(--text_font);
   text-align: center;
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
 }
 .checkoutWrapper form {
   display: grid;
@@ -26,7 +26,7 @@
 }
 .checkoutWrapper form label {
   font-family: var(--text_font);
-  font-size: var(--desktop_body);
+  font-size: var(--body);
   text-rendering: optimizeLegibility;
 }
 .checkoutWrapper form input {
@@ -35,7 +35,7 @@
   background-color: var(--secondary_light);
   padding: 0.5rem;
   width: 100%;
-  font-size: var(--mobile_body);
+  font-size: var(--body);
 }
 .checkoutEtage {
   display: grid;
@@ -60,7 +60,7 @@
 }
 .paymentOptions div label {
   font-family: var(--text_font);
-  font-size: var(--mobile_body);
+  font-size: var(--body);
   width: 100%;
   text-align: center;
 }
@@ -92,7 +92,7 @@
 }
 
 .checkoutOrdreResumeFlex p {
-  font-size: var(--mobile_body);
+  font-size: var(--body);
 }
 
 .checkoutLine {
@@ -150,7 +150,7 @@
   border: none;
   border-radius: 50px;
   font-family: var(--text_font);
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
   padding: 1rem 1.5rem 1rem 1.5rem;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
@@ -181,69 +181,15 @@
     grid-column: 2/3;
     grid-row: 2/3;
   }
-  .checkoutH2 {
-    font-size: var(--tablet_subheading);
-  }
-
-  .checkoutLabel {
-    font-size: var(--tablet_subheading);
-  }
-
-  .checkoutInput {
-    font-size: var(--tablet_body);
-  }
-
-  .checkoutButtonGrid button {
-    font-size: var(--tablet_body);
-  }
 
   .checkoutOrderWrapper {
     background-color: var(--secondary_dark);
   }
-  .checkoutOrdreResumeFlex p {
-    font-size: var(--tablet_body);
-  }
-
-  .checkoutPromo input {
-    font-size: var(--tablet_body);
-  }
-
-  .checkoutPromo button {
-    font-size: var(--tablet_body);
-  }
-
-  .checkoutConfirmButton {
-    font-size: var(--tablet_subheading);
-  }
 }
 
 @media (min-width: 992px) {
-  .checkoutH2 {
-    font-size: var(--desktop_subheading);
-  }
-  .checkoutLabel {
-    font-size: var(--desktop_subheading);
-  }
-  .checkoutInput {
-    font-size: var(--desktop_body);
-  }
-  .checkoutButtonGrid button {
-    font-size: var(--desktop_body);
-  }
-  .checkoutOrdreResumeFlex p {
-    font-size: var(--desktop_body);
-  }
-
   .checkoutPromo input {
-    font-size: var(--desktop_body);
+    /* font-size: var(--desktop_body); */
     height: 2.3rem;
-  }
-
-  .checkoutPromo button {
-    font-size: var(--desktop_body);
-  }
-
-  .checkoutConfirmButton {
-    font-size: var(--desktop_subheading);
   }
 }

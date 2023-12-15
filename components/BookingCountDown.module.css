@@ -8,7 +8,7 @@
   height: 3rem;
   display: grid;
   color: var(--primary_dark);
-  font-size: var(--mobile_subheading);
+  font-size: 1.5rem;
   font-family: var(--text_font);
 }
 .progressBar {
