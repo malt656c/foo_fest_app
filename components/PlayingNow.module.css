@@ -38,7 +38,6 @@
 .card span:first-child {
   color: var(--accent_pink);
   font-family: var(--heading_font);
-  font-size: var(--heading);
   font-weight: 100;
 }
 
@@ -67,5 +66,8 @@
     white-space: nowrap;
     align-items: center;
     justify-content: center;
+  }
+  .card span:nth-child(2) {
+    display: block;
   }
 }
