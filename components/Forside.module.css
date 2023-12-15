@@ -8,9 +8,9 @@
 }
 
 .forsideContent {
-display: grid;
-place-items: center;
-padding-top: 5rem;
+  display: grid;
+  place-items: center;
+  padding-top: 5rem;
   height: 100vh;
   background-image: url("/frontpagebg.jpg");
   background-size: cover;
@@ -20,7 +20,7 @@ padding-top: 5rem;
 
 .forsideHeader {
   font-family: var(--heading_font);
-  font-size: var(--mobile_display);
+  font-size: var(--display);
   color: var(--primary_light);
   margin-bottom: 1rem; /* Juster efter behov */
 }
@@ -30,7 +30,7 @@ padding-top: 5rem;
   border: none;
   border-radius: 4rem;
   font-family: var(--heading_font);
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
   background-color: var(--accent_pink);
   color: var(--primary_light);
   cursor: pointer;
@@ -102,19 +102,5 @@ padding-top: 5rem;
 @media (min-width: 768px) {
   .forsideHeader {
     margin-bottom: 6rem;
-    font-size: var(--tablet_display);
-  }
-
-  .forsideButton {
-    font-size: var(--tablet_subheading);
-  }
-}
-
-@media (min-width: 992px) {
-  .forsideHeader {
-    font-size: var(--desktop_display);
-  }
-  .forsideButton {
-    font-size: var(--desktop_subheading);
   }
 }

@@ -11,13 +11,13 @@
 .Heading {
   font-family: var(--heading_font);
   color: var(--primary_light);
-  font-size: var(--mobile_heading);
+  font-size: var(--heading);
 }
 
 .Price {
   font-family: var(--heading_font);
   color: var(--primary_light);
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
   margin-bottom: 1rem;
 }
 
@@ -30,7 +30,7 @@
   margin: 0 auto;
   background-color: var(--accent_pink);
   font-family: var(--heading_font);
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
   padding: 6px 60px;
   border-radius: 30px;
   margin-bottom: 1rem;
@@ -49,7 +49,7 @@
 .Text {
   color: var(--primary_light);
   font-family: var(--text_font);
-  font-size: var(--mobile_body);
+  font-size: var(--body);
 }
 
 .Heading,
@@ -68,34 +68,10 @@
     height: 500px;
     width: 600px;
   }
-  .Heading {
-    font-size: var(--tablet_heading);
-  }
-
-  .Price {
-    font-size: var(--tablet_subheading);
-  }
-  .Text {
-    width: 450px;
-    font-size: var(--tablet_body);
-  }
-  .Button {
-    font-size: var(--tablet_subheading);
-  }
 }
 
 @media (min-width: 992px) {
   .GCcard {
     width: 650px;
-  }
-  .Heading {
-    font-size: var(--desktop_heading);
-  }
-  .Text {
-    width: 400px;
-    font-size: var(--desktop_body);
-  }
-  .Button {
-    font-size: var(--desktop_subheading);
   }
 }
