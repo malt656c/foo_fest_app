@@ -27,7 +27,7 @@
 .bandH1 {
   color: var(--primary_light);
   font-family: var(--heading_font);
-  font-size: var(--mobile_title);
+  font-size: var(--title);
 }
 
 .mobileWrapper {
@@ -63,7 +63,7 @@
 }
 
 .bandGenre h2 {
-  font-size: var(--mobile_heading);
+  font-size: var(--heading);
 }
 
 .h2Pink {
@@ -74,7 +74,7 @@
   max-width: 45ch;
   font-family: var(--text_font);
   text-align: left;
-  font-size: var(--mobile_body);
+  font-size: var(--body);
 }
 .bandInfo > h1 {
   margin: auto;
@@ -94,14 +94,14 @@
 }
 
 .bandMembers h3 {
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
 }
 
 .bandMembers div {
   color: var(--accent_pink);
   display: grid;
   gap: 0.25rem;
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
 }
 
 .ButtonBack {
@@ -110,7 +110,7 @@
   margin: 3rem auto;
   background-color: var(--accent_pink);
   font-family: var(--heading_font);
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
   padding: 6px 60px;
   border-radius: 30px;
   border: none;
@@ -135,7 +135,7 @@
   }
   .bandH1 {
     text-align: center;
-    font-size: var(--tablet_title);
+    /* font-size: var(--tablet_title); */
     grid-column: 1/3;
     grid-row: 1/2;
   }
@@ -151,19 +151,11 @@
     justify-content: left;
   }
 
-  .bandGenre h2 {
-    font-size: var(--tablet_heading);
-  }
-
-  .bandMembers h3 {
-    font-size: var(--tablet_subheading);
-  }
   .bandInfo {
     color: var(--primary_light);
   }
   .bandInfo p {
     color: var(--primary_light);
-    font-size: var(--tablet_body);
   }
   .deskImg {
     display: block;
@@ -171,26 +163,11 @@
   .mobileImg {
     display: none;
   }
-  .ButtonBack {
-    font-size: var(--tablet_subheading);
-  }
 }
 
 @media (min-width: 992px) {
   .bandH1 {
     place-content: top;
-    font-size: var(--desktop_title);
-  }
-  .bandGenre h2 {
-    font-size: var(--desktop_heading);
-  }
-  .bandMembers h3 {
-    font-size: var(--desktop_subheading);
-  }
-  .bandInfo p {
-    font-size: var(--desktop_body);
-  }
-  .ButtonBack {
-    font-size: var(--desktop_subheading);
+    /* font-size: var(--desktop_title); */
   }
 }
