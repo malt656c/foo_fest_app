@@ -19,6 +19,11 @@ eventuelt bezier
   --mobile_heading: 2rem;
   --mobile_subheading: 1.5rem;
   --mobile_body: 1rem;
+  --display: 4.5rem;
+  --title: 3rem;
+  --heading: 2rem;
+  --subheading: 1.5rem;
+  --body: 1rem;
   --tablet_display: 7rem;
   --tablet_title: 4.5rem;
   --tablet_heading: 3rem;
@@ -29,7 +34,7 @@ eventuelt bezier
   --desktop_heading: 3.5rem;
   --desktop_subheading: 2rem;
   --desktop_body: 1.25rem;
-  --header_height:5rem;
+  --header_height: 5rem;
 }
 * {
   margin: 0;
@@ -40,4 +45,24 @@ eventuelt bezier
 body {
   background-color: var(--primary_dark);
   height: 100vh;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --display: 7rem;
+    --title: 4.5rem;
+    --heading: 3rem;
+    --subheading: 1.75rem;
+    --body: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --display: 8rem;
+    --title: 5rem;
+    --heading: 3.5rem;
+    --subheading: 2rem;
+    --body: 1.25rem;
+  }
 }
