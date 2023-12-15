@@ -15,7 +15,6 @@ export default function Ticketcard(props) {
   }
   function addToBasket() {
     const objectIndex = productsInCart.findIndex((p) => p.id == props.product.id);
-    console.log(objectIndex, productsInCart);
     if (objectIndex >= 0) {
       const updatedProducts = [...productsInCart];
       updatedProducts[objectIndex].count = updatedProducts[objectIndex].count + count;

@@ -114,7 +114,6 @@ export default function TentBooking() {
   const ChooseArea = (e) => {
     const data = new FormData(e.currentTarget);
     const area = CampAreas.find((area) => area.id == data.get("tentArea"));
-    console.log(area);
     setTentArea(area);
   };
 

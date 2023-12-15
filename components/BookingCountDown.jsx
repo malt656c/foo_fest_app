@@ -8,7 +8,7 @@ export default function BookingCountDown() {
   const seconds = 300;
   const [timeLeft, setTimeLeft] = useState(seconds);
   useEffect(() => {
-    if (reservationId !== null) {
+    if (reservationId !== null && productsInCart.length < 0) {
       if (timeLeft <= 0) {
         window.alert("your reservation time ran out. try again");
         setProductsInCart([]);
@@ -22,7 +22,7 @@ export default function BookingCountDown() {
       return () => clearInterval(counter);
     }
   }, [reservationId, setProductsInCart, timeLeft, setTimeLeft, router]);
-  if (reservationId !== null) {
+  if (reservationId !== null && productsInCart.length < 0) {
     return (
       <div className={styles.countdownWrapper}>
         <span className={styles.time}>

@@ -5,8 +5,6 @@ import { dataContext } from "../src/app/contexts/basketContext";
 import Link from "next/link";
 export default function Payment() {
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
-
-  console.log(userInfo);
   return (
     <section className={styles.paymentWrapper}>
       <div className={styles.paymentOplysninger}>

@@ -28,11 +28,9 @@ export default function PlayingNow() {
             venue: Object.keys(venue)[0],
             slug: getBand[0].slug
           };
-                 console.log(band)
           playingBands.push(band);
         });
         setCurrentBands(playingBands);
-          console.log(playingBands)
       }
     }
     getCurrentbands();

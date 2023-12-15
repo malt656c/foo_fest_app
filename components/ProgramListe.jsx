@@ -52,7 +52,6 @@ export default function ProgramListe() {
       setFilter(daySchedule.filter((v) => Object.keys(v) == venue));
     }
   };
-  console.log(filter);
   return (
     <section className={styles.list}>
       <form

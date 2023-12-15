@@ -3,7 +3,6 @@ import styles from "./UsersOrder.module.css";
 import { dataContext } from "../src/app/contexts/basketContext";
 export default function UsersOrder() {
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
-  console.log(productsInCart);
   if (productsInCart.length !== 0) {
     const totalPrice = productsInCart
       .map((product) => product.price?product.price:0 * product.count)

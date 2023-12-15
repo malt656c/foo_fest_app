@@ -15,34 +15,32 @@ const products = [
 
 export default function GreenCamping() {
   const { userInfo, setUserInfo, productsInCart, setProductsInCart, reservationId, setReservationId } = useContext(dataContext);
+      const tentArea = productsInCart.filter((p) => 11 >= p.id && p.id >= 6)[0];   
   useEffect(() => {
-    const tentArea = productsInCart.filter((p) => 11 >= p.id && p.id >= 6)[0];
-    console.log(tentArea)
     async function ReserveSpot() {
       let headersList = {
-        "Content-Type": "application/json"
-       }
-       let bodyContent = JSON.stringify({
-           "area": `${tentArea.name}`,
-           "amount": `${tentArea.count}`
-         });
-       
-       let response = await fetch("https://tranquil-groovy-fossa.glitch.me/reserve-spot", { 
-         method: "PUT",
-         body: bodyContent,
-         headers: headersList
-       });
-       
-       let data = await response.json();
-       console.log(data);
-      setReservationId(data.id)
+        "Content-Type": "application/json",
+      };
+      let bodyContent = JSON.stringify({
+        area: `${tentArea.name}`,
+        amount: `${tentArea.count}`,
+      });
+
+      let response = await fetch("https://tranquil-groovy-fossa.glitch.me/reserve-spot", {
+        method: "PUT",
+        body: bodyContent,
+        headers: headersList,
+      });
+
+      let data = await response.json();
+        setReservationId(data.id);
     }
-   ReserveSpot()
-  }, [productsInCart, setReservationId]);
+ReserveSpot()
+return
+  }, [productsInCart, setReservationId,tentArea]);
   function addToBasket() {
     setProductsInCart((o) => o.concat({ ...products[0] }));
   }
-  console.log(reservationId)
   return (
     <div>
       <div className={styles.GCcard}>
