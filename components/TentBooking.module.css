@@ -91,7 +91,7 @@
 }
 .ticketNumber {
   color: var(--primary_light);
-  font-size: var(--display);
+  font-size: var(--subheading);
   font-family: var(--text_font);
 }
 .ChooseTent {

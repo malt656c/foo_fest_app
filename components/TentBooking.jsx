@@ -49,11 +49,11 @@ export default function TentBooking() {
   const [btnState, setBtnState] = useState(false);
   const [available, setAvailableData] = useState([]);
   const [tentArea, setTentArea] = useState(null);
-  const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
+  const { userInfo, setUserInfo, productsInCart, setProductsInCart,reservationId, setReservationId } = useContext(dataContext);
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch("https://tranquil-groovy-fossa.glitch.me//available-spots");
+        const res = await fetch("https://tranquil-groovy-fossa.glitch.me/available-spots");
 
         if (!res.ok) {
           throw new Error("ERROR");
@@ -68,8 +68,6 @@ export default function TentBooking() {
 
     fetchData();
   }, []);
-
-  //const response = await FFGet("available-spots");
 
   function getAvailableSpots(areaName) {
     const area = available.find((data) => data.area === areaName);
@@ -115,8 +113,8 @@ export default function TentBooking() {
   };
   const ChooseArea = (e) => {
     const data = new FormData(e.currentTarget);
-    const area = CampAreas.find(area=>area.id==data.get("tentArea"))
-    console.log(area)
+    const area = CampAreas.find((area) => area.id == data.get("tentArea"));
+    console.log(area);
     setTentArea(area);
   };
 
@@ -195,7 +193,7 @@ export default function TentBooking() {
           if (tentArea == null) {
             window.alert("you need to choose a camping area");
           } else {
-            setProductsInCart((p) => p.concat({ ...tentArea,name: "Camping: " + tentArea.name, count: GetNumberOfTickets() }));
+            setProductsInCart((p) => p.concat({ ...tentArea, name:tentArea.name, count: GetNumberOfTickets() }));
             router.push("/greencamping");
           }
         }}
