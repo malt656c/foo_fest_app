@@ -14,7 +14,7 @@
 }
 
 .Heading {
-  font-size: var(--mobile_title);
+  font-size: var(--title);
   text-align: center;
   font-family: var(--heading_font);
   color: var(--secondary_light);
@@ -24,7 +24,7 @@
   font-family: var(--text_font);
   color: var(--primary_light);
   margin-bottom: 1rem;
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
 }
 
 .Info {
@@ -49,7 +49,7 @@
 .Counterbtn {
   background: none;
   border: none;
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
   color: var(--primary_light);
 }
 
@@ -63,7 +63,7 @@
   margin: 2rem auto;
   background-color: var(--accent_pink);
   font-family: var(--heading_font);
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
   padding: 6px 60px;
   border-radius: 30px;
   border: none;
@@ -80,7 +80,7 @@
 .Text {
   color: var(--primary_light);
   font-family: var(--text_font);
-  font-size: var(--mobile_body);
+  font-size: var(--body);
 }
 
 .Heading,
@@ -112,7 +112,7 @@
   background-color: var(--secondary_dark);
   border: solid black 1px;
   border-radius: 15px;
-position: relative;
+  position: relative;
   color: var(--primary_light);
 
   transition: all 0.1s ease-in-out;
@@ -135,22 +135,22 @@ position: relative;
   position: absolute;
 }
 .tentAreaButton:has(input:checked) {
-background-color: var(--accent_pink);
+  background-color: var(--accent_pink);
 }
 .tentAreaButton:has(p[data-available="0"]) {
-pointer-events: none;
-filter: opacity(60%) saturate(70%);
-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.2);
-cursor: default;
-  }
+  pointer-events: none;
+  filter: opacity(60%) saturate(70%);
+  box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
 .Tentheadline {
   color: var(--secondary_light);
   font-family: var(--heading_font);
-  font-size: var(--mobile_title);
+  font-size: var(--title);
 }
 .spotsAvailable {
   color: var(--primary_light);
-  font-size: var(--mobile_body);
+  font-size: var(--body);
   padding-top: 0.5rem;
   font-family: var(--text_font);
 }
@@ -167,7 +167,7 @@ cursor: default;
   border-radius: 30px;
   padding: 1rem;
   background-color: var(--accent_pink);
-  font-size: var(--mobile_body);
+  font-size: var(--body);
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -193,7 +193,7 @@ button.active {
   margin: 3rem auto;
   background-color: var(--accent_pink);
   font-family: var(--heading_font);
-  font-size: var(--mobile_subheading);
+  font-size: var(--subheading);
   padding: 6px 60px;
   border-radius: 30px;
   border: none;
@@ -211,48 +211,22 @@ button.active {
   .TentCard {
     width: 600px;
   }
-  .Heading {
-    font-size: var(--tablet_title);
-  }
-  .h3 {
-    font-size: var(--tablet_subheading);
-  }
-  .Price,
-  .Text {
-    font-size: var(--tablet_body);
-  }
+
   .Counter {
     width: 40%;
   }
-  .Counterbtn {
-    font-size: var(--tablet_subheading);
-  }
+
   .Info {
     margin: 0 120px;
-  }
-
-  .Button {
-    font-size: var(--tablet_subheading);
   }
 
   .ChooseTent {
     width: 550px;
   }
-  .Tentheadline {
-    font-size: var(--tablet_title);
-  }
-  .Tentbtn {
-    font-size: var(--tablet_subheading);
-  }
-  .campingbtn {
-    font-size: var(--tablet_subheading);
-  }
+
   .image {
     width: 700px;
     margin-bottom: 2rem;
-  }
-  .ButtonBottom {
-    font-size: var(--tablet_subheading);
   }
 }
 
@@ -260,36 +234,8 @@ button.active {
   .TentCard {
     width: 650px;
   }
-  .Heading {
-    font-size: var(--desktop_title);
-  }
-  .h3 {
-    font-size: var(--desktop_subheading);
-  }
-  .Price,
-  .Text {
-    font-size: var(--desktop_body);
-  }
-  .Counterbtn {
-    font-size: var(--desktop_subheading);
-  }
-  .Button {
-    font-size: var(--desktop_subheading);
-  }
 
   .ChooseTent {
     width: 650px;
-  }
-  .Tentheadline {
-    font-size: var(--desktop_title);
-  }
-  .Tentbtn {
-    font-size: var(--desktop_subheading);
-  }
-  .campingbtn {
-    font-size: var(--desktop_subheading);
-  }
-  .ButtonBottom {
-    font-size: var(--desktop_subheading);
   }
 }
