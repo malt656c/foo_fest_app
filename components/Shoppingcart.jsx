@@ -8,6 +8,7 @@ import Image from "next/image";
 export default function Shoppingcart() {
   const [cartVisibility, setCartVisibility] = useState(false);
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
+  console.log(productsInCart)
   return (
     <>
       <div
@@ -34,15 +35,15 @@ export default function Shoppingcart() {
               <div className={styles.cartProductInfo}>
                 <h3 className={styles.productName}>{product.name}</h3>
                 <span className={styles.productCount}>amount: <b>{product.count}</b></span>
-                <span className={styles.productPrice}>individual price: <b>{product.price}</b></span>
-                <span className={styles.productPriceToatal}>total price: <b>{product.price*product.count}</b></span>
+                <span className={styles.productPrice}>individual price: <b>{product.price?product.price:"free"}</b></span>
+                <span className={styles.productPriceToatal}>total price: <b>{product.price?product.price*product.count:"free"}</b></span>
               </div>
-              <button onClick={() => setProductsInCart(productsInCart.filter((i) => i.id !== product.id))} className={styles.closeButton}>
+             {11>=product.id&&product.id>=6?"":<button onClick={() => setProductsInCart(productsInCart.filter((i) => i.id !== product.id))} className={styles.closeButton}>
                 <Image src="/xmark-solid.svg" alt="Close" width={16} height={16} />
-              </button>
+              </button>}
             </div>
           ))}
-        </div>{" "}
+        </div>
         {productsInCart.length > 0 && (
           <Link href="/checkout" className={styles.checkoutButton}         onClick={() => {
             cartVisibility ? setCartVisibility(false) : setCartVisibility(true);

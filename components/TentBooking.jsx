@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState, useContext } from "react";
 import styles from "./TentBooking.module.css";
-import Link from "next/link";
-import { FFGet } from "./Utilities";
 import { dataContext } from "../src/app/contexts/basketContext";
+import { useRouter } from "next/navigation";
 const products = [
   {
     id: 4,
@@ -44,10 +43,12 @@ const CampAreas = [
   },
 ];
 export default function TentBooking() {
+  const router = useRouter();
   const [count, setCount] = useState(1);
   const [count2, setCount2] = useState(1);
   const [btnState, setBtnState] = useState(false);
   const [available, setAvailableData] = useState([]);
+  const [tentArea, setTentArea] = useState(null);
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
   useEffect(() => {
     async function fetchData() {
@@ -104,24 +105,35 @@ export default function TentBooking() {
   function decrement2() {
     if (count2 > 1) setCount2(count2 - 1);
   }
-const ChooseArea =(e)=>{
-  const data=new FormData(e.currentTarget)
-  const area = data.get("tentArea")
-console.log(area)
-}
-const GetNumberOfTickets=()=>{
-  
-}
+  const GetNumberOfTickets = () => {
+    const tickets = productsInCart.filter((p) => p.id == 1 || p.id == 2);
+    const ticketAmount = tickets.map((t) => t.count);
+    const totalAmount = ticketAmount.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue;
+    }, 0);
+    return totalAmount;
+  };
+  const ChooseArea = (e) => {
+    const data = new FormData(e.currentTarget);
+    const area = CampAreas.find(area=>area.id==data.get("tentArea"))
+    console.log(area)
+    setTentArea(area);
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.ChooseTent}>
-        <span>{GetNumberOfTickets()}</span>
-        <h2 className={styles.Tentheadline}>Choose your camping area</h2>
-        <form className={styles.Tentareas} onChange={(e)=>{ChooseArea(e)}}>
+        <h2 className={styles.Tentheadline}>Choose your camping area</h2> <span className={styles.ticketNumber}>number of tickets: {GetNumberOfTickets()}</span>
+        <form
+          className={styles.Tentareas}
+          onChange={(e) => {
+            ChooseArea(e);
+          }}
+        >
           {CampAreas.map((area) => (
             <div key={area.id} className={styles.tentAreaButton}>
               <label htmlFor={area.name}>{area.name}</label>
-              <input type="radio" name="tentArea" id={area.name} value={area.name}/>
+              <input type="radio" name="tentArea" id={area.name} value={area.id} />
               <p className={styles.spotsAvailable} data-available={getAvailableSpots(area.name)}>{`Available spots: ${getAvailableSpots(area.name)}`}</p>
             </div>
           ))}
@@ -176,9 +188,20 @@ const GetNumberOfTickets=()=>{
           </button>
         </div>
       </div>
-      <Link href="/greencamping" className={styles.alink}>
-        <button className={styles.ButtonBottom}>Next</button>
-      </Link>
+
+      <button
+        className={styles.ButtonBottom}
+        onClick={() => {
+          if (tentArea == null) {
+            window.alert("you need to choose a camping area");
+          } else {
+            setProductsInCart((p) => p.concat({ ...tentArea,name: "Camping: " + tentArea.name, count: GetNumberOfTickets() }));
+            router.push("/greencamping");
+          }
+        }}
+      >
+        Next
+      </button>
     </div>
   );
 }

@@ -89,7 +89,11 @@
 .Counter {
   margin-bottom: 1rem;
 }
-
+.ticketNumber {
+  color: var(--primary_light);
+  font-size: var(--display);
+  font-family: var(--text_font);
+}
 .ChooseTent {
   display: grid;
   gap: 2rem;
