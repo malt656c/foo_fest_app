@@ -2,12 +2,14 @@
 import React from "react";
 import styles from "./Shoppingcart.module.css";
 import Link from "next/link";
-import { useState, useContext } from "react";
+import { useState, useContext} from "react";
 import { dataContext } from "../src/app/contexts/basketContext";
 import Image from "next/image";
 export default function Shoppingcart() {
   const [cartVisibility, setCartVisibility] = useState(false);
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
+
+
   console.log(productsInCart)
   return (
     <>
