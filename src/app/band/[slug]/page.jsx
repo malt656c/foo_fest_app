@@ -11,9 +11,9 @@ export default async function Page({ params }) {
   );
 }
 export async function generateStaticParams() {
-  const posts = await FFGet('bands')
+  const bands = await FFGet('bands')
  
-  return posts.map((post) => ({
-    slug: post.slug,
+  return bands.map((band) => ({
+    slug: band.slug,
   }))
 }
