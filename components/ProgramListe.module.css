@@ -26,6 +26,8 @@
   gap: 1rem;
   place-items: center;
   padding: 1rem;
+  max-width: fit-content;
+  margin: auto;
 }
 @media (min-width: 768px) {
   .bandList {

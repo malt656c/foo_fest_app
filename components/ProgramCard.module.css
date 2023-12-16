@@ -4,6 +4,7 @@
   max-width: 400px;
   color: var(--primary_dark);
   height: 100%;
+  transition: all 0.1s ease-in-out;
 }
 
 .linkWrapper:hover {
