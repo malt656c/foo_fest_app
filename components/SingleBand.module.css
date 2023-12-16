@@ -38,6 +38,7 @@
 .bandImage {
   width: 100%;
   mix-blend-mode: luminosity;
+  object-fit: cover;
 }
 .logoCredits {
   color: var(--primary_dark);
