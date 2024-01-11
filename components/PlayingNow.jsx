@@ -14,6 +14,7 @@ export default function PlayingNow() {
         const currentDay = new Date();
         const currentTime = currentDay.getHours();
         const playingBands = [];
+        console.log("bandsToday", [...Object.values(bandsToday[0]),...Object.values(bandsToday[1]),...Object.values(bandsToday[2])])
         bandsToday.forEach((venue) => {
           const allBands = Object.values(venue)[0];
           const timeStringToNumber = (string) => {
@@ -35,7 +36,7 @@ export default function PlayingNow() {
     }
     getCurrentbands();
   });
- 
+ if(currentBands?.length!==0 && currentBands!==null){
   return (
     <>
       <section className={styles.wrapper}>
@@ -57,4 +58,6 @@ export default function PlayingNow() {
       </section>
     </>
   );
+ }
+  
 }

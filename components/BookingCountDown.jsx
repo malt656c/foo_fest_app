@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState, useContext } from "react";
 import styles from "./BookingCountDown.module.css";
 import { dataContext } from "../src/app/contexts/basketContext";
@@ -7,8 +8,9 @@ export default function BookingCountDown() {
   const router = useRouter();
   const seconds = 300;
   const [timeLeft, setTimeLeft] = useState(seconds);
+  const [countDownVisible, setCountDownVisible] = useState(false);
   useEffect(() => {
-    if (reservationId !== null && productsInCart.length < 0) {
+    if (reservationId !== null && productsInCart.length > 0) {
       if (timeLeft <= 0) {
         window.alert("your reservation time ran out. try again");
         setProductsInCart([]);
@@ -22,7 +24,7 @@ export default function BookingCountDown() {
       return () => clearInterval(counter);
     }
   }, [reservationId, setProductsInCart, timeLeft, setTimeLeft, router, productsInCart]);
-  if (reservationId !== null && productsInCart.length < 0) {
+  if (reservationId !== null && productsInCart.length > 0) {
     return (
       <div className={styles.countdownWrapper}>
         <span className={styles.time}>
