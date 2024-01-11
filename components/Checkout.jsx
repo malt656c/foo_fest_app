@@ -60,7 +60,7 @@ export default function Checkout() {
 
           <div className={styles.termsOfService}>
             <input type="checkbox" id="myCheckbox" name="myCheckbox" required />
-            <label htmlFor="myCheckbox">Jeg accepterer handelsbetingelserne og giver samtykke til at Foo-Fest behandler mine persondata.</label>
+            <label htmlFor="myCheckbox">I accept the terms and conditions and consent to Foo-Fest processing my personal data.</label>
           </div>
         </div>
         <button role="button" className={styles.checkoutButton}>

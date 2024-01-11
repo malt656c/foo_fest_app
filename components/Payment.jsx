@@ -12,7 +12,7 @@ export default function Payment() {
         {/* <span>{"(bare tryk på Confirm Payment, vi leger bare)"}</span> */}
         <form className={styles.paymentFormGrid}>
           <label className={styles.paymentLabel} htmlFor="navn">
-            Navn På Kortet
+            Name on the Card
           </label>
           <input className={styles.paymentInput} type="text" name="navn" id="navn" required />
           <label className={styles.paymentLabel} htmlFor="kortnummer">

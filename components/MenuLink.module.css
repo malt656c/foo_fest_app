@@ -10,7 +10,7 @@
 }
 
 .linkText:hover {
-  color: var(--secondary_dark);
+  color: var(--secondary_light);
 }
 
 .effectText {
