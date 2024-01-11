@@ -8,7 +8,8 @@
   background-image: url(../public/frontpagebg.jpg);
   background-size: cover;
   text-align: center;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   padding: 2rem;
   margin: 0 auto;
 }
@@ -107,7 +108,7 @@
 .Tentareas {
   gap: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   height: fit-content;
 }
 .tentAreaButton {
@@ -213,7 +214,7 @@ button.active {
 
 @media (min-width: 768px) {
   .TentCard {
-    width: 600px;
+    max-width: 600px;
   }
 
   .Counter {
@@ -232,11 +233,14 @@ button.active {
     width: 700px;
     margin-bottom: 2rem;
   }
+  .Tentareas {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (min-width: 992px) {
   .TentCard {
-    width: 650px;
+    max-width: 650px;
   }
 
   .ChooseTent {
