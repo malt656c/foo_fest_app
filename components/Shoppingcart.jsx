@@ -2,12 +2,19 @@
 import React from "react";
 import styles from "./Shoppingcart.module.css";
 import Link from "next/link";
-import { useState, useContext} from "react";
+import { useState, useContext } from "react";
 import { dataContext } from "../src/app/contexts/basketContext";
 import Image from "next/image";
 export default function Shoppingcart() {
   const [cartVisibility, setCartVisibility] = useState(false);
   const { userInfo, setUserInfo, productsInCart, setProductsInCart } = useContext(dataContext);
+  let productAmount = () => {
+    let sum = 0;
+    productsInCart?.forEach((product) => {
+      sum = sum + product.count;
+    });
+    return sum;
+  };
   return (
     <>
       <div
@@ -19,6 +26,7 @@ export default function Shoppingcart() {
         role="button"
       >
         <Image src="/cart-shopping-solid.svg" alt="Cart" width={48} height={48}></Image>
+        {productsInCart?.length > 0 && <span className={styles.iconCount}>{productAmount()}</span>}
       </div>
       <section className={styles.wrapper} style={{ translate: cartVisibility ? "0%" : "100%" }}>
         <div className={styles.header}>
