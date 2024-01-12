@@ -39,7 +39,7 @@ export default function Footer() {
             <p>Volunteer</p>
           </Link>
           <Link className={styles.footerLink} href="/">
-            <p>Sponsers & Partners</p>
+            <p>Sponsors & Partners</p>
           </Link>
         </div>
       </div>
